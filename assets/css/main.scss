@@ -8,3 +8,24 @@
 html {
   scroll-behavior: smooth;
 }
+
+.section {
+  padding-top: 10px;
+}
+
+.profile-img {
+  width: 200px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  vertical-align: top;
+  padding: 5px;
+}
