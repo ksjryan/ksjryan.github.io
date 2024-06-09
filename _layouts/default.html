@@ -5,11 +5,13 @@
 
   <body class="{{ page.layout }}{% if page.url == '/' %} home{% endif %}">
 
-    {% include sidebar.html %}
+    <div class="sidebar">
+      {% include sidebar.html %}
+    </div>
 
-    <main class="container">
+    <div class="container">
       {{ content }}
-    </main>
+    </div>
 
     {% include custom-foot.html %}
     <script src="{{ '/smooth-scroll.js' }}"></script>
