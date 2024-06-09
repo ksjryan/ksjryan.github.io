@@ -39,3 +39,29 @@ td {
   border: none;
   background-color: transparent;
 }
+
+.container {
+  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .profile-img {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-right: 0;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  table {
+    display: block;
+  }
+}
