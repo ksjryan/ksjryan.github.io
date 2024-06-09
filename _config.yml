@@ -1,20 +1,20 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      rouge
+markdown: kramdown
+highlighter: rouge
 
 # Setup
-title:            Seongjun Kang
+title: Seongjun Kang
 description: |
   <p style="font-size: 16px;">Ph.D. student in<br>human-computer interaction</p>
   <p style="font-size: 16px;">working at the <a href="https://sites.google.com/view/gist-hcis-lab/home">HCIS Lab.</a> in the Gwangju Institute of Science and Technology (GIST)</p>
-url:              https://ksjryan.github.io
-baseurl:          ''
+url: https://ksjryan.github.io
+baseurl: ''
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name: Andrew Fong
+  url: https://twitter.com/fongandrewc
 
-paginate:         5
+paginate: 5
 
 plugins:
   - jekyll-feed
@@ -22,7 +22,7 @@ plugins:
   - jekyll-paginate
 
 # Sidebar link settings
-sidebar_home_link:  true
+sidebar_home_link: true
 
 nav:
   - title: "About"
