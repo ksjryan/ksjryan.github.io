@@ -28,6 +28,7 @@ table {
 td {
   vertical-align: top;
   padding: 5px;
+  background-color: transparent; /* 추가: 배경색 투명 */
 }
 
 /* Add these styles to remove border and background color */
@@ -37,7 +38,7 @@ td {
 
 .no-border td {
   border: none;
-  background-color: transparent;
+  background-color: transparent; /* 추가: 배경색 투명 */
 }
 
 .container {
