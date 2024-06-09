@@ -23,6 +23,8 @@ html {
 table {
   border-collapse: collapse;
   width: 100%;
+  background-color: #ffffff; /* 표의 내부 색깔을 흰색으로 설정 */
+  border: none; /* 표의 선 색깔을 무색으로 설정 */
 }
 
 td {
