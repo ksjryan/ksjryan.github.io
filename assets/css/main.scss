@@ -21,29 +21,11 @@ html {
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
+  width: 100%;
 }
 
 td {
   vertical-align: top;
   padding: 5px;
-}
-
-/* Add these styles to remove border and background color */
-.no-border {
-  border: none;
-}
-
-.no-border td {
-  border: none;
-  background-color: transparent;
-}
-
-.container {
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
 }
