@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop,
+          top: targetElement.offsetTop - 20, // Adjust for padding or fixed header
           behavior: 'smooth'
         });
       }
