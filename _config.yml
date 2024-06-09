@@ -22,7 +22,7 @@ plugins:
   - jekyll-paginate
 
 # Sidebar link settings
-sidebar_home_link: true
+sidebar_home_link:  true
 
 nav:
   - title: "About"
