@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            Seongjun Kang
 # tagline:          'A Jekyll theme'
 # description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
-description: Ph.D. student in the [Human-Centered Intelligent Systems Lab](https://sites.google.com/view/gist-hcis-lab) at the Gwangju Institute of Science and Technology.
+description: Ph.D. student in the [Human-Centered Intelligent Systems Lab](http://your-lab-link.com) at the Gwangju Institute of Science and Technology.'
 url:              https://ksjryan.github.io
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
