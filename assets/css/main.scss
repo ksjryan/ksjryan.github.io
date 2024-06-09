@@ -21,8 +21,8 @@ html {
 }
 
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
 }
 
 td {
@@ -30,10 +30,12 @@ td {
   padding: 5px;
 }
 
-.container {
-  max-width: 100%;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+/* Add these styles to remove border and background color */
+.no-border {
+  border: none;
+}
+
+.no-border td {
+  border: none;
+  background-color: transparent;
 }
