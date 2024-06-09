@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
+      const target = document.querySelector(this.getAttribute('href'));
+      const topOffset = target.getBoundingClientRect().top + window.pageYOffset;
+      
+      window.scrollTo({
+        top: topOffset,
         behavior: 'smooth'
       });
     });
