@@ -32,7 +32,6 @@ td {
   padding: 5px;
   background-color: #ffffff !important; /* 각 셀의 배경색을 흰색으로 설정 */
   border: none !important; /* 셀의 경계선을 무색으로 설정 */
-  width: 100%; /* Ensure td elements take full width */
 }
 
 body {
@@ -46,4 +45,10 @@ main.container {
   # max-width: 1500px; /* 선택 사항: 가독성을 위해 본문의 최대 너비를 설정 */
   padding: 20px;
   margin-right: auto;
+}
+
+main.container p {
+  max-width: 800px; /* 최대 너비를 설정하여 읽기 쉽게 조절 */
+  margin: 0 auto; /* 가운데 정렬 */
+  line-height: 1.6; /* 줄 간격을 조절하여 가독성 향상 */
 }
