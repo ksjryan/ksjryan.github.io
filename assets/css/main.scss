@@ -36,11 +36,14 @@ td {
 
 body {
   display: grid;
-  grid-template-columns: 250px 1fr; /* 250px for sidebar and remaining space for main content */
+  grid-template-columns: 300px 1fr; /* 300px for sidebar and remaining space for main content */
   grid-gap: 20px; /* space between sidebar and main content */
 }
 
 main.container {
   width: 100%; /* Use full available width */
+  max-width: 1200px; /* Optional: Set a maximum width for better readability */
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
