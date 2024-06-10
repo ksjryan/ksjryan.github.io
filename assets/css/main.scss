@@ -22,14 +22,14 @@ html {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 120%;
   background-color: #ffffff !important; /* 표의 내부 색깔을 흰색으로 설정 */
   border: none !important; /* 표의 선 색깔을 무색으로 설정 */
 }
 
 td {
   vertical-align: top;
-  padding: 5px;
+  padding: 10px;
   background-color: #ffffff !important; /* 각 셀의 배경색을 흰색으로 설정 */
   border: none !important; /* 셀의 경계선을 무색으로 설정 */
 }
