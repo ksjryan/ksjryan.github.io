@@ -36,12 +36,12 @@ td {
 
 body {
   display: grid;
-  grid-template-columns: 250px 1fr; /* 사이드바는 300px, 메인 콘텐츠는 남은 공간 */
+  grid-template-columns: 250px 10fr; /* 사이드바는 300px, 메인 콘텐츠는 남은 공간 */
   grid-gap: 20px; /* 사이드바와 메인 콘텐츠 사이의 공간 */
 }
 
 main.container {
-  width: 200%; /* 사용 가능한 전체 너비 사용 */
+  width: 100%; /* 사용 가능한 전체 너비 사용 */
   #max-width: 1200px; /* 선택사항: 가독성을 높이기 위해 최대 너비를 설정하세요. */
   padding: 20px;
   #margin-left: auto;
