@@ -38,14 +38,11 @@ body {
   display: grid;
   grid-template-columns: 300px 1fr; /* 사이드바를 300px로 고정하고, 나머지 공간을 본문에 할당 */
   grid-gap: 20px; /* 사이드바와 본문 간의 간격 설정 */
-  width: 100vw; /* 뷰포트의 전체 너비 사용 */
-  margin: 0; /* 기본 여백 제거 */
-  padding: 0; /* 기본 패딩 제거 */
 }
 
 main.container {
-  width: calc(100% - 320px); /* 그리드 간격(20px)과 사이드바(300px) 제외한 나머지 공간 사용 */
-  # max-width: 1200px; /* 선택 사항: 가독성을 위해 본문의 최대 너비를 설정 */
+  width: calc(100vw - 320px); /* 그리드 간격(20px)과 사이드바(300px) 제외한 나머지 공간 사용 */
+  # max-width: none; /* 선택 사항: 가독성을 위해 본문의 최대 너비를 설정 */
   padding: 20px;
   #margin-left: auto;
   #margin-right: auto;
