@@ -33,3 +33,10 @@ td {
   background-color: #ffffff !important; /* 각 셀의 배경색을 흰색으로 설정 */
   border: none !important; /* 셀의 경계선을 무색으로 설정 */
 }
+
+main.container {
+  width: 80%; /* Adjust this value as needed to increase the width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
