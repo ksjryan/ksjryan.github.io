@@ -23,11 +23,14 @@ layout: default
     border-top: 1px solid #ccc; /* 원하는 색상으로 변경 */
     margin: 20px auto; /* 원하는 여백으로 변경 */
   }
+  .img-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 원하는 그림자 효과 */
+  }
 </style>
 
 <div id="about" style="padding-top: 2px;">
   <h2>About</h2>
-  <img src="{{ '/images/profile.jpeg' | relative_url }}" style="width: 200px; height: auto; float: left; margin-right: 20px;">
+  <img src="{{ '/images/profile.jpeg' | relative_url }}" class="img-shadow" style="width: 200px; height: auto; float: left; margin-right: 20px;">
   <p>Hello! My name is Seongjun Kang, and I am currently a Ph.D. candidate at the HCIS Lab of Gwangju Institute of Science and Technology (GIST). <br> <br>
     <strong>My vision: multisensory synchronization for advanced digital interactions</strong> <br>
     My research primarily focuses on haptic technology within Virtual Reality. I am dedicated to developing hardware and software technologies that aid in seamlessly integrating various human senses, as well as augmenting or reproducing multimodal sensory experiences.</p>
@@ -40,7 +43,7 @@ layout: default
 
     <tr>
       <td style="width: 400px;">
-        <img src="{{ '/images/FlipPelt_ICRAworkshop.png' | relative_url }}" style="width: 400px; height: auto;">
+        <img src="{{ '/images/FlipPelt_ICRAworkshop.png' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
       </td>
       <td>
         <p class="paper-title">Dual-sided Peltier Elements for Rapid Thermal Feedback in Wearables<br>
@@ -51,7 +54,7 @@ layout: default
 
     <tr>
       <td style="width: 400px;">
-        <img src="{{ '/images/RDD_CHILBW.gif' | relative_url }}" style="width: 400px; height: auto;">
+        <img src="{{ '/images/RDD_CHILBW.gif' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
       </td>
       <td>
         <p class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR<br>
@@ -62,7 +65,7 @@ layout: default
 
     <tr>
       <td style="width: 400px;">
-        <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" style="width: 400px; height: auto;">
+        <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
       </td>
       <td>
         <p class="paper-title">ErgoPulse: Electrifying Your Lower Body With Biomechanical Simulation-based Electrical Muscle Stimulation Haptic System in Virtual Reality<br>
@@ -74,7 +77,7 @@ layout: default
 
     <tr>
       <td style="width: 400px;">
-        <img src="{{ '/images/PortalDisplay_Electronics.gif' | relative_url }}" style="width: 400px; height: auto;">
+        <img src="{{ '/images/PortalDisplay_Electronics.gif' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
       </td>
       <td>
         <p class="paper-title">How Do Background and Remote User Representations Affect Social Telepresence in Remote Collaboration?: A Study with Portal Display, a Head Pose-Responsive Video Teleconferencing System<br>
@@ -85,7 +88,7 @@ layout: default
 
     <tr>
       <td style="width: 400px;">
-        <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" style="width: 400px; height: auto;">
+        <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
       </td>
       <td>
         <p class="paper-title">Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality<br>
@@ -96,7 +99,7 @@ layout: default
     
     <tr>
       <td style="width: 400px;">
-        <img src="{{ '/images/GiantFinger_IEEEVRW.gif' | relative_url }}" style="width: 400px; height: auto;">
+        <img src="{{ '/images/GiantFinger_IEEEVRW.gif' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
       </td>
       <td>
         <p class="paper-title">Giant Finger: Visuo-Proprioceptive Congruent Virtual Legs for Flying Actions in Virtual Reality<br>
@@ -107,7 +110,7 @@ layout: default
     
     <tr>
       <td style="width: 400px;">
-        <img src="{{ '/images/PortalDisplay_ICONI.gif' | relative_url }}" style="width: 400px; height: auto;">
+        <img src="{{ '/images/PortalDisplay_ICONI.gif' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
       </td>
       <td>
         <p class="paper-title">Portal Display: Screen-based 3D Stereoscopic Conferencing System for Immersive Social Telepresence<br>
