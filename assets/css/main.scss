@@ -1,3 +1,8 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
 @import "hydeout";
 
 html {
@@ -13,11 +18,6 @@ html {
   height: auto;
   float: left;
   margin-right: 20px;
-}
-
-.container {
-  width: 100%;
-  overflow-x: auto;
 }
 
 table {
