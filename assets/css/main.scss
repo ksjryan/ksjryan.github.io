@@ -36,14 +36,14 @@ td {
 
 body {
   display: grid;
-  grid-template-columns: 300px 1fr; /* 300px for sidebar and remaining space for main content */
-  grid-gap: 20px; /* space between sidebar and main content */
+  grid-template-columns: 300px 1fr; /* 사이드바는 300px, 메인 콘텐츠는 남은 공간 */
+  grid-gap: 20px; /* 사이드바와 메인 콘텐츠 사이의 공간 */
 }
 
 main.container {
-  width: 100%; /* Use full available width */
-  max-width: 1200px; /* Optional: Set a maximum width for better readability */
+  width: 100%; /* 사용 가능한 전체 너비 사용 */
+  max-width: 1200px; /* 선택사항: 가독성을 높이기 위해 최대 너비를 설정하세요. */
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  #margin-left: auto;
+  #margin-right: auto;
 }
