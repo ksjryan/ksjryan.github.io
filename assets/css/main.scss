@@ -40,14 +40,15 @@ main.container p {
 
 #sidebar-icon-links {
   display: flex;
-  justify-content: space-between; /* 아이콘을 균등하게 배치합니다 */
+  justify-content: flex-start; /* 아이콘을 왼쪽 정렬합니다 */
+  flex-wrap: nowrap; /* 아이콘이 한 줄에 나열되도록 합니다 */
 }
 
-.icon-link {
-  margin-right: 10px; /* 아이콘 사이의 간격을 조절합니다 */
+.icon {
+  margin-right: 20px; /* 아이콘 사이의 간격을 조절합니다 */
 }
 
-.icon-link:last-child {
+.icon:last-child {
   margin-right: 0; /* 마지막 아이콘에는 여백을 추가하지 않습니다 */
 }
 
