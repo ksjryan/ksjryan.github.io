@@ -1,16 +1,24 @@
 <nav id="sidebar-icon-links">
-  {% if site.hydeout.repo %}
-    <a id="github-link"
-       class="icon" title="Github Project" aria-label="Github Project"
-       href="{{ site.hydeout.repo }}">
-      {% include svg/github.svg %}
-    </a>
-    <a id="github-download-link"
-       class="icon" title="Download" aria-label="Download"
-       href="{{ site.hydeout.repo }}/archive/v{{ site.hydeout.version }}.zip">
-      {% include svg/download.svg %}
-    </a>
-  {% endif %}
+  <a id="scholar-link"
+     class="icon" title="Google Scholar" aria-label="Google Scholar"
+     href="https://scholar.google.com/citations?user=GflY-_gAAAAJ&hl=ko">
+    {% include svg/scholar.svg %}
+  </a>
+  <a id="cv-link"
+     class="icon" title="CV" aria-label="CV"
+     href="https://drive.google.com/file/d/1MHmKXxcaqUUGL_nxbkyCWML_Y7E9a86v/view">
+    {% include svg/cv.svg %}
+  </a>
+  <a id="linkedin-link"
+     class="icon" title="LinkedIn" aria-label="LinkedIn"
+     href="https://www.linkedin.com/in/seongjun-kang-309647262/">
+    {% include svg/linkedin.svg %}
+  </a>
+  <a id="youtube-link"
+     class="icon" title="Youtube" aria-label="Youtube"
+     href="https://www.youtube.com/channel/UCmVL3NEjQe9m6zM13Z6EauQ">
+    {% include svg/youtube.svg %}
+  </a>
 
   <a id="subscribe-link"
      class="icon" title="Subscribe" aria-label="Subscribe"
