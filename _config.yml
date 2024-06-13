@@ -6,7 +6,7 @@ highlighter: rouge
 title: Seongjun Kang
 description: |
   <p style="font-size: 16px;">Ph.D. student in<br>human-computer interaction</p>
-  <p style="font-size: 16px;">working at the <a href="https://sites.google.com/view/gist-hcis-lab/home">HCIS Lab.</a> in the Gwangju Institute of Science and Technology (GIST)</p>
+  <p style="font-size: 16px;">working at the <a href="https://sites.google.com/view/gist-hcis-lab/home" target="_blank">HCIS Lab.</a> in the Gwangju Institute of Science and Technology (GIST)</p>
 url: https://ksjryan.github.io
 baseurl: ''
 
