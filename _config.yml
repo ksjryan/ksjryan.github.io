@@ -27,7 +27,7 @@ sidebar_home_link:  true
 nav:
   - title: "About"
     url: /#about
-  - title: "Research"
+  - title: "Publications"
     url: /#research
-  - title: "Fun Project"
+  - title: "Fun Projects"
     url: /#fun-project
