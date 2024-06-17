@@ -18,7 +18,6 @@ title: Food Delivery Turtlebot
 
   .content {
     width: 120%;
-    margin: 0 auto;
   }
 
   .img-shadow {
