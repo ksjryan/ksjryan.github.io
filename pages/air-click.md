@@ -21,7 +21,7 @@ title: Air Click
   }
 
   .img-shadow {
-    width: 600px; /* Adjust the width as needed */
+    width: 500px; /* Adjust the width as needed */
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
