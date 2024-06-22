@@ -84,8 +84,15 @@ layout: default
     height: auto;
   }
 
+  .publication-table {
+    width: 110%;
+  }
+
   /* Mobile Styles */
   @media (max-width: 768px) {
+    body, .white-text {
+      color: white; /* 흰색 글씨 */
+    }
     hr {
       width: 100%;
     }
@@ -98,13 +105,13 @@ layout: default
     .publication-gif {
       width: 70%;
     }
+    .publication-table {
+      width: 100%;
+    }
     .publication-table td {
       width: 100%;
       display: block;
       margin-bottom: 20px;
-    }
-    .white-text {
-      color: white; /* 흰색 글씨 */
     }
   }
 </style>
@@ -120,10 +127,10 @@ layout: default
 
 <div id="research" style="padding-top: 10px;" class="white-text">
   <h2>Publications</h2>
-  <table class="no-border publication-table" style="width: 110%;">
+  <table class="no-border publication-table">
 
     <tr>
-      <td style="width: 400px;">
+      <td>
         <img src="{{ '/images/FlipPelt_ICRAworkshop.png' | relative_url }}" class="img-shadow publication-gif">
       </td>
       <td>
@@ -135,7 +142,7 @@ layout: default
     </tr>
 
     <tr>
-      <td style="width: 400px;">
+      <td>
         <img src="{{ '/images/RDD_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
       </td>
       <td>
@@ -147,7 +154,7 @@ layout: default
     </tr>
 
     <tr>
-      <td style="width: 400px;">
+      <td>
         <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
       </td>
       <td>
@@ -160,7 +167,7 @@ layout: default
     </tr>
 
     <tr>
-      <td style="width: 400px;">
+      <td>
         <img src="{{ '/images/PortalDisplay_Electronics.gif' | relative_url }}" class="img-shadow publication-gif">
       </td>
       <td>
@@ -172,7 +179,7 @@ layout: default
     </tr>
 
     <tr>
-      <td style="width: 400px;">
+      <td>
         <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
       </td>
       <td>
@@ -184,7 +191,7 @@ layout: default
     </tr>
     
     <tr>
-      <td style="width: 400px;">
+      <td>
         <img src="{{ '/images/GiantFinger_IEEEVRW.gif' | relative_url }}" class="img-shadow publication-gif">
       </td>
       <td>
@@ -196,7 +203,7 @@ layout: default
     </tr>
     
     <tr>
-      <td style="width: 400px;">
+      <td>
         <img src="{{ '/images/PortalDisplay_ICONI.gif' | relative_url }}" class="img-shadow publication-gif">
       </td>
       <td>
