@@ -3,23 +3,31 @@ layout: default
 ---
 
 <style>
+  body {
+    background-color: #000; /* 배경을 검은색으로 설정하여 흰색 글씨가 잘 보이도록 */
+  }
   .paper-title {
     font-size: 1em;
+    color: white; /* 흰색 글씨 */
   }
   .author {
     font-size: 0.8em;
+    color: white; /* 흰색 글씨 */
   }
   .bold-author {
     font-size: 0.8em;
     font-weight: bold; /* BOLD체로 변경 */
+    color: white; /* 흰색 글씨 */
   }
   .conference-name {
     font-size: 0.8em;
     font-style: italic;
+    color: white; /* 흰색 글씨 */
   }
   .links {
     font-size: 0.8em;
     font-style: normal;
+    color: white; /* 흰색 글씨 */
   }
   hr {
     width: 120%; /* 또는 120%로 변경 */
@@ -95,10 +103,13 @@ layout: default
       display: block;
       margin-bottom: 20px;
     }
+    .white-text {
+      color: white; /* 흰색 글씨 */
+    }
   }
 </style>
 
-<div id="about" style="padding-top: 2px;">
+<div id="about" style="padding-top: 2px;" class="white-text">
   <h2>About</h2>
   <img src="{{ '/images/profile.jpeg' | relative_url }}" class="img-shadow" style="width: 200px; height: auto; float: left; margin-right: 20px;">
   <p>Hello! My name is Seongjun Kang, and I am currently a Ph.D. candidate at the HCIS Lab of Gwangju Institute of Science and Technology (GIST). <br> <br>
@@ -107,7 +118,7 @@ layout: default
   <hr>
 </div>
 
-<div id="research" style="padding-top: 10px;">
+<div id="research" style="padding-top: 10px;" class="white-text">
   <h2>Publications</h2>
   <table class="no-border publication-table" style="width: 110%;">
 
@@ -201,7 +212,7 @@ layout: default
   <hr>
 </div>
 
-<div id="fun-project" style="padding-top: 10px;">
+<div id="fun-project" style="padding-top: 10px;" class="white-text">
   <h2>Fun Projects</h2>
   
   <div class="gif-grid">
