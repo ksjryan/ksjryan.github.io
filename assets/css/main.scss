@@ -47,21 +47,3 @@ main.container p {
 footer {
   display: none; /* 전체 footer를 숨깁니다 */
 }
-
-/* 모바일에 최적화된 반응형 디자인을 위한 미디어 쿼리 추가 */
-@media (max-width: 768px) {
-  .profile-img {
-    width: 100%; /* 모바일에서는 이미지가 화면 너비에 맞게 조절 */
-    float: none; /* 이미지를 왼쪽에 고정하지 않음 */
-    margin-right: 0; /* 오른쪽 여백 제거 */
-    margin-bottom: 20px; /* 아래쪽 여백 추가 */
-  }
-
-  table {
-    width: 100%; /* 모바일에서 표의 너비가 화면을 넘어가지 않도록 수정 */
-  }
-
-  main.container p {
-    width: 100%; /* 모바일에서 텍스트 블록이 화면을 넘어가지 않도록 수정 */
-  }
-}
