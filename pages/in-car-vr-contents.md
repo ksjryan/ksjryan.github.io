@@ -21,4 +21,6 @@ title: In-Car VR Contents
 
 <h2>In-Car VR Contents</h2>
 <img src="{{ '/images/InCarVR contents.gif' | relative_url }}" class="img-shadow" style="width: 400px; height: auto;">
-<p>Detailed description of the project...</p>
+<p>The In-car VR Contents project aims to enhance the driving experience by creating immersive virtual reality (VR) environments that transform mundane drives into thrilling adventures. This project specifically focuses on developing dinosaur-themed content, providing passengers with the excitement of navigating through various prehistoric landscapes. The VR system integrates a series of dynamic scenes, such as treacherous cliff paths, dark caves, dense jungles, erupting volcanoes, and eerie urban settings. Each scene is interconnected through portals, allowing seamless transitions and continuous engagement for users.</p>
+
+<p> The system utilizes real-time vehicle data to synchronize the VR environment with the actual movement of the car. For example, when the vehicle stops, the VR simulation presents scenarios such as a dinosaur blocking the path. Additional interactions include the use of virtual car features like horns, lights, wipers, and sunroofs to influence the VR environment. Future developments aim to implement real-time adaptive systems using data from navigation and vehicle sensors, enhancing the realism and responsiveness of the VR experience. This innovative approach not only provides entertainment but also transforms routine travel into an engaging and educational journey through time.</p>
