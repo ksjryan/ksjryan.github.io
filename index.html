@@ -81,6 +81,10 @@ layout: default
     height: auto;
   }
 
+  .small-text {
+    font-size: 0.9em; /* Adjust the font size as needed */
+  }
+
   /* Mobile Styles */
   @media (max-width: 768px) {
     hr {
@@ -107,7 +111,8 @@ layout: default
   <img src="{{ '/images/profile.jpeg' | relative_url }}" class="img-shadow" style="width: 200px; height: auto; float: left; margin-right: 20px;">
   <p>Hello! My name is Seongjun Kang, and I am currently a Ph.D. candidate at the HCIS Lab of Gwangju Institute of Science and Technology (GIST). <br> <br>
     <strong>My vision: multisensory synchronization for advanced digital interactions</strong> <br>
-    My research primarily focuses on haptic technology within Virtual Reality. I am dedicated to developing hardware and software that seamlessly integrate various human senses, enhancing multimodal sensory experiences. This involves designing innovative interfaces and exploring the potential of human somatosensory perception to create more immersive and intuitive digital interactions. By bridging the gap between the virtual and physical worlds, my goal is to contribute to a more nuanced and engaging user experience.</p>
+    <div class="small-text">My research primarily focuses on haptic technology within Virtual Reality. I am dedicated to developing hardware and software that seamlessly integrate various human senses, enhancing multimodal sensory experiences. This involves designing innovative interfaces and exploring the potential of human somatosensory perception to create more immersive and intuitive digital interactions. By bridging the gap between the virtual and physical worlds, my goal is to contribute to a more nuanced and engaging user experience.</div>
+  </p>
   <hr>
 </div>
 
@@ -158,114 +163,4 @@ layout: default
       </td>
       <td>
         <p class="paper-title">How Do Background and Remote User Representations Affect Social Telepresence in Remote Collaboration?: A Study with Portal Display, a Head Pose-Responsive Video Teleconferencing System<br>
-        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K-T., Kim S. </span><br><br>
-        <span class="conference-name">Electronics. 2023; 12(20):4339</span><br>
-        <span class="links"><a href="https://drive.google.com/file/d/1P2auI62cnaEgxwQt1NNy_6uskeo3woi7/view?usp=sharing" target="_blank">Paper</a> | <a href="https://www.mdpi.com/2079-9292/12/20/4339" target="_blank">DOI</a></span></p>
-      </td>
-    </tr>
-
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p class="paper-title">Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality<br>
-        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Kim, S. (2023)</span><br><br>
-        <span class="conference-name">ISMAR 2023: IEEE International Symposium on Mixed and Augmented Reality</span><br>
-        <span class="links"><a href="https://drive.google.com/file/d/1n_AfKS4rmYOh3UP7cem2qPOz4yzuscDt/view?usp=sharing" target="_blank">Paper</a> | <a href="https://ieeexplore.ieee.org/document/10316523" target="_blank">DOI</a> | <a href="https://youtu.be/gUMXspPIGdk" target="_blank">Video</a></span></p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/GiantFinger_IEEEVRW.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p class="paper-title">Giant Finger: Visuo-Proprioceptive Congruent Virtual Legs for Flying Actions in Virtual Reality<br>
-        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K.T., Kim, S. (2023)</span><br><br>
-        <span class="conference-name">IEEE VRW 2023: Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops</span><br>
-        <span class="links"><a href="https://drive.google.com/file/d/1il_u96bo1MeZfrRvDfA4K3VYc0n8iSut/view?usp=sharing" target="_blank">Paper</a> | <a href="https://ieeexplore.ieee.org/document/10108677" target="_blank">DOI</a></span></p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/PortalDisplay_ICONI.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p class="paper-title">Portal Display: Screen-based 3D Stereoscopic Conferencing System for Immersive Social Telepresence<br>
-        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K., Kim, S. (2022)</span><br><br>
-        <span class="conference-name">KSII the 14th international conference on internet (ICONI) 2022 symposium<br>
-        🏆 Best Paper Award (1st)</span> <br>
-        <span class="links"><a href="https://drive.google.com/file/d/1vxHDhS7M7hwoAm0xrdxI0w_8w50lJJ1F/view" target="_blank">Paper</a></span></p>
-      </td>
-    </tr>
-    
-  </table>
-  <hr>
-</div>
-
-<div id="fun-project" style="padding-top: 10px;">
-  <h2>Fun Projects</h2>
-  
-  <div class="gif-grid">
-
-    <div class="gif-item">
-      <a href="{{ '/pages/virtual-arm-visualization' | relative_url }}">
-        <img src="{{ '/images/Virtual Arm Visualization to Reduce In-Car VR Motion Sickness.gif' | relative_url }}" alt="Virtual Arm Visualization to Reduce In-Car VR Motion Sickness">
-        <div class="overlay">Virtual arm visualization to reduce In-Car VR motion sickness</div>
-      </a>
-    </div>
-    
-    <div class="gif-item">
-      <a href="{{ '/pages/finger-based-avatar-mapping' | relative_url }}">
-        <img src="{{ '/images/Finger-based miniature avatar mapping.gif' | relative_url }}" alt="Finger-based miniature avatar mapping">
-        <div class="overlay">Finger-based miniature avatar mapping</div>
-      </a>
-    </div>
-    
-    <div class="gif-item">
-      <a href="{{ '/pages/motion-tracking-action-game' | relative_url }}">
-        <img src="{{ '/images/motion tracking action game.gif' | relative_url }}" alt="motion tracking action game">
-        <div class="overlay">Motion tracking action game</div>
-      </a>
-    </div>
-    
-    <div class="gif-item">
-      <a href="{{ '/pages/reinforcement-learning-walking' | relative_url }}">
-        <img src="{{ '/images/6 gain.gif' | relative_url }}" alt="6 gain">
-        <div class="overlay">Reinforcement learning based redirected walking</div>
-      </a>
-    </div>
-    
-    <div class="gif-item">
-      <a href="{{ '/pages/in-car-vr-contents' | relative_url }}">
-        <img src="{{ '/images/InCarVR contents.gif' | relative_url }}" alt="InCarVR Contents">
-        <div class="overlay">In-CarVR contents</div>
-      </a>
-    </div>
-    
-    <div class="gif-item">
-      <a href="{{ '/pages/xr-bus-simulator' | relative_url }}">
-        <img src="{{ '/images/Bus Simulator.gif' | relative_url }}" alt="Bus Simulator">
-        <div class="overlay">XR screen bus simulator</div>
-      </a>
-    </div>
-    
-    <div class="gif-item">
-      <a href="{{ '/pages/air-click' | relative_url }}">
-        <img src="{{ '/images/Air Click.gif' | relative_url }}" alt="Air Click">
-        <div class="overlay">Air Click</div>
-      </a>
-    </div>
-    
-    <div class="gif-item">
-      <a href="{{ '/pages/food-delivery-turtlebot' | relative_url }}">
-        <img src="{{ '/images/automatic food delivery robot.gif' | relative_url }}" alt="Automatic Food Delivery Robot">
-        <div class="overlay">Food delivery turtlebot</div>
-      </a>
-    </div>
-    
-  </div>
-  <hr>
-</div>
+        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee
