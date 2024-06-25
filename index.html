@@ -84,8 +84,16 @@ layout: default
   .small-text {
     font-size: 0.9em; /* Adjust the font size as needed */
     width: 120%;
-    margin-top: -20px; /* Remove top margin */
+    margin-top: -20px; /* Use a negative value to reduce the space */
     margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .intro-text {
+    margin-bottom: 5px; /* Adjust this value as needed */
+  }
+
+  .vision-text {
+    margin-top: 0; /* Adjust this value as needed */
   }
 
   /* Mobile Styles */
@@ -112,10 +120,9 @@ layout: default
 <div id="about" style="padding-top: 2px;">
   <h2>About</h2>
   <img src="{{ '/images/profile.jpeg' | relative_url }}" class="img-shadow" style="width: 200px; height: auto; float: left; margin-right: 20px;">
-  <p>Hello! My name is Seongjun Kang, and I am currently a Ph.D. candidate at the HCIS Lab of Gwangju Institute of Science and Technology (GIST). <br> <br>
-    <strong>My vision: multisensory synchronization for advanced digital interactions</strong> <br>
-    <div class="small-text">My research primarily focuses on haptic technology within Virtual Reality. I am dedicated to developing hardware and software that seamlessly integrate various human senses. This involves designing innovative interfaces and exploring the potential of human somatosensory perception to create more immersive and intuitive interactions. By bridging the gap between the virtual and physical worlds, my goal is to contribute to a more nuanced and engaging user experience.</div>
-  </p>
+  <p class="intro-text">Hello! My name is Seongjun Kang, and I am currently a Ph.D. candidate at the HCIS Lab of Gwangju Institute of Science and Technology (GIST). <br></p>
+  <p class="vision-text"><strong>My vision: multisensory synchronization for advanced digital interactions</strong> <br></p>
+  <div class="small-text">My research primarily focuses on haptic technology within Virtual Reality. I am dedicated to developing hardware and software that seamlessly integrate various human senses. This involves designing innovative interfaces and exploring the potential of human somatosensory perception to create more immersive and intuitive interactions. By bridging the gap between the virtual and physical worlds, my goal is to contribute to a more nuanced and engaging user experience.</div>
   <hr>
 </div>
 
