@@ -32,7 +32,6 @@ title: Reinforcement Learning Based Redirected Walking
 <div class="content">
 
 <h2>Reinforcement Learning Based Redirected Walking</h2>
-<img src="{{ '/images/Bus Simulator.gif' | relative_url }}" class="img-shadow">
 <img src="{{ '/images/6 gain.gif' | relative_url }}" class="img-shadow">
 <p>The Reinforcement Learning Based Redirected Walking project focuses on optimizing user navigation within virtual environments (VEs) to seamlessly fit within the physical constraints of real-world (RW) spaces. This project addresses the challenge of limited physical space that often restricts natural movement in VR by employing redirected walking techniques. These techniques subtly alter the user's path in the VE to keep them within the boundaries of the RW space without them noticing the adjustments, thereby enhancing the VR experience's immersion and naturalness.</p>
 
