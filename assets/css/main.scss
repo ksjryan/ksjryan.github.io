@@ -58,7 +58,12 @@ footer {
   }
   
   main.container {
+    width: 100%;
     background-color: white;
     color: black; /* main.container 내의 모든 글씨를 검정색으로 설정 */
+    padding-left: 10px; /* 좌측 여백 추가 */
+    padding-right: 10px; /* 우측 여백 추가 */
+    margin-left: auto; /* 좌측 마진을 자동으로 설정하여 가운데 정렬 */
+    margin-right: auto; /* 우측 마진을 자동으로 설정하여 가운데 정렬 */
   }
 }
