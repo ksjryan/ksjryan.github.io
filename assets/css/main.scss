@@ -53,9 +53,11 @@ footer {
   table {
     width: 100%;
   }
-
-  main.container {
+   main.container p {
     width: 100%;
+  }
+  
+  main.container {
     background-color: white;
     color: black; /* main.container 내의 모든 글씨를 검정색으로 설정 */
   }
