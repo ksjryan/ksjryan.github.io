@@ -25,6 +25,17 @@ title: In-Car VR Contents
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+    /* Mobile Styles */
+  @media (max-width: 768px) {
+    .content {
+      width: 100%; /* 모바일 화면에서는 100%로 변경 */
+    }
+
+    .img-shadow {
+      width: 100%; /* 이미지도 모바일 화면에 맞게 100%로 변경 */
+    }
+  }
 </style>
 
 
