@@ -47,3 +47,15 @@ main.container p {
 footer {
   display: none; /* 전체 footer를 숨깁니다 */
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+
+  main.container{
+    width: 100%;
+    background-color: white;
+  }
+}
