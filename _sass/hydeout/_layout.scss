@@ -281,12 +281,10 @@ body {
 }
 
 #sidebar-icon-links {
-  margin-top: 1rem;
-  max-width: 100%;
-  display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 5px; /* 아이콘 간 간격 조정 */
+  margin-top: 1rem;
+  max-width: 110%;
 
   @media (min-width: $large-breakpoint) {
     justify-content: flex-start;
