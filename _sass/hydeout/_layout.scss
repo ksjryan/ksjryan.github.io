@@ -34,11 +34,11 @@ body {
 
 #sidebar {
   flex: 0 0 auto;
-  padding: $section-spacing * 0.6;
+  padding: $section-spacing;
 
   .site-title {
     font-family: 'Abril Fatface', serif;
-    font-size: 2rem !important;
+    font-size: $large-font-size;
     font-weight: normal;
     margin-bottom: $heading-spacing;
     margin-top: 0;
@@ -152,7 +152,7 @@ body {
   #sidebar,
   .home #sidebar {
     text-align: left;
-    width: 300px;
+    width: $sidebar-width;
 
     > *:last-child {
       margin-bottom: 0;
@@ -208,11 +208,11 @@ body {
       0;
 
     @if $layout-reverse {
-      margin-right: 300px;
+      margin-right: $sidebar-width;
     }
 
     @else {
-      margin-left: 300px;
+      margin-left: $sidebar-width;
     }
 
     > header {
@@ -284,7 +284,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   margin-top: 1rem;
-  max-width: 130%;
+  max-width: 100%;
 
   @media (min-width: $large-breakpoint) {
     justify-content: flex-start;
