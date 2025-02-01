@@ -152,7 +152,7 @@ body {
   #sidebar,
   .home #sidebar {
     text-align: left;
-    width: 300px;
+    width: $sidebar-width;
 
     > *:last-child {
       margin-bottom: 0;
@@ -208,11 +208,11 @@ body {
       0;
 
     @if $layout-reverse {
-      margin-right: 300px;
+      margin-right: $sidebar-width;
     }
 
     @else {
-      margin-left: 300px;
+      margin-left: $sidebar-width;
     }
 
     > header {
