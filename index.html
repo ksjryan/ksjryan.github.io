@@ -1,4 +1,334 @@
 ---
-layout: index
-title: Home
+layout: default
 ---
+
+<style>
+  .paper-title {
+    font-size: 1em;
+  }
+  .author {
+    font-size: 0.8em;
+  }
+  .bold-author {
+    font-size: 0.8em;
+    font-weight: bold; /* BOLD체로 변경 */
+  }
+  .conference-name {
+    font-size: 0.8em;
+    font-style: italic;
+  }
+  .links {
+    font-size: 0.8em;
+    font-style: normal;
+  }
+  hr {
+    width: 120%; /* 또는 120%로 변경 */
+    border: none;
+    border-top: 1px solid #ccc; /* 원하는 색상으로 변경 */
+    margin: 20px auto; /* 원하는 여백으로 변경 */
+  }
+  .img-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 원하는 그림자 효과 */
+  }
+  .gif-grid {
+    width: 120%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .gif-item {
+    position: relative;
+    width: 23%; /* 한 행에 4개가 들어가도록 설정 */
+    margin-bottom: 10px;
+  }
+  .gif-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 원하는 그림자 효과 */
+    border-radius: 5px; /* 둥근 모서리 적용 */
+  }
+  .gif-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 20px); /* 패딩 높이만큼 뺀 높이 */
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px; /* 둥근 모서리 적용 */
+  }
+  .gif-item:hover .overlay {
+    opacity: 1;
+  }
+
+  .publication-gif {
+    width: 400px;
+    height: auto;
+  }
+
+  .publication-table {
+    width: 110%;
+    height: auto;
+  }
+
+  .small-text {
+    font-size: 0.9em; /* Adjust the font size as needed */
+    width: 120%;
+    margin-top: -10px; /* Use a negative value to reduce the space */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .intro-text {
+    font-size: 0.9em;
+    margin-bottom: 11px; /* Adjust this value as needed */
+  }
+
+  .vision-text {
+    margin-top: 0; /* Adjust this value as needed */
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    hr {
+      width: 100%;
+    }
+    .gif-grid {
+      width: 100%;
+    }
+    .gif-item {
+      width: 45%;
+    }
+    .publication-table {
+      width: 100%;
+      height: auto;
+    }
+    .small-text {
+      width: 100%;
+      height: auto;
+    }
+    .no-border.publication-table td {
+    width: 300px;
+    }
+    .intro-text {
+    margin-bottom: 100px; /* 원하는 만큼의 큰 간격으로 설정 */
+  }
+
+  .vision-text {
+    margin-top: 100px; /* 원하는 만큼의 큰 간격으로 설정 */
+    margin-bottom: 30px; /* 원하는 만큼의 큰 간격으로 설정 */
+  }
+  }
+</style>
+
+<div id="about" style="padding-top: 0px;">
+  <img src="{{ '/images/profile.jpeg' | relative_url }}" class="img-shadow" style="width: 200px; height: auto; float: left; margin-right: 20px;">
+  <p class="intro-text">Hello! My name is Seongjun Kang, and I am currently a Ph.D. candidate at the HCIS Lab of Gwangju Institute of Science and Technology (GIST). <br></p>
+  <p class="vision-text"><strong>My vision: multisensory synchronization for advanced digital interactions</strong> <br></p>
+  <div class="small-text">My research primarily focuses on haptic technology within Virtual Reality. I am dedicated to developing hardware and software that seamlessly integrate various human senses. This involves designing innovative interfaces and exploring the potential of human somatosensory perception to create more immersive and intuitive interactions. By bridging the gap between the virtual and physical worlds, my goal is to contribute to a more nuanced and engaging user experience.</div>
+  <hr>
+</div>
+
+<div id="research" style="padding-top: 10px;">
+  <h2>Publications</h2>
+  <table class="no-border publication-table">
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/FlipPelt_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">Flip-Pelt: Motor-Driven Peltier Elements for Rapid Thermal Stimulation and Congruent Pressure Feedback in Virtual Reality<br>
+        <span class="author bold-author">Kang, S.</span>, <span class="author">Kim, G., Hwang, S., Park, J., Elsharkawy, A., Kim, S.</span><br><br>
+        <span class="conference-name">UIST 2024: The ACM Symposium on User Interface Software and Technology</span><br>
+        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3654777.3676363" target="_blank">DOI</a> | <a href="https://www.youtube.com/watch?v=YiiH59DvC0I" target="_blank">Video</a></span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/Legsense_UBICOMP.png' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">LegSense: Inducing Walking Sensation in Seated VR by Providing Movement Illusion via Electrical Muscle Stimulation<br>          
+        <span class="author">Um, J., Jeon, E., Kang, Y., </span><span class="author bold-author">Kang, S.</span><span class="author">, Elsharkawy, A., Joseph DelPreto, Wojciech Matusik, Daniela Rus, Kim, S.</span><br><br>          
+        <span class="conference-name">UbiComp Companion 2024: Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing</span><br>
+        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3675094.3678375" target="_blank">DOI</a></span></p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/Telepulse_UBICOMP.png' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">Proposal of a Framework for Enhancing Teleoperation Experience with Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality<br>          
+        <span class="author">Hwang, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Oh, J., Park, J., Shin, S., Yiyue Luo, Joseph DelPreto, Wojciech Matusik, Daniela Rus, Kim, S.</span><br><br>          
+        <span class="conference-name">UbiComp Companion 2024: Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing</span><br>
+        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3675094.3678380" target="_blank">DOI</a></span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/FlipPelt_ICRAworkshop.png' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">Dual-sided Peltier Elements for Rapid Thermal Feedback in Wearables<br>
+        <span class="author bold-author">Kang, S.</span>, <span class="author">Kim, G., Hwang, S., Park, J., Elsharkawy, A., Kim, S.</span><br><br>
+        <span class="conference-name">2024 IEEE ICRA Workshop on Wearable</span><br>
+        <span class="links"><a href="https://drive.google.com/file/d/13_wEXVlTiCLcNV0GTEyd8yVhp8l_38jP/view?usp=sharing" target="_blank">Paper</a> | <a href="https://arxiv.org/abs/2405.11807" target="_blank">DOI</a></span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/RDD_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR<br>
+        <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Hwang, S., Kim, S.</span><br><br>
+        <span class="conference-name">CHI LBW 2024: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
+        <span class="links"><a href="https://drive.google.com/file/d/1t90TAt79-KtMCIJUmf9pse8qXAtWi_NF/view?usp=sharing" target="_blank">Paper</a> | <a href="https://dl.acm.org/doi/10.1145/3613905.3650746" target="_blank">DOI</a> | <a href="https://youtu.be/o-daTAUQaJg" target="_blank">Video</a></span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">ErgoPulse: Electrifying Your Lower Body With Biomechanical Simulation-based Electrical Muscle Stimulation Haptic System in Virtual Reality<br>
+        <span class="author">Hwang, S., Oh, J., </span><span class="author bold-author">Kang, S.</span><span class="author">, Seong, M., Elsharkawy, A., Kim, S.</span><br><br>
+        <span class="conference-name">CHI 2024: ACM Conference on Human Factors in Computing Systems<br>
+        🏆 Honorable Mention Award (Top 5%)</span><br>
+        <span class="links"><a href="https://drive.google.com/file/d/1Z6_s2Me4WD4TkwpI0CUluvhQWOCb_RdU/view?usp=sharing" target="_blank">Paper</a> | <a href="https://dl.acm.org/doi/10.1145/3613904.3642008" target="_blank">DOI</a> | <a href="https://youtu.be/UBSrvx4KgOI" target="_blank">Video</a></span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/PortalDisplay_Electronics.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">How Do Background and Remote User Representations Affect Social Telepresence in Remote Collaboration?: A Study with Portal Display, a Head Pose-Responsive Video Teleconferencing System<br>
+        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K-T., Kim S. </span><br><br>
+        <span class="conference-name">Electronics. 2023; 12(20):4339</span><br>
+        <span class="links"><a href="https://drive.google.com/file/d/1P2auI62cnaEgxwQt1NNy_6uskeo3woi7/view?usp=sharing" target="_blank">Paper</a> | <a href="https://www.mdpi.com/2079-9292/12/20/4339" target="_blank">DOI</a></span></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality<br>
+        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Kim, S. (2023)</span><br><br>
+        <span class="conference-name">ISMAR 2023: IEEE International Symposium on Mixed and Augmented Reality</span><br>
+        <span class="links"><a href="https://drive.google.com/file/d/1n_AfKS4rmYOh3UP7cem2qPOz4yzuscDt/view?usp=sharing" target="_blank">Paper</a> | <a href="https://ieeexplore.ieee.org/document/10316523" target="_blank">DOI</a> | <a href="https://youtu.be/gUMXspPIGdk" target="_blank">Video</a></span></p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/GiantFinger_IEEEVRW.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">Giant Finger: Visuo-Proprioceptive Congruent Virtual Legs for Flying Actions in Virtual Reality<br>
+        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K.T., Kim, S. (2023)</span><br><br>
+        <span class="conference-name">IEEE VRW 2023: Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops</span><br>
+        <span class="links"><a href="https://drive.google.com/file/d/1il_u96bo1MeZfrRvDfA4K3VYc0n8iSut/view?usp=sharing" target="_blank">Paper</a> | <a href="https://ieeexplore.ieee.org/document/10108677" target="_blank">DOI</a></span></p>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/PortalDisplay_ICONI.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p class="paper-title">Portal Display: Screen-based 3D Stereoscopic Conferencing System for Immersive Social Telepresence<br>
+        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K., Kim, S. (2022)</span><br><br>
+        <span class="conference-name">KSII the 14th international conference on internet (ICONI) 2022 symposium<br>
+        🏆 Best Paper Award (1st)</span> <br>
+        <span class="links"><a href="https://drive.google.com/file/d/1vxHDhS7M7hwoAm0xrdxI0w_8w50lJJ1F/view" target="_blank">Paper</a></span></p>
+      </td>
+    </tr>
+    
+  </table>
+  <hr>
+</div>
+
+<div id="fun-project" style="padding-top: 10px;">
+  <h2>Fun Projects</h2>
+  
+  <div class="gif-grid">
+
+    <div class="gif-item">
+      <a href="{{ '/pages/virtual-arm-visualization' | relative_url }}">
+        <img src="{{ '/images/Virtual Arm Visualization to Reduce In-Car VR Motion Sickness.gif' | relative_url }}" alt="Virtual Arm Visualization to Reduce In-Car VR Motion Sickness">
+        <div class="overlay">Virtual arm visualization to reduce In-Car VR motion sickness</div>
+      </a>
+    </div>
+    
+    <div class="gif-item">
+      <a href="{{ '/pages/finger-based-avatar-mapping' | relative_url }}">
+        <img src="{{ '/images/Finger-based miniature avatar mapping.gif' | relative_url }}" alt="Finger-based miniature avatar mapping">
+        <div class="overlay">Finger-based miniature avatar mapping</div>
+      </a>
+    </div>
+    
+    <div class="gif-item">
+      <a href="{{ '/pages/motion-tracking-action-game' | relative_url }}">
+        <img src="{{ '/images/motion tracking action game.gif' | relative_url }}" alt="motion tracking action game">
+        <div class="overlay">Motion tracking action game</div>
+      </a>
+    </div>
+    
+    <div class="gif-item">
+      <a href="{{ '/pages/reinforcement-learning-walking' | relative_url }}">
+        <img src="{{ '/images/6 gain.gif' | relative_url }}" alt="6 gain">
+        <div class="overlay">Reinforcement learning based redirected walking</div>
+      </a>
+    </div>
+    
+    <div class="gif-item">
+      <a href="{{ '/pages/in-car-vr-contents' | relative_url }}">
+        <img src="{{ '/images/InCarVR contents.gif' | relative_url }}" alt="InCarVR Contents">
+        <div class="overlay">In-CarVR contents</div>
+      </a>
+    </div>
+    
+    <div class="gif-item">
+      <a href="{{ '/pages/xr-bus-simulator' | relative_url }}">
+        <img src="{{ '/images/Bus Simulator.gif' | relative_url }}" alt="Bus Simulator">
+        <div class="overlay">XR screen bus simulator</div>
+      </a>
+    </div>
+    
+    <div class="gif-item">
+      <a href="{{ '/pages/air-click' | relative_url }}">
+        <img src="{{ '/images/Air Click.gif' | relative_url }}" alt="Air Click">
+        <div class="overlay">Air Click</div>
+      </a>
+    </div>
+    
+    <div class="gif-item">
+      <a href="{{ '/pages/food-delivery-turtlebot' | relative_url }}">
+        <img src="{{ '/images/automatic food delivery robot.gif' | relative_url }}" alt="Automatic Food Delivery Robot">
+        <div class="overlay">Food delivery turtlebot</div>
+      </a>
+    </div>
+    
+  </div>
+  <hr>
+</div>
