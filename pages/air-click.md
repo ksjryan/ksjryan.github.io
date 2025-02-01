@@ -17,7 +17,7 @@ title: Air Click
   }
 
   .content {
-    width: 120%;
+    width: 150%;
   }
 
   .img-shadow {
