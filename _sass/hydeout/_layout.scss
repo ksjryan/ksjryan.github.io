@@ -286,7 +286,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 10px; /* 아이콘 간 간격 조정 */
+  gap: 5px; /* 아이콘 간 간격 조정 */
 
   @media (min-width: $large-breakpoint) {
     justify-content: flex-start;
