@@ -4,3 +4,73 @@
 ---
 
 @import "hydeout";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding-top: 10px;
+}
+
+.profile-img {
+  width: 200px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 120%;
+  background-color: transparent !important; /* 각 셀의 배경색을 투명색으로 설정 */
+  border: none !important; /* 표의 선 색깔을 무색으로 설정 */
+}
+
+td {
+  vertical-align: top;
+  padding: 10px;
+  background-color: transparent !important; /* 각 셀의 배경색을 투명색으로 설정 */
+  border: none !important; /* 셀의 경계선을 무색으로 설정 */
+}
+
+main.container p {
+  width: 120%; /* 최대 너비를 설정하여 읽기 쉽게 조절 */
+}
+
+#sidebar {
+  width: 50%; /* 사이드바의 기본 너비 */
+}
+
+#sidebar-icon-links {
+
+  justify-content: center; /* 아이콘들을 중앙에 정렬합니다 */
+  padding: 10px 0; /* 위아래 간격을 조정합니다 */
+}
+
+footer {
+  display: none; /* 전체 footer를 숨깁니다 */
+}
+
+/*
+/* Mobile Styles */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+   main.container p {
+    width: 100%;
+  }
+  
+  main.container {
+    width: 100%;
+    background-color: white;
+    color: black; /* main.container 내의 모든 글씨를 검정색으로 설정 */
+    padding-left: 10px; /* 좌측 여백 추가 */
+    padding-right: 10px; /* 우측 여백 추가 */
+    margin-left: auto; /* 좌측 마진을 자동으로 설정하여 가운데 정렬 */
+    margin-right: auto; /* 우측 마진을 자동으로 설정하여 가운데 정렬 */
+  }
+}
+
+*/
