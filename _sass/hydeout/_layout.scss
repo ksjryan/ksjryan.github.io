@@ -38,7 +38,7 @@ body {
 
   .site-title {
     font-family: 'Abril Fatface', serif;
-    font-size: 5pt;
+    font-size: 3.25rem;
     font-weight: normal;
     margin-bottom: $heading-spacing;
     margin-top: 0;
@@ -152,7 +152,7 @@ body {
   #sidebar,
   .home #sidebar {
     text-align: left;
-    width: $sidebar-width;
+    width: 300px;
 
     > *:last-child {
       margin-bottom: 0;
