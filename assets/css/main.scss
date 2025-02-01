@@ -38,6 +38,13 @@ main.container p {
   width: 120%; /* 최대 너비를 설정하여 읽기 쉽게 조절 */
 }
 
+#sidebar {
+  width: 250px; /* 사이드바의 기본 너비 */
+  max-width: 300px; /* 최대 너비 제한 */
+  min-width: 200px; /* 최소 너비 제한 */
+  padding: 20px; /* 내부 여백 추가 */
+}
+
 #sidebar-icon-links {
 
   justify-content: center; /* 아이콘들을 중앙에 정렬합니다 */
