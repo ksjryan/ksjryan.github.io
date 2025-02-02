@@ -58,6 +58,10 @@ footer {
   #sidebar {
     width: 100%; /* 모바일 화면에서 사이드바 너비를 40%로 설정 */
   }
+
+  #about {
+    padding-top: 10px !important; /* 모바일에서만 padding-top 적용 */
+  }
   
   table {
     width: 100%;
