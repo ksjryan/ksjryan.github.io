@@ -54,6 +54,11 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  
+  #sidebar {
+    width: 100%; /* 모바일 화면에서 사이드바 너비를 40%로 설정 */
+  }
+  
   table {
     width: 100%;
   }
