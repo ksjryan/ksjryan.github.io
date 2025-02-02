@@ -131,6 +131,10 @@ layout: default
   color: #444;
 }
 
+  .no-border-hr {
+    display: none; /* 특정 위치의 hr 제거 */
+  }
+
   /* Mobile Styles */
   @media (max-width: 768px) {
     hr {
@@ -179,9 +183,8 @@ layout: default
 </div>
 
 <div id="research" style="padding-top: 10px;">
-  <div class="section-title">Publications from PhD research: rewiring & restoring sensory gaps</div>
-  <div class="subsection-title">Full Papers</div>
-  <div style="clear: both; margin-bottom: 10px;"></div> 
+  <h2 class="section-title">Publications from PhD research: rewiring & restoring sensory gaps</h2>
+  <h3 class="subsection-title">Full Papers</h3>
   <table class="no-border publication-table">
     <tr>
       <td style="width: 400px;">
@@ -225,8 +228,12 @@ layout: default
         </p>
       </td>
     </tr>
-    
-<div class="subsection-title">Posters, Demos, and Workshop Papers</div>
+  </table>
+    <hr>
+ </div>
+
+<h3 class="subsection-title">Posters, Demos, and Workshop Papers</h3>
+<table class="no-border publication-table">
     <tr>
       <td style="width: 400px;">
         <img src="{{ '/images/Legsense_UBICOMP.png' | relative_url }}" class="img-shadow publication-gif">
