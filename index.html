@@ -150,16 +150,17 @@ layout: default
   }
 
   /* =====================================================
-     NEW (only affects #research publications)
+     ONLY affects #research publications
      - Stack layout ONLY for First/Co-first Author full papers
      - Co-author full papers + Posters return to 2-column
+     - Add callout cards for First/Co-first papers
      ===================================================== */
 
   /* Stack table inside #research: widen like hr */
   #research .publication-table-stack {
     width: 150%;
     border-collapse: separate;
-    border-spacing: 0 18px;
+    border-spacing: 0 14px; /* a bit tighter for card look */
   }
 
   #research .publication-table-stack .publication-item {
@@ -168,40 +169,50 @@ layout: default
     align-items: stretch;
     gap: 12px;
     width: 100%;
+
+    /* Callout card */
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-left: 6px solid rgb(254, 192, 0);
+    border-radius: 10px;
+    padding: 16px 16px 14px 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
   }
 
   #research .publication-table-stack .publication-media,
   #research .publication-table-stack .publication-info {
     width: 100%;
-    min-width: 0; /* (중요) flex 컨테이너에서 텍스트 줄바꿈 막히는 이슈 방지 */
+    min-width: 0; /* allow wrapping inside flex */
   }
 
-  /* 1) FIRST-AUTHOR STACK IMAGE: 80% width, LEFT-ALIGNED */
+  /* First/Co-first image: 80%, LEFT-aligned */
   #research .publication-table-stack .publication-gif {
     width: 80%;
     max-width: 80%;
     height: auto;
     display: block;
-    margin: 0; /* 가운데 정렬 금지 -> 왼쪽 정렬 */
+    margin: 0; /* left */
   }
 
   #research .publication-table-stack .publication-info p {
     margin: 0;
     max-width: 100%;
-    white-space: normal !important; /* 테마에서 nowrap 걸려도 무시 */
+    white-space: normal !important;
   }
 
-  /* 2) FIRST-AUTHOR STACK TITLE: bigger + force wrap */
+  /* First/Co-first title: bigger + force wrap + smaller gap to authors */
   #research .publication-table-stack .paper-title {
-    font-size: 1.5em;               /* 요청: 조금 더 키움 */
-    line-height: 1.25;
+    font-size: 1.5em;
+    line-height: 1.2;
+
     display: block;
     max-width: 100%;
-    white-space: normal !important; /* 테마 영향 무시 */
+    white-space: normal !important;
     overflow-wrap: anywhere !important;
     word-break: break-word !important;
     hyphens: auto;
-    margin-bottom: 14px;
+
+    margin-bottom: 6px !important; /* FIX: reduce title-author gap */
   }
 
   /* Co-author (2-column) table inside #research */
@@ -254,11 +265,11 @@ layout: default
       width: 100%;
     }
 
-    /* 1저자 stack 이미지: 모바일에서는 100%로 */
+    /* stack image on mobile: 100% */
     #research .publication-table-stack .publication-gif {
       width: 100%;
       max-width: 100%;
-      margin: 0; /* 모바일도 왼쪽 정렬 */
+      margin: 0; /* left */
     }
 
     /* On mobile: make ALL #research tables stack for readability */
@@ -294,7 +305,7 @@ layout: default
 <div id="research" style="padding-top: 10px;">
   <h2 class="section-title">Publications from PhD research: rewiring & restoring sensory gaps</h2>
 
-  <!-- 1) First/Co-first Author (STACK, 80% IMAGE, LEFT-ALIGNED) -->
+  <!-- 1) First/Co-first Author (STACK + CALLOUT CARD) -->
   <h3 class="subsection-title">Full Papers — First Author</h3>
   <table class="no-border publication-table publication-table-stack">
 
@@ -549,7 +560,7 @@ layout: default
 </div>
 <!-- ===================================================== -->
 
-<!-- 아래는 "원본 그대로" 유지 (변경 없음) -->
+<!-- BELOW: original 그대로 유지 -->
 <div id="research3" style="padding-top: 10px;">
 <h2 class="section-title">More Publications</h2>
 <table class="no-border publication-table">
