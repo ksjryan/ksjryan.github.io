@@ -82,12 +82,12 @@ layout: default
     padding: 10px;
     border-radius: 5px; /* 둥근 모서리 적용 */
   }
-  
+
   .gif-item:hover .overlay {
     opacity: 1;
   }
 
-   .publication-table {
+  .publication-table {
     width: 125%;
     height: auto;
   }
@@ -122,34 +122,57 @@ layout: default
     font-weight: bold; /* BOLD체로 변경 */
     color: #777777;
   }
-  
-  .section-title {
-  font-size: 1.5em;
-  margin-top: 20px;
-  color: #444444; /* 원하는 색상 */
-  width: 150%;
-  font-weight: 300;
-}
 
-.subsection-title {
-  font-size: 1.2em;
-  margin-top: 15px;
-  color: #444444;
-  font-weight: 300;
-}
+  .section-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #444444; /* 원하는 색상 */
+    width: 150%;
+    font-weight: 300;
+  }
+
+  .subsection-title {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #444444;
+    font-weight: 300;
+  }
 
   .no-border-hr {
     display: none; /* 특정 위치의 hr 제거 */
   }
 
   .inline-hr {
-  display: inline-block;
-  width: 100%;
-  border: none;
-  border-top: 1px solid #ccc; /* 연한 회색 줄 */
-  margin: 10px 0; /* 위아래 여백 조정 */
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc; /* 연한 회색 줄 */
+    margin: 10px 0; /* 위아래 여백 조정 */
   }
 
+  /* =====================================================
+     NEW (only affects #research publications stacking)
+     ===================================================== */
+  #research .publication-table {
+    border-collapse: separate;
+    border-spacing: 0 18px; /* 블록 사이 간격 */
+  }
+  #research .publication-item {
+    display: flex;
+    flex-direction: column;   /* 이미지 위, 텍스트 아래 */
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+  #research .publication-media {
+    width: 100%;
+  }
+  #research .publication-info {
+    width: 100%;
+  }
+  #research .publication-info p {
+    margin: 0;
+  }
 
   /* Mobile Styles */
   @media (max-width: 768px) {
@@ -171,25 +194,30 @@ layout: default
       height: auto;
     }
     .no-border.publication-table td {
-    width: 300px;
+      width: 300px;
     }
 
-  .vision-text {
-    margin-top: 50px; /* 원하는 만큼의 큰 간격으로 설정 */
-    margin-bottom: 20px; /* 원하는 만큼의 큰 간격으로 설정 */
-  }
+    .vision-text {
+      margin-top: 50px; /* 원하는 만큼의 큰 간격으로 설정 */
+      margin-bottom: 20px; /* 원하는 만큼의 큰 간격으로 설정 */
+    }
 
-  .big-text {
-    font-size: 2.0em; /* Adjust the font size as needed */
-    width: 150%;
-    font-weight: bold; /* BOLD체로 변경 */
-    margin-bottom: 7px;
-  }
-    
-  .section-title {
-    width: 100%;
-  }
-    
+    .big-text {
+      font-size: 2.0em; /* Adjust the font size as needed */
+      width: 150%;
+      font-weight: bold; /* BOLD체로 변경 */
+      margin-bottom: 7px;
+    }
+
+    .section-title {
+      width: 100%;
+    }
+
+    /* research 섹션에서만 이미지가 모바일에서 100% 폭으로 자연스럽게 */
+    #research .publication-gif {
+      width: 100%;
+      max-width: 420px;
+    }
   }
 </style>
 
@@ -202,230 +230,301 @@ layout: default
   <hr>
 </div>
 
+<!-- =====================================================
+     MODIFIED ONLY: #research section (stack image + text)
+     ===================================================== -->
 <div id="research" style="padding-top: 10px;">
   <h2 class="section-title">Publications from PhD research: rewiring & restoring sensory gaps</h2>
   <h3 class="subsection-title">Full Papers</h3>
+
   <table class="no-border publication-table">
 
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/Defying Gravity_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Defying Gravity: Towards Gravitoinertial Retargeting of Acceleration for Virtual Vertical Motion in In-Car VR</span><br>
-        <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Yeo, D., Kim, G., Um, J., Park, J., Kim, S.</span><br><br>
-        <span class="colored-conference-name">ISMAR 2025</span><span class="conference-name">: IEEE International Symposium on Mixed and Augmented Reality</span><br>
-        <span class="links"><a href="https://ieeexplore.ieee.org/document/11220362" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=3cCIikQ7xt0" target="_blank">Video</a></span>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/EarPressureVR_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">EarPressure VR: Ear Canal Pressure Feedback for Enhancing Environmental Presence in Virtual Reality</span><br>
-        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Gim, B., Park, J., Shin, S., Kim, S.</span><br><br>
-        <span class="colored-conference-name">UIST 2025</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3746059.3747618" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=c8Zx0tn4t0w" target="_blank">Video</a></span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/Defying Gravity_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Defying Gravity: Towards Gravitoinertial Retargeting of Acceleration for Virtual Vertical Motion in In-Car VR</span><br>
+              <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Yeo, D., Kim, G., Um, J., Park, J., Kim, S.</span><br><br>
+              <span class="colored-conference-name">ISMAR 2025</span><span class="conference-name">: IEEE International Symposium on Mixed and Augmented Reality</span><br>
+              <span class="links"><a href="https://ieeexplore.ieee.org/document/11220362" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=3cCIikQ7xt0" target="_blank">Video</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
 
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/AttraCar_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">AttraCar: Multisensory In-Car VR with Thermal, Airflow, and Motion Feedback through Built-In Vehicle Systems</span><br>
-        <span class="author">Yeo, D., Kim, G., Oh, M., Park, J., Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Elsharkawy, A., Kim, S.</span><br><br>
-        <span class="colored-conference-name">UIST 2025</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology<br>
-        🏆🏆 People's Choice Best Demo, Demo Honorable Mention</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3746059.3747642" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=JlWWLTflcx0" target="_blank">Video</a></span>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/TelePulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">TelePulse: Enhancing the Teleoperation Experience through Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality</span><br>
-        <span class="author">Hwang, S.*, </span><span class="author bold-author">Kang, S.*</span><span class="author">, Oh, J.*, Park, J., Shin, S., Luo, Y., DelPreto, J., Lee, S., Lee, K., Matusik, W., Rus, D., Kim, S. (* equal contribution)</span><br><br>
-        <span class="colored-conference-name">CHI 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems<br>
-        🏆 Best Paper Award (Top 1%)</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3706598.3713767" target="_blank">Paper</a> </span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/EarPressureVR_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">EarPressure VR: Ear Canal Pressure Feedback for Enhancing Environmental Presence in Virtual Reality</span><br>
+              <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Gim, B., Park, J., Shin, S., Kim, S.</span><br><br>
+              <span class="colored-conference-name">UIST 2025</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3746059.3747618" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=c8Zx0tn4t0w" target="_blank">Video</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
 
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/Iwanttobreakfree_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">I Want to Break Free: Enabling User-Applied Active Locomotion in In-Car VR through Contextual Cues</span><br>
-        <span class="author">Gim, B., Hwang, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Kim, S.</span><br><br>
-        <span class="colored-conference-name">CHI 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems </span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3706598.3713373" target="_blank">Paper</a> </span>
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/FlipPelt_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Flip-Pelt: Motor-Driven Peltier Elements for Rapid Thermal Stimulation and Congruent Pressure Feedback in Virtual Reality</span><br>
-        <span class="author bold-author">Kang, S.</span>, <span class="author">Kim, G., Hwang, S., Park, J., Elsharkawy, A., Kim, S.</span><br><br>
-        <span class="colored-conference-name">UIST 2024</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3654777.3676363" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=YiiH59DvC0I" target="_blank">Video</a></span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/AttraCar_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">AttraCar: Multisensory In-Car VR with Thermal, Airflow, and Motion Feedback through Built-In Vehicle Systems</span><br>
+              <span class="author">Yeo, D., Kim, G., Oh, M., Park, J., Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Elsharkawy, A., Kim, S.</span><br><br>
+              <span class="colored-conference-name">UIST 2025</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology<br>
+              🏆🏆 People's Choice Best Demo, Demo Honorable Mention</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3746059.3747642" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=JlWWLTflcx0" target="_blank">Video</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
 
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">ErgoPulse: Electrifying Your Lower Body With Biomechanical Simulation-based Electrical Muscle Stimulation Haptic System in Virtual Reality</span><br>
-        <span class="author">Hwang, S., Oh, J., </span><span class="author bold-author">Kang, S.</span><span class="author">, Seong, M., Elsharkawy, A., Kim, S.</span><br><br>
-        <span class="colored-conference-name">CHI 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems<br>
-        🏆 Honorable Mention Award (Top 5%)</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613904.3642008" target="_blank">Paper</a> | <a href="https://youtu.be/UBSrvx4KgOI" target="_blank">Video</a></span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/TelePulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">TelePulse: Enhancing the Teleoperation Experience through Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality</span><br>
+              <span class="author">Hwang, S.*, </span><span class="author bold-author">Kang, S.*</span><span class="author">, Oh, J.*, Park, J., Shin, S., Luo, Y., DelPreto, J., Lee, S., Lee, K., Matusik, W., Rus, D., Kim, S. (* equal contribution)</span><br><br>
+              <span class="colored-conference-name">CHI 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems<br>
+              🏆 Best Paper Award (Top 1%)</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3706598.3713767" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
 
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality</span><br>
-        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Kim, S. (2023)</span><br><br>
-        <span class="colored-conference-name">ISMAR 2023</span><span class="conference-name">: IEEE International Symposium on Mixed and Augmented Reality</span><br>
-        <span class="links"><a href="https://ieeexplore.ieee.org/document/10316523" target="_blank">Paper</a> | <a href="https://youtu.be/gUMXspPIGdk" target="_blank">Video</a></span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/Iwanttobreakfree_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">I Want to Break Free: Enabling User-Applied Active Locomotion in In-Car VR through Contextual Cues</span><br>
+              <span class="author">Gim, B., Hwang, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Kim, S.</span><br><br>
+              <span class="colored-conference-name">CHI 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems </span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3706598.3713373" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/FlipPelt_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Flip-Pelt: Motor-Driven Peltier Elements for Rapid Thermal Stimulation and Congruent Pressure Feedback in Virtual Reality</span><br>
+              <span class="author bold-author">Kang, S.</span>, <span class="author">Kim, G., Hwang, S., Park, J., Elsharkawy, A., Kim, S.</span><br><br>
+              <span class="colored-conference-name">UIST 2024</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3654777.3676363" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=YiiH59DvC0I" target="_blank">Video</a></span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">ErgoPulse: Electrifying Your Lower Body With Biomechanical Simulation-based Electrical Muscle Stimulation Haptic System in Virtual Reality</span><br>
+              <span class="author">Hwang, S., Oh, J., </span><span class="author bold-author">Kang, S.</span><span class="author">, Seong, M., Elsharkawy, A., Kim, S.</span><br><br>
+              <span class="colored-conference-name">CHI 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems<br>
+              🏆 Honorable Mention Award (Top 5%)</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613904.3642008" target="_blank">Paper</a> | <a href="https://youtu.be/UBSrvx4KgOI" target="_blank">Video</a></span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality</span><br>
+              <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Kim, S. (2023)</span><br><br>
+              <span class="colored-conference-name">ISMAR 2023</span><span class="conference-name">: IEEE International Symposium on Mixed and Augmented Reality</span><br>
+              <span class="links"><a href="https://ieeexplore.ieee.org/document/10316523" target="_blank">Paper</a> | <a href="https://youtu.be/gUMXspPIGdk" target="_blank">Video</a></span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
   </table>
 
-<h3 class="subsection-title">Posters, Demos, and Workshop Papers</h3>
-<table class="no-border publication-table">
+  <h3 class="subsection-title">Posters, Demos, and Workshop Papers</h3>
+
+  <table class="no-border publication-table">
+
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/Magneto_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Magneto: Enabling Multimodal Haptic Feedback on Paper through Magnetic Fields</span><br>
-        <span class="author">Park, J., Shin, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Kim, S.</span><br><br>
-        <span class="colored-conference-name">CHI LBW 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3706599.3720242" target="_blank">Paper</a> </span>
-        </p>
-      </td>
-    </tr>
-  
-      <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/TeleHopper_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">TeleHopper: Simulating a Jumping Sensation as Proprioceptive Feedback for Teleportation in Virtual Reality via Electrical Muscle Stimulation</span><br>
-        <span class="author">Um, J., Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kang, Y., Jeon, E., Kim, S.</span><br><br>
-        <span class="colored-conference-name">CHI LBW 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3706599.3720248" target="_blank">Paper</a> </span>
-        </p>
-      </td>
-    </tr>
-  
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/Legsense_UBICOMP.png' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">LegSense: Inducing Walking Sensation in Seated VR by Providing Movement Illusion via Electrical Muscle Stimulation</span><br>
-        <span class="author">Um, J., Jeon, E., Kang, Y., </span><span class="author bold-author">Kang, S.</span><span class="author">, Elsharkawy, A., Joseph DelPreto, Wojciech Matusik, Daniela Rus, Kim, S.</span><br><br>
-        <span class="colored-conference-name">UbiComp Companion 2024</span><span class="conference-name">: Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3675094.3678375" target="_blank">Paper</a></span>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/Telepulse_UBICOMP.png' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Proposal of a Framework for Enhancing Teleoperation Experience with Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality</span><br>          
-        <span class="author">Hwang, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Oh, J., Park, J., Shin, S., Yiyue Luo, Joseph DelPreto, Wojciech Matusik, Daniela Rus, Kim, S.</span><br><br>          
-        <span class="colored-conference-name">UbiComp Companion 2024</span><span class="conference-name">: Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3675094.3678380" target="_blank">Paper</a></span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/Magneto_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Magneto: Enabling Multimodal Haptic Feedback on Paper through Magnetic Fields</span><br>
+              <span class="author">Park, J., Shin, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Kim, S.</span><br><br>
+              <span class="colored-conference-name">CHI LBW 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3706599.3720242" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
 
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/FlipPelt_ICRAworkshop.png' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Dual-sided Peltier Elements for Rapid Thermal Feedback in Wearables</span><br>
-        <span class="author bold-author">Kang, S.</span>, <span class="author">Kim, G., Hwang, S., Park, J., Elsharkawy, A., Kim, S.</span><br><br>
-        <span class="colored-conference-name">2024 IEEE ICRA Workshop</span><span class="conference-name"> on Wearable</span><br>
-        <span class="links"><a href="https://arxiv.org/abs/2405.11807" target="_blank">Paper</a></span>
-        </p>
-      </td>
-    </tr>
-
-    <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/RDD_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR</span><br>
-        <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Hwang, S., Kim, S.</span><br><br>
-        <span class="colored-conference-name">CHI LBW 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
-        <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613905.3650746" target="_blank">Paper</a> | <a href="https://youtu.be/o-daTAUQaJg" target="_blank">Video</a></span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/TeleHopper_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">TeleHopper: Simulating a Jumping Sensation as Proprioceptive Feedback for Teleportation in Virtual Reality via Electrical Muscle Stimulation</span><br>
+              <span class="author">Um, J., Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kang, Y., Jeon, E., Kim, S.</span><br><br>
+              <span class="colored-conference-name">CHI LBW 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3706599.3720248" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
 
     <tr>
-      <td style="width: 400px;">
-        <img src="{{ '/images/GiantFinger_IEEEVRW.gif' | relative_url }}" class="img-shadow publication-gif">
-      </td>
-      <td>
-        <p>
-        <span class="paper-title">Giant Finger: Visuo-Proprioceptive Congruent Virtual Legs for Flying Actions in Virtual Reality</span><br>
-        <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K.T., Kim, S. (2023)</span><br><br>
-        <span class="colored-conference-name">IEEE VRW 2023</span><span class="conference-name">: Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops</span><br>
-        <span class="links"><a href="https://ieeexplore.ieee.org/document/10108677" target="_blank">Paper</a></span>
-        </p>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/Legsense_UBICOMP.png' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">LegSense: Inducing Walking Sensation in Seated VR by Providing Movement Illusion via Electrical Muscle Stimulation</span><br>
+              <span class="author">Um, J., Jeon, E., Kang, Y., </span><span class="author bold-author">Kang, S.</span><span class="author">, Elsharkawy, A., Joseph DelPreto, Wojciech Matusik, Daniela Rus, Kim, S.</span><br><br>
+              <span class="colored-conference-name">UbiComp Companion 2024</span><span class="conference-name">: Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3675094.3678375" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
       </td>
     </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/Telepulse_UBICOMP.png' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Proposal of a Framework for Enhancing Teleoperation Experience with Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality</span><br>
+              <span class="author">Hwang, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Oh, J., Park, J., Shin, S., Yiyue Luo, Joseph DelPreto, Wojciech Matusik, Daniela Rus, Kim, S.</span><br><br>
+              <span class="colored-conference-name">UbiComp Companion 2024</span><span class="conference-name">: Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3675094.3678380" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/FlipPelt_ICRAworkshop.png' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Dual-sided Peltier Elements for Rapid Thermal Feedback in Wearables</span><br>
+              <span class="author bold-author">Kang, S.</span>, <span class="author">Kim, G., Hwang, S., Park, J., Elsharkawy, A., Kim, S.</span><br><br>
+              <span class="colored-conference-name">2024 IEEE ICRA Workshop</span><span class="conference-name"> on Wearable</span><br>
+              <span class="links"><a href="https://arxiv.org/abs/2405.11807" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/RDD_CHILBW.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR</span><br>
+              <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Hwang, S., Kim, S.</span><br><br>
+              <span class="colored-conference-name">CHI LBW 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
+              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613905.3650746" target="_blank">Paper</a> | <a href="https://youtu.be/o-daTAUQaJg" target="_blank">Video</a></span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="publication-item">
+          <div class="publication-media">
+            <img src="{{ '/images/GiantFinger_IEEEVRW.gif' | relative_url }}" class="img-shadow publication-gif">
+          </div>
+          <div class="publication-info">
+            <p>
+              <span class="paper-title">Giant Finger: Visuo-Proprioceptive Congruent Virtual Legs for Flying Actions in Virtual Reality</span><br>
+              <span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Lee, K.T., Kim, S. (2023)</span><br><br>
+              <span class="colored-conference-name">IEEE VRW 2023</span><span class="conference-name">: Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops</span><br>
+              <span class="links"><a href="https://ieeexplore.ieee.org/document/10108677" target="_blank">Paper</a></span>
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
   </table>
-    <hr>
- </div>
-    
+
+  <hr>
+</div>
+<!-- ===================================================== -->
+
+<!-- 아래는 "원본 그대로" 유지 (변경 없음) -->
 <div id="research3" style="padding-top: 10px;">
 <h2 class="section-title">More Publications</h2>
 <table class="no-border publication-table">
