@@ -14,18 +14,18 @@ layout: default
   }
   .bold-author {
     font-size: 1em;
-    font-weight: bold; /* BOLD체로 변경 */
-    background-color: rgb(220, 220, 220); /* 연한 회색 바탕 */
-    padding: 2px 5px; /* 텍스트와 배경 사이 여백 추가 */
-    border-radius: 5px; /* 배경을 둥글게 */
+    font-weight: bold;
+    background-color: rgb(220, 220, 220);
+    padding: 2px 5px;
+    border-radius: 5px;
   }
   .colored-conference-name {
     font-size: 1em;
-    font-weight: bold; /* BOLD체로 변경 */
+    font-weight: bold;
     font-style: italic;
-    background-color: rgb(254, 192, 0); /* 원하는 RGB 값 */
-    padding: 2px 5px; /* 텍스트와 배경 사이 여백 추가 */
-    border-radius: 5px; /* 배경을 둥글게 */
+    background-color: rgb(254, 192, 0);
+    padding: 2px 5px;
+    border-radius: 5px;
   }
   .conference-name {
     font-size: 1em;
@@ -36,13 +36,13 @@ layout: default
     font-style: normal;
   }
   hr {
-    width: 150%; /* 또는 150%로 변경 */
+    width: 150%;
     border: none;
-    border-top: 1px solid #ccc; /* 원하는 색상으로 변경 */
-    margin: 20px auto; /* 원하는 여백으로 변경 */
+    border-top: 1px solid #ccc;
+    margin: 20px auto;
   }
   .img-shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 원하는 그림자 효과 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .gif-grid {
     width: 150%;
@@ -54,22 +54,22 @@ layout: default
   }
   .gif-item {
     position: relative;
-    width: 23%; /* 한 행에 4개가 들어가도록 설정 */
+    width: 23%;
     margin-bottom: 10px;
   }
   .gif-item img {
     width: 100%;
     height: auto;
     display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 원하는 그림자 효과 */
-    border-radius: 5px; /* 둥근 모서리 적용 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
   .gif-item .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 20px); /* 패딩 높이만큼 뺀 높이 */
+    height: calc(100% - 20px);
     background: rgba(0, 0, 0, 0.3);
     color: white;
     display: flex;
@@ -80,9 +80,8 @@ layout: default
     font-size: 1em;
     text-align: center;
     padding: 10px;
-    border-radius: 5px; /* 둥근 모서리 적용 */
+    border-radius: 5px;
   }
-
   .gif-item:hover .overlay {
     opacity: 1;
   }
@@ -98,35 +97,35 @@ layout: default
   }
 
   .big-text {
-    font-size: 2.0em; /* Adjust the font size as needed */
+    font-size: 2.0em;
     width: 150%;
-    font-weight: bold; /* BOLD체로 변경 */
+    font-weight: bold;
     margin-bottom: -1px;
   }
 
   .small-text {
-    font-size: 0.9em; /* Adjust the font size as needed */
+    font-size: 0.9em;
     width: 150%;
-    margin-top: -10px; /* Use a negative value to reduce the space */
-    margin-bottom: 0; /* Remove bottom margin */
+    margin-top: -10px;
+    margin-bottom: 0;
   }
 
   .intro-text {
     font-size: 0.9em;
     width: 150%;
-    margin-bottom: 11px; /* Adjust this value as needed */
+    margin-bottom: 11px;
   }
 
   .vision-text {
-    margin-top: 2px; /* Adjust this value as needed */
-    font-weight: bold; /* BOLD체로 변경 */
+    margin-top: 2px;
+    font-weight: bold;
     color: #777777;
   }
 
   .section-title {
     font-size: 1.5em;
     margin-top: 20px;
-    color: #444444; /* 원하는 색상 */
+    color: #444444;
     width: 150%;
     font-weight: 300;
   }
@@ -139,15 +138,15 @@ layout: default
   }
 
   .no-border-hr {
-    display: none; /* 특정 위치의 hr 제거 */
+    display: none;
   }
 
   .inline-hr {
     display: inline-block;
     width: 100%;
     border: none;
-    border-top: 1px solid #ccc; /* 연한 회색 줄 */
-    margin: 10px 0; /* 위아래 여백 조정 */
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
   }
 
   /* =====================================================
@@ -174,29 +173,34 @@ layout: default
   #research .publication-table-stack .publication-media,
   #research .publication-table-stack .publication-info {
     width: 100%;
+    min-width: 0; /* (중요) flex 컨테이너에서 텍스트 줄바꿈 막히는 이슈 방지 */
   }
 
-  /* 1) FIRST-AUTHOR STACK IMAGE: 80% width + centered */
+  /* 1) FIRST-AUTHOR STACK IMAGE: 80% width, LEFT-ALIGNED */
   #research .publication-table-stack .publication-gif {
     width: 80%;
     max-width: 80%;
     height: auto;
     display: block;
-    margin: 0 auto; /* center */
+    margin: 0; /* 가운데 정렬 금지 -> 왼쪽 정렬 */
   }
 
   #research .publication-table-stack .publication-info p {
     margin: 0;
+    max-width: 100%;
+    white-space: normal !important; /* 테마에서 nowrap 걸려도 무시 */
   }
 
-  /* 2) FIRST-AUTHOR STACK TITLE: bigger + wrap nicely */
+  /* 2) FIRST-AUTHOR STACK TITLE: bigger + force wrap */
   #research .publication-table-stack .paper-title {
-    font-size: 1.35em;         /* slightly bigger */
+    font-size: 1.5em;               /* 요청: 조금 더 키움 */
     line-height: 1.25;
-    display: block;            /* so wrapping is reliable */
-    white-space: normal;       /* allow wrap */
-    overflow-wrap: anywhere;   /* prevent overflow */
-    word-break: break-word;    /* fallback */
+    display: block;
+    max-width: 100%;
+    white-space: normal !important; /* 테마 영향 무시 */
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    hyphens: auto;
     margin-bottom: 14px;
   }
 
@@ -250,10 +254,11 @@ layout: default
       width: 100%;
     }
 
-    /* 1저자 stack 이미지: 모바일에서는 100%로 (가독성) */
+    /* 1저자 stack 이미지: 모바일에서는 100%로 */
     #research .publication-table-stack .publication-gif {
       width: 100%;
       max-width: 100%;
+      margin: 0; /* 모바일도 왼쪽 정렬 */
     }
 
     /* On mobile: make ALL #research tables stack for readability */
@@ -289,7 +294,7 @@ layout: default
 <div id="research" style="padding-top: 10px;">
   <h2 class="section-title">Publications from PhD research: rewiring & restoring sensory gaps</h2>
 
-  <!-- 1) First/Co-first Author (STACK, 80% IMAGE) -->
+  <!-- 1) First/Co-first Author (STACK, 80% IMAGE, LEFT-ALIGNED) -->
   <h3 class="subsection-title">Full Papers — First Author</h3>
   <table class="no-border publication-table publication-table-stack">
 
@@ -356,7 +361,7 @@ layout: default
       <td colspan="2">
         <div class="publication-item">
           <div class="publication-media">
-            <img src="{{ '/images/GiantFinger_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
+            <img src="{{ '/images/GiantFinger_ISMAR.png' | relative_url }}" class="img-shadow publication-gif">
           </div>
           <div class="publication-info">
             <p>
@@ -516,7 +521,7 @@ layout: default
       </td>
       <td>
         <p>
-          <span class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR through Contextual Cues</span><br>
+          <span class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR</span><br>
           <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Hwang, S., Kim, S.</span><br><br>
           <span class="colored-conference-name">CHI LBW 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
           <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613905.3650746" target="_blank">Paper</a> | <a href="https://youtu.be/o-daTAUQaJg" target="_blank">Video</a></span>
