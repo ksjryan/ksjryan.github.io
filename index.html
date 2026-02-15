@@ -151,42 +151,48 @@ layout: default
   }
 
   /* =====================================================
-     NEW (only affects #research publications stacking)
-     - 이미지 위 / 텍스트 아래
-     - PC에서도 이미지 폭 "꽉 차게"
+     NEW (only affects #research publications)
+     - Stack layout (image above text) ONLY for:
+       1) First/Co-first Author full papers
+       2) Posters/Demos/Workshop papers
+     - Co-author full papers return to 2-column layout
      ===================================================== */
 
-  /* #research 영역에서는 hr처럼 전체 폭 넓게 */
-  #research .publication-table {
+  /* Stack tables inside #research: widen like hr */
+  #research .publication-table-stack {
     width: 150%;
     border-collapse: separate;
-    border-spacing: 0 18px; /* 논문 블록 간격 */
+    border-spacing: 0 18px;
   }
 
-  /* 1개 논문 블록 */
-  #research .publication-item {
+  #research .publication-table-stack .publication-item {
     display: flex;
-    flex-direction: column; /* 이미지 위, 텍스트 아래 */
-    align-items: stretch;   /* 중요: stretch -> 이미지가 가로로 꽉 참 */
+    flex-direction: column;
+    align-items: stretch;  /* image fills width */
     gap: 12px;
     width: 80%;
   }
 
-  #research .publication-media,
-  #research .publication-info {
+  #research .publication-table-stack .publication-media,
+  #research .publication-table-stack .publication-info {
     width: 100%;
   }
 
-  /* 핵심: 기존 .publication-gif(400px 제한)을 #research에서만 무력화 */
-  #research .publication-gif {
+  /* IMPORTANT: only stack tables override image size */
+  #research .publication-table-stack .publication-gif {
     width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
   }
 
-  #research .publication-info p {
+  #research .publication-table-stack .publication-info p {
     margin: 0;
+  }
+
+  /* Co-author (2-column) table inside #research: keep original look */
+  #research .publication-table-two {
+    width: 125%;
   }
 
   /* Mobile Styles */
@@ -213,14 +219,14 @@ layout: default
     }
 
     .vision-text {
-      margin-top: 50px; /* 원하는 만큼의 큰 간격으로 설정 */
-      margin-bottom: 20px; /* 원하는 만큼의 큰 간격으로 설정 */
+      margin-top: 50px;
+      margin-bottom: 20px;
     }
 
     .big-text {
-      font-size: 2.0em; /* Adjust the font size as needed */
+      font-size: 2.0em;
       width: 150%;
-      font-weight: bold; /* BOLD체로 변경 */
+      font-weight: bold;
       margin-bottom: 7px;
     }
 
@@ -228,15 +234,26 @@ layout: default
       width: 100%;
     }
 
-    /* 모바일에선 research 테이블도 overflow 방지 위해 100% */
-    #research .publication-table {
+    /* research tables fit mobile */
+    #research .publication-table-stack,
+    #research .publication-table-two {
       width: 100%;
     }
 
-    /* 모바일에서도 꽉 차게 */
-    #research .publication-gif {
+    /* On mobile: make co-author (2-column) table stack for readability */
+    #research .publication-table-two tr {
+      display: block;
+      margin-bottom: 18px;
+    }
+    #research .publication-table-two td {
+      display: block;
+      width: 100% !important;
+    }
+    #research .publication-table-two .publication-gif {
       width: 100%;
       max-width: 100%;
+      height: auto;
+      display: block;
     }
   }
 </style>
@@ -251,37 +268,21 @@ layout: default
 </div>
 
 <!-- =====================================================
-     MODIFIED ONLY: #research section (stack + full-width image)
+     MODIFIED ONLY: #research section
      ===================================================== -->
 <div id="research" style="padding-top: 10px;">
   <h2 class="section-title">Publications from PhD research: rewiring & restoring sensory gaps</h2>
-  <h3 class="subsection-title">Full Papers</h3>
 
-  <table class="no-border publication-table">
+  <!-- 1) First/Co-first Author (STACK, FULL WIDTH IMAGE) -->
+  <h3 class="subsection-title">Full Papers — First/Co-first Author</h3>
+  <table class="no-border publication-table publication-table-stack">
 
+    <!-- EarPressure VR (1st author) -->
     <tr>
       <td colspan="2">
         <div class="publication-item">
           <div class="publication-media">
-            <img src="{{ '/images/Defying Gravity_ISMAR.png' | relative_url }}" class="img-shadow publication-gif">
-          </div>
-          <div class="publication-info">
-            <p>
-              <span class="paper-title">Defying Gravity: Towards Gravitoinertial Retargeting of Acceleration for Virtual Vertical Motion in In-Car VR</span><br>
-              <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Yeo, D., Kim, G., Um, J., Park, J., Kim, S.</span><br><br>
-              <span class="colored-conference-name">ISMAR 2025</span><span class="conference-name">: IEEE International Symposium on Mixed and Augmented Reality</span><br>
-              <span class="links"><a href="https://ieeexplore.ieee.org/document/11220362" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=3cCIikQ7xt0" target="_blank">Video</a></span>
-            </p>
-          </div>
-        </div>
-      </td>
-    </tr>
-
-    <tr>
-      <td colspan="2">
-        <div class="publication-item">
-          <div class="publication-media">
-            <img src="{{ '/images/EarPressureVR_UIST.png' | relative_url }}" class="img-shadow publication-gif">
+            <img src="{{ '/images/EarPressureVR_UIST.jpg' | relative_url }}" class="img-shadow publication-gif">
           </div>
           <div class="publication-info">
             <p>
@@ -295,25 +296,7 @@ layout: default
       </td>
     </tr>
 
-    <tr>
-      <td colspan="2">
-        <div class="publication-item">
-          <div class="publication-media">
-            <img src="{{ '/images/AttraCar_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
-          </div>
-          <div class="publication-info">
-            <p>
-              <span class="paper-title">AttraCar: Multisensory In-Car VR with Thermal, Airflow, and Motion Feedback through Built-In Vehicle Systems</span><br>
-              <span class="author">Yeo, D., Kim, G., Oh, M., Park, J., Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Elsharkawy, A., Kim, S.</span><br><br>
-              <span class="colored-conference-name">UIST 2025</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology<br>
-              🏆🏆 People's Choice Best Demo, Demo Honorable Mention</span><br>
-              <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3746059.3747642" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=JlWWLTflcx0" target="_blank">Video</a></span>
-            </p>
-          </div>
-        </div>
-      </td>
-    </tr>
-
+    <!-- TelePulse (co-first author) -->
     <tr>
       <td colspan="2">
         <div class="publication-item">
@@ -333,24 +316,7 @@ layout: default
       </td>
     </tr>
 
-    <tr>
-      <td colspan="2">
-        <div class="publication-item">
-          <div class="publication-media">
-            <img src="{{ '/images/Iwanttobreakfree_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
-          </div>
-          <div class="publication-info">
-            <p>
-              <span class="paper-title">I Want to Break Free: Enabling User-Applied Active Locomotion in In-Car VR through Contextual Cues</span><br>
-              <span class="author">Gim, B., Hwang, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Kim, S.</span><br><br>
-              <span class="colored-conference-name">CHI 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems </span><br>
-              <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3706598.3713373" target="_blank">Paper</a></span>
-            </p>
-          </div>
-        </div>
-      </td>
-    </tr>
-
+    <!-- Flip-Pelt (1st author) -->
     <tr>
       <td colspan="2">
         <div class="publication-item">
@@ -369,25 +335,7 @@ layout: default
       </td>
     </tr>
 
-    <tr>
-      <td colspan="2">
-        <div class="publication-item">
-          <div class="publication-media">
-            <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
-          </div>
-          <div class="publication-info">
-            <p>
-              <span class="paper-title">ErgoPulse: Electrifying Your Lower Body With Biomechanical Simulation-based Electrical Muscle Stimulation Haptic System in Virtual Reality</span><br>
-              <span class="author">Hwang, S., Oh, J., </span><span class="author bold-author">Kang, S.</span><span class="author">, Seong, M., Elsharkawy, A., Kim, S.</span><br><br>
-              <span class="colored-conference-name">CHI 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems<br>
-              🏆 Honorable Mention Award (Top 5%)</span><br>
-              <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613904.3642008" target="_blank">Paper</a> | <a href="https://youtu.be/UBSrvx4KgOI" target="_blank">Video</a></span>
-            </p>
-          </div>
-        </div>
-      </td>
-    </tr>
-
+    <!-- Giant Finger (1st author) -->
     <tr>
       <td colspan="2">
         <div class="publication-item">
@@ -408,9 +356,73 @@ layout: default
 
   </table>
 
-  <h3 class="subsection-title">Posters, Demos, and Workshop Papers</h3>
+  <!-- 2) Co-author (RETURN TO 2-COLUMN) -->
+  <h3 class="subsection-title">Full Papers — Co-author</h3>
+  <table class="no-border publication-table publication-table-two">
 
-  <table class="no-border publication-table">
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/Defying Gravity_ISMAR.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p>
+          <span class="paper-title">Defying Gravity: Towards Gravitoinertial Retargeting of Acceleration for Virtual Vertical Motion in In-Car VR</span><br>
+          <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Yeo, D., Kim, G., Um, J., Park, J., Kim, S.</span><br><br>
+          <span class="colored-conference-name">ISMAR 2025</span><span class="conference-name">: IEEE International Symposium on Mixed and Augmented Reality</span><br>
+          <span class="links"><a href="https://ieeexplore.ieee.org/document/11220362" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=3cCIikQ7xt0" target="_blank">Video</a></span>
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/AttraCar_UIST.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p>
+          <span class="paper-title">AttraCar: Multisensory In-Car VR with Thermal, Airflow, and Motion Feedback through Built-In Vehicle Systems</span><br>
+          <span class="author">Yeo, D., Kim, G., Oh, M., Park, J., Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Elsharkawy, A., Kim, S.</span><br><br>
+          <span class="colored-conference-name">UIST 2025</span><span class="conference-name">: The ACM Symposium on User Interface Software and Technology<br>
+          🏆🏆 People's Choice Best Demo, Demo Honorable Mention</span><br>
+          <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3746059.3747642" target="_blank">Paper</a> | <a href="https://www.youtube.com/watch?v=JlWWLTflcx0" target="_blank">Video</a></span>
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/Iwanttobreakfree_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p>
+          <span class="paper-title">I Want to Break Free: Enabling User-Applied Active Locomotion in In-Car VR through Contextual Cues</span><br>
+          <span class="author">Gim, B., Hwang, S., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Kim, S.</span><br><br>
+          <span class="colored-conference-name">CHI 2025</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems </span><br>
+          <span class="links"><a href="https://dl.acm.org/doi/full/10.1145/3706598.3713373" target="_blank">Paper</a></span>
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 400px;">
+        <img src="{{ '/images/ErgoPulse_CHI.gif' | relative_url }}" class="img-shadow publication-gif">
+      </td>
+      <td>
+        <p>
+          <span class="paper-title">ErgoPulse: Electrifying Your Lower Body With Biomechanical Simulation-based Electrical Muscle Stimulation Haptic System in Virtual Reality</span><br>
+          <span class="author">Hwang, S., Oh, J., </span><span class="author bold-author">Kang, S.</span><span class="author">, Seong, M., Elsharkawy, A., Kim, S.</span><br><br>
+          <span class="colored-conference-name">CHI 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems<br>
+          🏆 Honorable Mention Award (Top 5%)</span><br>
+          <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613904.3642008" target="_blank">Paper</a> | <a href="https://youtu.be/UBSrvx4KgOI" target="_blank">Video</a></span>
+        </p>
+      </td>
+    </tr>
+
+  </table>
+
+  <!-- Posters/Demos/Workshop (keep STACK) -->
+  <h3 class="subsection-title">Posters, Demos, and Workshop Papers</h3>
+  <table class="no-border publication-table publication-table-stack">
 
     <tr>
       <td colspan="2">
