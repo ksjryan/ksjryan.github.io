@@ -160,35 +160,35 @@ layout: default
   #research .publication-table-stack {
     width: 150%;
     border-collapse: separate;
-    border-spacing: 0 14px; /* a bit tighter for card look */
+    border-spacing: 0 14px;
   }
 
   #research .publication-table-stack .publication-item {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
 
-    /* Callout card */
-    background: rgba(0,0,0,0.03);
-    border: 1px solid rgba(0,0,0,0.08);
-    border-left: 6px solid rgb(254, 192, 0);
+    /* Callout card (LESS FLASHY: gray) */
+    background: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.10);
+    border-left: 6px solid rgba(0,0,0,0.25); /* gray accent instead of yellow */
     border-radius: 10px;
     padding: 16px 16px 14px 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
 
   #research .publication-table-stack .publication-media,
   #research .publication-table-stack .publication-info {
     width: 100%;
-    min-width: 0; /* allow wrapping inside flex */
+    min-width: 0;
   }
 
-  /* First/Co-first image: 80%, LEFT-aligned */
+  /* First/Co-first image: 90%, LEFT-aligned */
   #research .publication-table-stack .publication-gif {
-    width: 80%;
-    max-width: 80%;
+    width: 90%;
+    max-width: 90%;
     height: auto;
     display: block;
     margin: 0; /* left */
@@ -200,10 +200,10 @@ layout: default
     white-space: normal !important;
   }
 
-  /* First/Co-first title: bigger + force wrap + smaller gap to authors */
+  /* First/Co-first title: bigger + wrap + TIGHT gap to authors */
   #research .publication-table-stack .paper-title {
-    font-size: 1.5em;
-    line-height: 1.2;
+    font-size: 1.55em;       /* slightly bigger */
+    line-height: 1.18;
 
     display: block;
     max-width: 100%;
@@ -212,7 +212,13 @@ layout: default
     word-break: break-word !important;
     hyphens: auto;
 
-    margin-bottom: 6px !important; /* FIX: reduce title-author gap */
+    margin: 0 0 2px 0 !important;  /* CRITICAL: remove big gap */
+    padding: 0 !important;
+  }
+
+  /* Also reduce any extra spacing caused by <br> right after title */
+  #research .publication-table-stack .publication-info br {
+    line-height: 0.9;
   }
 
   /* Co-author (2-column) table inside #research */
@@ -222,31 +228,14 @@ layout: default
 
   /* Mobile Styles */
   @media (max-width: 768px) {
-    hr {
-      width: 100%;
-    }
-    .gif-grid {
-      width: 100%;
-    }
-    .gif-item {
-      width: 45%;
-    }
-    .publication-table {
-      width: 100%;
-      height: auto;
-    }
-    .small-text {
-      width: 100%;
-      height: auto;
-    }
-    .no-border.publication-table td {
-      width: 300px;
-    }
+    hr { width: 100%; }
+    .gif-grid { width: 100%; }
+    .gif-item { width: 45%; }
+    .publication-table { width: 100%; height: auto; }
+    .small-text { width: 100%; height: auto; }
+    .no-border.publication-table td { width: 300px; }
 
-    .vision-text {
-      margin-top: 50px;
-      margin-bottom: 20px;
-    }
+    .vision-text { margin-top: 50px; margin-bottom: 20px; }
 
     .big-text {
       font-size: 2.0em;
@@ -255,9 +244,7 @@ layout: default
       margin-bottom: 7px;
     }
 
-    .section-title {
-      width: 100%;
-    }
+    .section-title { width: 100%; }
 
     /* research tables fit mobile */
     #research .publication-table-stack,
@@ -269,7 +256,7 @@ layout: default
     #research .publication-table-stack .publication-gif {
       width: 100%;
       max-width: 100%;
-      margin: 0; /* left */
+      margin: 0;
     }
 
     /* On mobile: make ALL #research tables stack for readability */
