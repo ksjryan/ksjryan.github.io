@@ -166,7 +166,7 @@ layout: default
   #research .publication-table-stack .publication-item {
     display: flex;
     flex-direction: column;
-    align-items: stretch;  /* image fills width */
+    align-items: stretch;
     gap: 12px;
     width: 100%;
   }
@@ -176,16 +176,28 @@ layout: default
     width: 100%;
   }
 
-  /* IMPORTANT: only stack tables override image size */
+  /* 1) FIRST-AUTHOR STACK IMAGE: 80% width + centered */
   #research .publication-table-stack .publication-gif {
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    max-width: 80%;
     height: auto;
     display: block;
+    margin: 0 auto; /* center */
   }
 
   #research .publication-table-stack .publication-info p {
     margin: 0;
+  }
+
+  /* 2) FIRST-AUTHOR STACK TITLE: bigger + wrap nicely */
+  #research .publication-table-stack .paper-title {
+    font-size: 1.35em;         /* slightly bigger */
+    line-height: 1.25;
+    display: block;            /* so wrapping is reliable */
+    white-space: normal;       /* allow wrap */
+    overflow-wrap: anywhere;   /* prevent overflow */
+    word-break: break-word;    /* fallback */
+    margin-bottom: 14px;
   }
 
   /* Co-author (2-column) table inside #research */
@@ -238,6 +250,12 @@ layout: default
       width: 100%;
     }
 
+    /* 1저자 stack 이미지: 모바일에서는 100%로 (가독성) */
+    #research .publication-table-stack .publication-gif {
+      width: 100%;
+      max-width: 100%;
+    }
+
     /* On mobile: make ALL #research tables stack for readability */
     #research .publication-table-two tr {
       display: block;
@@ -271,7 +289,7 @@ layout: default
 <div id="research" style="padding-top: 10px;">
   <h2 class="section-title">Publications from PhD research: rewiring & restoring sensory gaps</h2>
 
-  <!-- 1) First/Co-first Author (STACK, FULL WIDTH IMAGE) -->
+  <!-- 1) First/Co-first Author (STACK, 80% IMAGE) -->
   <h3 class="subsection-title">Full Papers — First Author</h3>
   <table class="no-border publication-table publication-table-stack">
 
@@ -418,7 +436,7 @@ layout: default
 
   </table>
 
-  <!-- Posters/Demos/Workshop (RETURN TO 2-COLUMN) -->
+  <!-- Posters/Demos/Workshop (2-COLUMN) -->
   <h3 class="subsection-title">Posters, Demos, and Workshop Papers</h3>
   <table class="no-border publication-table publication-table-two">
 
@@ -498,7 +516,7 @@ layout: default
       </td>
       <td>
         <p>
-          <span class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR</span><br>
+          <span class="paper-title">Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR through Contextual Cues</span><br>
           <span class="author">Gim, B., </span><span class="author bold-author">Kang, S.</span><span class="author">, Kim, G., Yeo, D., Hwang, S., Kim, S.</span><br><br>
           <span class="colored-conference-name">CHI LBW 2024</span><span class="conference-name">: ACM Conference on Human Factors in Computing Systems Late-Breaking Work</span><br>
           <span class="links"><a href="https://dl.acm.org/doi/10.1145/3613905.3650746" target="_blank">Paper</a> | <a href="https://youtu.be/o-daTAUQaJg" target="_blank">Video</a></span>
