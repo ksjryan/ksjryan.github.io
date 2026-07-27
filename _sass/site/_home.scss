@@ -418,9 +418,14 @@ footer {
   --project-thumb-y: -30%;
 }
 
+.project-card img.project-thumb-fill-strong {
+  --project-thumb-scale: 1.75;
+  --project-thumb-y: -48%;
+}
+
 .project-card img.project-thumb-fill-extra {
-  --project-thumb-scale: 1.95;
-  --project-thumb-y: -72%;
+  --project-thumb-scale: 2.6;
+  --project-thumb-y: -135%;
 }
 
 .project-card a:hover img,
