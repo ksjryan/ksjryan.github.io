@@ -1,6 +1,11 @@
 # Edit this file to update the homepage profile section.
 name: "Seongjun (Ryan) Kang"
 image: "/images/SeongjunKang_profile2.jpeg"
+images:
+  - src: "/images/SeongjunKang_profile2.jpeg"
+    alt: "Seongjun (Ryan) Kang profile photo"
+  - src: "/images/SeongjunKang_profile3.jpeg"
+    alt: "Seongjun (Ryan) Kang profile photo outdoors"
 intro: >-
   Hello! My name is Seongjun (Ryan) Kang, and I am currently a Ph.D.
   candidate at the HCIS Lab of Gwangju Institute of Science and Technology

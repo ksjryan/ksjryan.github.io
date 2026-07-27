@@ -32,6 +32,7 @@ The homepage itself is intentionally small:
 
 - `index.html`: assembles the homepage sections
 - `_includes/home-about.html`: profile section template
+- `profile-carousel.js`: profile photo previous/next interaction
 - `_includes/home-publications.html`: publication section template
 - `_includes/publication-card.html`: one publication card template
 - `_includes/home-projects.html`: project grid template

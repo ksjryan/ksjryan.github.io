@@ -22,10 +22,14 @@ def read(path: Path) -> str:
 
 def check_image_paths(errors: list[str]) -> None:
     for data_file in DATA_DIR.glob("*.yml"):
-        for match in re.finditer(r'image:\s*"([^"]+)"', read(data_file)):
-            image_path = ROOT / match.group(1).lstrip("/")
+        for match in re.finditer(r'(?:image|src):\s*"([^"]+)"', read(data_file)):
+            image_url = match.group(1)
+            if not image_url.startswith("/images/"):
+                continue
+
+            image_path = ROOT / image_url.lstrip("/")
             if not image_path.exists():
-                errors.append(f"Missing image in {data_file.name}: {match.group(1)}")
+                errors.append(f"Missing image in {data_file.name}: {image_url}")
 
 
 def check_project_pages(errors: list[str]) -> None:
