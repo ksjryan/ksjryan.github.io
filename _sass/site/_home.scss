@@ -185,15 +185,17 @@ footer {
 
 .publication-media-mark {
   align-items: center;
-  border: 2px solid rgba(255, 255, 255, 0.88);
-  border-radius: 50%;
-  display: flex;
-  font-size: 2rem;
-  font-weight: 300;
-  height: 3rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.18);
+  color: #222;
+  display: inline-flex;
+  font-size: 0.92rem;
+  font-weight: 700;
   justify-content: center;
-  line-height: 1;
-  width: 3rem;
+  letter-spacing: 0;
+  line-height: 1.1;
+  padding: 0.58rem 0.82rem;
 }
 
 .publication-media-link:hover img,
