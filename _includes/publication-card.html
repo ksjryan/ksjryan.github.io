@@ -16,7 +16,9 @@
           alt="{{ publication.title }}"
           loading="lazy"
         >
-        <span class="publication-media-overlay">More</span>
+        <span class="publication-media-overlay" aria-hidden="true">
+          <span class="publication-media-mark">+</span>
+        </span>
       </a>
     {% else %}
       <img
