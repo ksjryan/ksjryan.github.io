@@ -5,7 +5,7 @@
     {% for project in include.projects %}
       <article class="project-card">
         <a href="{{ project.url | relative_url }}">
-          <span class="project-card-media">
+          <span class="project-card-media{% if project.thumbnail_class %} {{ project.thumbnail_class }}{% endif %}">
             <img
               src="{{ project.image | relative_url }}"
               alt="{{ project.title }}"

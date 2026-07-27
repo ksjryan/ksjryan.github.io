@@ -390,6 +390,20 @@ footer {
   width: 100%;
 }
 
+.project-card-media--zoom {
+  --project-thumb-scale: 1.045;
+}
+
+.project-card-media--zoom-lower {
+  --project-thumb-scale: 1.075;
+  --project-thumb-y: -2%;
+}
+
+.project-card-media--zoom-air {
+  --project-thumb-scale: 1.095;
+  --project-thumb-y: -4%;
+}
+
 .project-card-media::after {
   background: rgba(0, 0, 0, 0.08);
   content: "";
@@ -406,7 +420,11 @@ footer {
   margin: 0;
   object-fit: cover;
   object-position: center center;
-  transition: filter 0.2s ease;
+  transform: translateY(var(--project-thumb-y, 0)) scale(var(--project-thumb-scale, 1));
+  transform-origin: center center;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
   width: 100%;
 }
 

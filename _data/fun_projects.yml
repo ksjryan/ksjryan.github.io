@@ -7,27 +7,34 @@ projects:
   - title: "Finger-based miniature avatar mapping"
     image: "/images/Finger-based miniature avatar mapping.gif"
     url: "/pages/finger-based-avatar-mapping"
+    thumbnail_class: "project-card-media--zoom"
 
   - title: "Motion tracking action game"
     image: "/images/motion tracking action game.gif"
     url: "/pages/motion-tracking-action-game"
+    thumbnail_class: "project-card-media--zoom"
 
   - title: "Reinforcement learning based redirected walking"
     image: "/images/6 gain.gif"
     url: "/pages/reinforcement-learning-walking"
+    thumbnail_class: "project-card-media--zoom-lower"
 
   - title: "In-CarVR contents"
     image: "/images/InCarVR contents.gif"
     url: "/pages/in-car-vr-contents"
+    thumbnail_class: "project-card-media--zoom"
 
   - title: "XR screen bus simulator"
     image: "/images/Bus Simulator.gif"
     url: "/pages/xr-bus-simulator"
+    thumbnail_class: "project-card-media--zoom"
 
   - title: "Air Click"
     image: "/images/Air Click.gif"
     url: "/pages/air-click"
+    thumbnail_class: "project-card-media--zoom-air"
 
   - title: "Food delivery turtlebot"
     image: "/images/automatic food delivery robot.gif"
     url: "/pages/food-delivery-turtlebot"
+    thumbnail_class: "project-card-media--zoom"
