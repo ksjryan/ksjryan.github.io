@@ -365,7 +365,7 @@ footer {
 
 .project-card a {
   color: #fff;
-  display: grid;
+  display: block;
   min-height: 100%;
   position: relative;
 }
@@ -382,56 +382,42 @@ footer {
 }
 
 .project-card-media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--project-card-ratio, 4 / 3);
   display: block;
   margin: 0;
   overflow: hidden;
+  position: relative;
   width: 100%;
 }
 
-.project-card img {
-  --project-thumb-scale: 1;
-  --project-thumb-y: 0%;
+.project-card-media::after {
+  background: rgba(0, 0, 0, 0.08);
+  content: "";
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
 
-  filter: brightness(0.96);
+.project-card img {
+  display: block;
   height: 100%;
   margin: 0;
   object-fit: cover;
   object-position: center center;
-  transform: translateY(var(--project-thumb-y)) scale(var(--project-thumb-scale));
-  transition:
-    filter 0.2s ease,
-    transform 0.2s ease;
+  transition: filter 0.2s ease;
   width: 100%;
-}
-
-.project-card img.project-thumb-fill-top {
-  --project-thumb-scale: 1.32;
-  --project-thumb-y: -15%;
-
-  object-position: center top;
-  transform-origin: center top;
-}
-
-.project-card img.project-thumb-fill-deep {
-  --project-thumb-scale: 1.52;
-  --project-thumb-y: -30%;
-}
-
-.project-card img.project-thumb-fill-strong {
-  --project-thumb-scale: 2.2;
-  --project-thumb-y: -95%;
-}
-
-.project-card img.project-thumb-fill-extra {
-  --project-thumb-scale: 2.6;
-  --project-thumb-y: -135%;
 }
 
 .project-card a:hover img,
 .project-card a:focus img {
-  filter: brightness(0.78) saturate(1.05);
-  transform: translateY(var(--project-thumb-y)) scale(calc(var(--project-thumb-scale) * 1.02));
+  filter: brightness(0.82) saturate(1.04);
+}
+
+.project-card a:hover .project-card-media::after,
+.project-card a:focus .project-card-media::after {
+  opacity: 1;
 }
 
 .project-card-title {
