@@ -18,12 +18,24 @@
     return true;
   }
 
-  window.addEventListener("load", function () {
+  function scrollToCurrentHash(behavior) {
     if (window.location.hash) {
-      window.setTimeout(function () {
-        scrollToHash(window.location.hash, "auto");
-      }, 0);
+      scrollToHash(window.location.hash, behavior);
     }
+  }
+
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+
+  window.addEventListener("load", function () {
+    scrollToCurrentHash("auto");
+
+    [120, 500].forEach(function (delay) {
+      window.setTimeout(function () {
+        scrollToCurrentHash("auto");
+      }, delay);
+    });
   });
 
   document.addEventListener("click", function (event) {
