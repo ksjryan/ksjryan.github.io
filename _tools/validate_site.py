@@ -41,6 +41,16 @@ def check_project_pages(errors: list[str]) -> None:
             errors.append(f"Missing project page for {url}")
 
 
+def check_publication_pages(errors: list[str]) -> None:
+    publications = DATA_DIR / "publications.yml"
+    for match in re.finditer(r'detail_url:\s*"([^"]+)"', read(publications)):
+        url = match.group(1).rstrip("/")
+        page_path = ROOT / url.lstrip("/")
+        candidates = [page_path, page_path.with_suffix(".md"), page_path.with_suffix(".html")]
+        if not any(candidate.exists() for candidate in candidates):
+            errors.append(f"Missing publication detail page for {url}")
+
+
 def check_includes(errors: list[str]) -> None:
     index = read(ROOT / "index.html")
     for match in re.finditer(r"{%\s*include\s+([^\s%]+)", index):
@@ -82,6 +92,7 @@ def main() -> int:
     errors: list[str] = []
     check_image_paths(errors)
     check_project_pages(errors)
+    check_publication_pages(errors)
     check_includes(errors)
     check_nav_anchors(errors)
     check_responsive_cleanup(errors)

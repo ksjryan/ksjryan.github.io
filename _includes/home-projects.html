@@ -9,6 +9,7 @@
             <img
               src="{{ project.image | relative_url }}"
               alt="{{ project.title }}"
+              {% if project.thumbnail_class %}class="{{ project.thumbnail_class }}"{% endif %}
               loading="lazy"
             >
           </span>

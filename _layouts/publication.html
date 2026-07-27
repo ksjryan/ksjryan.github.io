@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<div class="content publication-detail">
+  {% assign matched_publication = false %}
+
+  {% for section in site.data.publications.sections %}
+    {% for group in section.groups %}
+      {% for publication in group.items %}
+        {% if publication.slug == page.publication_slug %}
+          {% assign matched_publication = true %}
+
+          <a class="publication-detail-back" href="{{ '/#research' | relative_url }}">Back to publications</a>
+
+          <article>
+            <header class="publication-detail-header">
+              <p class="publication-detail-kicker">{{ publication.venue }}</p>
+              <h1 class="publication-detail-title">{{ publication.title }}</h1>
+              <p class="publication-authors">{{ publication.authors_html }}</p>
+            </header>
+
+            <img
+              src="{{ publication.image | relative_url }}"
+              alt="{{ publication.title }}"
+              class="publication-detail-figure"
+            >
+
+            <section class="publication-detail-section">
+              <h2>Summary</h2>
+              <p>{{ publication.summary }}</p>
+            </section>
+
+            <section class="publication-detail-section">
+              <h2>Video</h2>
+              {% if publication.video_id %}
+                <div class="publication-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ publication.video_id }}"
+                    title="{{ publication.title }} video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              {% else %}
+                <p>{{ publication.video_note | default: "A video link will be added here when available." }}</p>
+              {% endif %}
+            </section>
+
+            {% if publication.links %}
+              <nav class="publication-detail-links" aria-label="Publication links">
+                {% for link in publication.links %}
+                  <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                {% endfor %}
+              </nav>
+            {% endif %}
+          </article>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+
+  {% unless matched_publication %}
+    <h1>Publication Not Found</h1>
+    <p>The publication data for this page could not be found.</p>
+  {% endunless %}
+</div>

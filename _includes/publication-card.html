@@ -3,11 +3,28 @@
 
 <article class="publication-card publication-card--{{ card_layout }}">
   <div class="publication-media">
-    <img
-      src="{{ publication.image | relative_url }}"
-      alt="{{ publication.title }}"
-      loading="lazy"
-    >
+    {% if card_layout == "featured" and publication.detail_url %}
+      <a
+        href="{{ publication.detail_url | relative_url }}"
+        class="publication-media-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open summary and video for {{ publication.title }}"
+      >
+        <img
+          src="{{ publication.image | relative_url }}"
+          alt="{{ publication.title }}"
+          loading="lazy"
+        >
+        <span class="publication-media-overlay">More</span>
+      </a>
+    {% else %}
+      <img
+        src="{{ publication.image | relative_url }}"
+        alt="{{ publication.title }}"
+        loading="lazy"
+      >
+    {% endif %}
   </div>
 
   <div class="publication-body">

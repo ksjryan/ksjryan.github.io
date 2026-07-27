@@ -7,7 +7,15 @@ sections:
         layout: "featured"
         items:
           - title: "When Fingers Become Tools: Rendering Virtual Tool Inertia with a Finger-Mounted Extending Rod"
+            slug: "when-fingers-become-tools"
+            detail_url: "/pages/publications/when-fingers-become-tools/"
             image: "/images/WhenFingersBecomeTools_CHI.png"
+            summary: >-
+              This project explores how a finger-mounted extending rod can render
+              the inertia of virtual tools. By changing the apparent physical
+              response at the fingertip, the system helps users feel different
+              virtual tools through a compact wearable mechanism.
+            video_id: "X01IvWyG39s"
             authors_html: >-
               <strong class="author-name">Kang, S.</strong>, Kim, G., Gim, B.,
               Park, J., Um, J., Shin, S., Park, C., Kim, S.
@@ -21,7 +29,15 @@ sections:
                 url: "https://youtu.be/X01IvWyG39s"
 
           - title: "EarPressure VR: Ear Canal Pressure Feedback for Enhancing Environmental Presence in Virtual Reality"
+            slug: "earpressure-vr"
+            detail_url: "/pages/publications/earpressure-vr/"
             image: "/images/EarPressureVR_UIST.png"
+            summary: >-
+              EarPressure VR uses pressure feedback inside the ear canal to
+              strengthen environmental presence in virtual reality. The work
+              investigates how subtle pressure changes can complement visual and
+              auditory cues and make virtual events feel more physically present.
+            video_id: "hmOTCFciyg0"
             authors_html: >-
               <strong class="author-name">Kang, S.</strong>, Kim, G., Gim, B.,
               Park, J., Shin, S., Kim, S.
@@ -35,7 +51,16 @@ sections:
                 url: "https://youtu.be/hmOTCFciyg0"
 
           - title: "TelePulse: Enhancing the Teleoperation Experience through Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality"
+            slug: "telepulse"
+            detail_url: "/pages/publications/telepulse/"
             image: "/images/TelePulse_CHI.png"
+            summary: >-
+              TelePulse combines biomechanical simulation and electrical muscle
+              stimulation to provide force-related haptic feedback for robot
+              teleoperation in virtual reality. The system converts remote
+              manipulation forces into muscle stimulation patterns, improving
+              teleoperation performance and presence.
+            video_note: "A YouTube video link is not available yet."
             authors_html: >-
               Hwang, S.*, <strong class="author-name">Kang, S.*</strong>, Oh,
               J.*, Park, J., Shin, S., Luo, Y., DelPreto, J., Lee, S., Lee, K.,
@@ -49,7 +74,15 @@ sections:
                 url: "https://dl.acm.org/doi/full/10.1145/3706598.3713767"
 
           - title: "Flip-Pelt: Motor-Driven Peltier Elements for Rapid Thermal Stimulation and Congruent Pressure Feedback in Virtual Reality"
+            slug: "flip-pelt"
+            detail_url: "/pages/publications/flip-pelt/"
             image: "/images/FlipPelt_UIST.png"
+            summary: >-
+              Flip-Pelt presents a motor-driven thermal interface that flips
+              Peltier elements to deliver rapid warm and cool stimulation with
+              congruent pressure feedback. The system targets richer thermal and
+              tactile feedback for immersive virtual reality interactions.
+            video_id: "xPtMhkOUoQo"
             authors_html: >-
               <strong class="author-name">Kang, S.</strong>, Kim, G., Hwang,
               S., Park, J., Elsharkawy, A., Kim, S.
@@ -63,7 +96,15 @@ sections:
                 url: "https://youtu.be/xPtMhkOUoQo"
 
           - title: "Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality"
+            slug: "giant-finger"
+            detail_url: "/pages/publications/giant-finger/"
             image: "/images/GiantFinger_ISMAR.png"
+            summary: >-
+              Giant Finger simulates lower-body movement in virtual reality by
+              mapping leg-like actions to visuo-somatosensory feedback through
+              the user's finger. The approach offers a compact way to evoke
+              embodied movement sensations without requiring full-body hardware.
+            video_id: "gUMXspPIGdk"
             authors_html: >-
               <strong class="author-name">Kang, S.</strong>, Kim, G., Kim, S.
               (2023)

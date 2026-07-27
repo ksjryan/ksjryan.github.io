@@ -35,6 +35,8 @@ The homepage itself is intentionally small:
 - `_includes/home-publications.html`: publication section template
 - `_includes/publication-card.html`: one publication card template
 - `_includes/home-projects.html`: project grid template
+- `_layouts/publication.html`: publication summary/video page layout
+- `pages/publications/`: one lightweight page file per publication detail page
 
 ## Publishing
 
