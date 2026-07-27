@@ -38,7 +38,7 @@ title: Motion Tracking Action Game
   }
 </style>
 
-<a href="{{ '/' | relative_url }}" class="back-button">← Back to Main Page</a>
+<a href="{{ '/#fun-project' | relative_url }}" class="back-button">← Back to Main Page</a>
 
 <div class="content">
   <h2>Motion Tracking Action Game</h2>

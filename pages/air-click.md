@@ -39,7 +39,7 @@ title: Air Click
 </style>
 
 
-<a href="{{ '/' | relative_url }}" class="back-button">← Back to Main Page</a>
+<a href="{{ '/#fun-project' | relative_url }}" class="back-button">← Back to Main Page</a>
 
 <div class="content">
 

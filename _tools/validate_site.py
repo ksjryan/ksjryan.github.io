@@ -66,7 +66,7 @@ def check_includes(errors: list[str]) -> None:
 def check_nav_anchors(errors: list[str]) -> None:
     config = read(ROOT / "_config.yml")
     publication_data = read(DATA_DIR / "publications.yml")
-    available_ids = {"about", "fun-project"}
+    available_ids = {"home", "fun-project"}
     available_ids.update(re.findall(r'^\s+- id:\s*"([^"]+)"', publication_data, re.MULTILINE))
 
     for anchor in re.findall(r"url:\s*/#([A-Za-z0-9_-]+)", config):
