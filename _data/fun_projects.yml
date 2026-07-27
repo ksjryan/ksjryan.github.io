@@ -17,7 +17,7 @@ projects:
   - title: "Reinforcement learning based redirected walking"
     image: "/images/6 gain.gif"
     url: "/pages/reinforcement-learning-walking"
-    thumbnail_class: "project-thumb-fill-top"
+    thumbnail_class: "project-thumb-fill-top project-thumb-fill-deep"
 
   - title: "In-CarVR contents"
     image: "/images/InCarVR contents.gif"
