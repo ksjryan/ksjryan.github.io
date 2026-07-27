@@ -1,0 +1,16 @@
+<section id="about" class="home-section about-section">
+  <div class="about-grid">
+    <img
+      src="{{ include.profile.image | relative_url }}"
+      alt="{{ include.profile.name }}"
+      class="profile-photo"
+    >
+
+    <div class="about-copy">
+      <h1 class="profile-name">{{ include.profile.name }}</h1>
+      <p class="profile-intro">{{ include.profile.intro }}</p>
+      <p class="profile-vision">My Vision: {{ include.profile.vision }}</p>
+      <p class="profile-bio">{{ include.profile.bio }}</p>
+    </div>
+  </div>
+</section>

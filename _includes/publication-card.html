@@ -1,0 +1,38 @@
+{% assign publication = include.publication %}
+{% assign card_layout = include.card_layout | default: "standard" %}
+
+<article class="publication-card publication-card--{{ card_layout }}">
+  <div class="publication-media">
+    <img
+      src="{{ publication.image | relative_url }}"
+      alt="{{ publication.title }}"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="publication-body">
+    <h4 class="publication-title">{{ publication.title }}</h4>
+    <p class="publication-authors">{{ publication.authors_html }}</p>
+
+    <p class="publication-venue">
+      <span class="publication-venue-name{% if publication.highlight_venue %} publication-venue-name--highlight{% endif %}">
+        {{ publication.venue }}
+      </span>
+      {% if publication.venue_detail %}
+        <span class="publication-venue-detail">: {{ publication.venue_detail }}</span>
+      {% endif %}
+    </p>
+
+    {% if publication.note %}
+      <p class="publication-note">Award: {{ publication.note }}</p>
+    {% endif %}
+
+    {% if publication.links %}
+      <nav class="publication-links" aria-label="Links for {{ publication.title }}">
+        {% for link in publication.links %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+        {% endfor %}
+      </nav>
+    {% endif %}
+  </div>
+</article>

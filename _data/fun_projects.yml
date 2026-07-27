@@ -1,0 +1,33 @@
+# Edit this file to update the Fun Projects grid on the homepage.
+projects:
+  - title: "Virtual arm visualization to reduce In-Car VR motion sickness"
+    image: "/images/Virtual Arm Visualization to Reduce In-Car VR Motion Sickness.gif"
+    url: "/pages/virtual-arm-visualization"
+
+  - title: "Finger-based miniature avatar mapping"
+    image: "/images/Finger-based miniature avatar mapping.gif"
+    url: "/pages/finger-based-avatar-mapping"
+
+  - title: "Motion tracking action game"
+    image: "/images/motion tracking action game.gif"
+    url: "/pages/motion-tracking-action-game"
+
+  - title: "Reinforcement learning based redirected walking"
+    image: "/images/6 gain.gif"
+    url: "/pages/reinforcement-learning-walking"
+
+  - title: "In-CarVR contents"
+    image: "/images/InCarVR contents.gif"
+    url: "/pages/in-car-vr-contents"
+
+  - title: "XR screen bus simulator"
+    image: "/images/Bus Simulator.gif"
+    url: "/pages/xr-bus-simulator"
+
+  - title: "Air Click"
+    image: "/images/Air Click.gif"
+    url: "/pages/air-click"
+
+  - title: "Food delivery turtlebot"
+    image: "/images/automatic food delivery robot.gif"
+    url: "/pages/food-delivery-turtlebot"

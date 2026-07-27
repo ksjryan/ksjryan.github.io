@@ -1,0 +1,266 @@
+# Edit this file to add, remove, or reorder homepage publications.
+sections:
+  - id: "research"
+    title: "Publications from PhD research: rewiring & restoring sensory gaps"
+    groups:
+      - title: "Full Papers &mdash; First Author"
+        layout: "featured"
+        items:
+          - title: "When Fingers Become Tools: Rendering Virtual Tool Inertia with a Finger-Mounted Extending Rod"
+            image: "/images/WhenFingersBecomeTools_CHI.png"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Gim, B.,
+              Park, J., Um, J., Shin, S., Park, C., Kim, S.
+            venue: "CHI 2026"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3772318.3791755"
+              - label: "Video"
+                url: "https://youtu.be/X01IvWyG39s"
+
+          - title: "EarPressure VR: Ear Canal Pressure Feedback for Enhancing Environmental Presence in Virtual Reality"
+            image: "/images/EarPressureVR_UIST.png"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Gim, B.,
+              Park, J., Shin, S., Kim, S.
+            venue: "UIST 2025"
+            venue_detail: "The ACM Symposium on User Interface Software and Technology"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/full/10.1145/3746059.3747618"
+              - label: "Video"
+                url: "https://youtu.be/hmOTCFciyg0"
+
+          - title: "TelePulse: Enhancing the Teleoperation Experience through Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality"
+            image: "/images/TelePulse_CHI.png"
+            authors_html: >-
+              Hwang, S.*, <strong class="author-name">Kang, S.*</strong>, Oh,
+              J.*, Park, J., Shin, S., Luo, Y., DelPreto, J., Lee, S., Lee, K.,
+              Matusik, W., Rus, D., Kim, S. (* equal contribution)
+            venue: "CHI 2025"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems"
+            note: "Best Paper Award (Top 1%)"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/full/10.1145/3706598.3713767"
+
+          - title: "Flip-Pelt: Motor-Driven Peltier Elements for Rapid Thermal Stimulation and Congruent Pressure Feedback in Virtual Reality"
+            image: "/images/FlipPelt_UIST.png"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Hwang,
+              S., Park, J., Elsharkawy, A., Kim, S.
+            venue: "UIST 2024"
+            venue_detail: "The ACM Symposium on User Interface Software and Technology"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3654777.3676363"
+              - label: "Video"
+                url: "https://youtu.be/xPtMhkOUoQo"
+
+          - title: "Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality"
+            image: "/images/GiantFinger_ISMAR.png"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Kim, S.
+              (2023)
+            venue: "ISMAR 2023"
+            venue_detail: "IEEE International Symposium on Mixed and Augmented Reality"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://ieeexplore.ieee.org/document/10316523"
+              - label: "Video"
+                url: "https://youtu.be/gUMXspPIGdk"
+
+      - title: "Full Papers &mdash; Co-author"
+        layout: "standard"
+        items:
+          - title: "From Disruption to Immersion: Reimagining Vehicle Motion as Environmental Feedback through Force Mappings in In-Car VR"
+            image: "/images/From Disruption to Immersion.jpg"
+            authors_html: >-
+              Gim, B., <strong class="author-name">Kang, S.</strong>, Kim, G.,
+              Yeo, D., Kang, Y., Elsharkawy, A., Kim, S.
+            venue: "CHI 2026"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3772318.3790507"
+
+          - title: "Defying Gravity: Towards Gravitoinertial Retargeting of Acceleration for Virtual Vertical Motion in In-Car VR"
+            image: "/images/Defying Gravity_ISMAR.gif"
+            authors_html: >-
+              Gim, B., <strong class="author-name">Kang, S.</strong>, Yeo, D.,
+              Kim, G., Um, J., Park, J., Kim, S.
+            venue: "ISMAR 2025"
+            venue_detail: "IEEE International Symposium on Mixed and Augmented Reality"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://ieeexplore.ieee.org/document/11220362"
+              - label: "Video"
+                url: "https://www.youtube.com/watch?v=3cCIikQ7xt0"
+
+          - title: "AttraCar: Multisensory In-Car VR with Thermal, Airflow, and Motion Feedback through Built-In Vehicle Systems"
+            image: "/images/AttraCar_UIST.gif"
+            authors_html: >-
+              Yeo, D., Kim, G., Oh, M., Park, J., Gim, B.,
+              <strong class="author-name">Kang, S.</strong>, Elsharkawy, A.,
+              Kim, S.
+            venue: "UIST 2025"
+            venue_detail: "The ACM Symposium on User Interface Software and Technology"
+            note: "People's Choice Best Demo, Demo Honorable Mention"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/full/10.1145/3746059.3747642"
+              - label: "Video"
+                url: "https://www.youtube.com/watch?v=JlWWLTflcx0"
+
+          - title: "I Want to Break Free: Enabling User-Applied Active Locomotion in In-Car VR through Contextual Cues"
+            image: "/images/Iwanttobreakfree_CHI.gif"
+            authors_html: >-
+              Gim, B., Hwang, S., <strong class="author-name">Kang, S.</strong>,
+              Kim, G., Yeo, D., Kim, S.
+            venue: "CHI 2025"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/full/10.1145/3706598.3713373"
+
+          - title: "ErgoPulse: Electrifying Your Lower Body With Biomechanical Simulation-based Electrical Muscle Stimulation Haptic System in Virtual Reality"
+            image: "/images/ErgoPulse_CHI.gif"
+            authors_html: >-
+              Hwang, S., Oh, J., <strong class="author-name">Kang, S.</strong>,
+              Seong, M., Elsharkawy, A., Kim, S.
+            venue: "CHI 2024"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems"
+            note: "Honorable Mention Award (Top 5%)"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3613904.3642008"
+              - label: "Video"
+                url: "https://youtu.be/UBSrvx4KgOI"
+
+      - title: "Posters, Demos, and Workshop Papers"
+        layout: "standard"
+        items:
+          - title: "Magneto: Enabling Multimodal Haptic Feedback on Paper through Magnetic Fields"
+            image: "/images/Magneto_CHILBW.gif"
+            authors_html: >-
+              Park, J., Shin, S., <strong class="author-name">Kang, S.</strong>,
+              Kim, G., Kim, S.
+            venue: "CHI LBW 2025"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems Late-Breaking Work"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3706599.3720242"
+
+          - title: "TeleHopper: Simulating a Jumping Sensation as Proprioceptive Feedback for Teleportation in Virtual Reality via Electrical Muscle Stimulation"
+            image: "/images/TeleHopper_CHILBW.gif"
+            authors_html: >-
+              Um, J., Gim, B., <strong class="author-name">Kang, S.</strong>,
+              Kang, Y., Jeon, E., Kim, S.
+            venue: "CHI LBW 2025"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems Late-Breaking Work"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3706599.3720248"
+
+          - title: "LegSense: Inducing Walking Sensation in Seated VR by Providing Movement Illusion via Electrical Muscle Stimulation"
+            image: "/images/Legsense_UBICOMP.png"
+            authors_html: >-
+              Um, J., Jeon, E., Kang, Y.,
+              <strong class="author-name">Kang, S.</strong>, Elsharkawy, A.,
+              Joseph DelPreto, Wojciech Matusik, Daniela Rus, Kim, S.
+            venue: "UbiComp Companion 2024"
+            venue_detail: "Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3675094.3678375"
+
+          - title: "Proposal of a Framework for Enhancing Teleoperation Experience with Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality"
+            image: "/images/Telepulse_UBICOMP.png"
+            authors_html: >-
+              Hwang, S., <strong class="author-name">Kang, S.</strong>, Oh, J.,
+              Park, J., Shin, S., Yiyue Luo, Joseph DelPreto, Wojciech Matusik,
+              Daniela Rus, Kim, S.
+            venue: "UbiComp Companion 2024"
+            venue_detail: "Companion of the 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3675094.3678380"
+
+          - title: "Dual-sided Peltier Elements for Rapid Thermal Feedback in Wearables"
+            image: "/images/FlipPelt_ICRAworkshop.png"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Hwang,
+              S., Park, J., Elsharkawy, A., Kim, S.
+            venue: "2024 IEEE ICRA Workshop"
+            venue_detail: "on Wearable"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://arxiv.org/abs/2405.11807"
+
+          - title: "Curving the Virtual Route: Applying Redirected Steering Gains for Active Locomotion in In-Car VR"
+            image: "/images/RDD_CHILBW.gif"
+            authors_html: >-
+              Gim, B., <strong class="author-name">Kang, S.</strong>, Kim, G.,
+              Yeo, D., Hwang, S., Kim, S.
+            venue: "CHI LBW 2024"
+            venue_detail: "ACM Conference on Human Factors in Computing Systems Late-Breaking Work"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://dl.acm.org/doi/10.1145/3613905.3650746"
+              - label: "Video"
+                url: "https://youtu.be/o-daTAUQaJg"
+
+          - title: "Giant Finger: Visuo-Proprioceptive Congruent Virtual Legs for Flying Actions in Virtual Reality"
+            image: "/images/GiantFinger_IEEEVRW.gif"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Lee,
+              K.T., Kim, S. (2023)
+            venue: "IEEE VRW 2023"
+            venue_detail: "Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops"
+            highlight_venue: true
+            links:
+              - label: "Paper"
+                url: "https://ieeexplore.ieee.org/document/10108677"
+
+  - id: "research3"
+    title: "More Publications"
+    groups:
+      - layout: "standard"
+        items:
+          - title: "How Do Background and Remote User Representations Affect Social Telepresence in Remote Collaboration?: A Study with Portal Display, a Head Pose-Responsive Video Teleconferencing System"
+            image: "/images/PortalDisplay_Electronics.gif"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Lee,
+              K-T., Kim S.
+            venue: "Electronics. 2023; 12(20):4339"
+            links:
+              - label: "Paper"
+                url: "https://www.mdpi.com/2079-9292/12/20/4339"
+
+          - title: "Portal Display: Screen-based 3D Stereoscopic Conferencing System for Immersive Social Telepresence"
+            image: "/images/PortalDisplay_ICONI.gif"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Lee, K.,
+              Kim, S. (2022)
+            venue: "KSII the 14th international conference on internet (ICONI) 2022 symposium"
+            note: "Best Paper Award (1st)"
+            links:
+              - label: "Paper"
+                url: "https://drive.google.com/file/d/1vxHDhS7M7hwoAm0xrdxI0w_8w50lJJ1F/view"

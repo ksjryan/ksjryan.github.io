@@ -5,14 +5,14 @@ highlighter: rouge
 # Setup
 title: Seongjun (Ryan) Kang
 description: |
-  <p style="font-size: 16px;">Ph.D. student in<br>human-computer interaction</p>
-  <p style="font-size: 16px;">working at the <a href="https://sites.google.com/view/gist-hcis-lab/home" target="_blank">HCIS Lab.</a> in the Gwangju Institute of Science and Technology (GIST)</p>
+  <span class="lead-line">Ph.D. candidate in human-computer interaction</span>
+  <span class="lead-line"><a href="https://sites.google.com/view/gist-hcis-lab/home" target="_blank" rel="noopener noreferrer">HCIS Lab</a>, Gwangju Institute of Science and Technology (GIST)</span>
 url: https://ksjryan.github.io
 baseurl: ''
 
 author:
-  name: Andrew Fong
-  url: https://twitter.com/fongandrewc
+  name: Seongjun Kang
+  url: https://ksjryan.github.io
 
 paginate: 5
 
@@ -27,7 +27,7 @@ sidebar_home_link:  true
 nav:
   - title: "About"
     url: /#about
-  - title: "Research"
+  - title: "Publications"
     url: /#research
-  - title: "Fun Project"
+  - title: "Fun Projects"
     url: /#fun-project

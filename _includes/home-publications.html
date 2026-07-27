@@ -1,0 +1,17 @@
+{% for section in include.sections %}
+  <section id="{{ section.id }}" class="home-section publication-section">
+    <h2 class="section-title">{{ section.title }}</h2>
+
+    {% for group in section.groups %}
+      {% if group.title %}
+        <h3 class="subsection-title">{{ group.title }}</h3>
+      {% endif %}
+
+      <div class="publication-list publication-list--{{ group.layout | default: 'standard' }}">
+        {% for publication in group.items %}
+          {% include publication-card.html publication=publication card_layout=group.layout %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+{% endfor %}
