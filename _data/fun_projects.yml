@@ -7,12 +7,12 @@ projects:
   - title: "Finger-based miniature avatar mapping"
     image: "/images/Finger-based miniature avatar mapping.gif"
     url: "/pages/finger-based-avatar-mapping"
-    thumbnail_class: "project-thumb-fill-top"
+    thumbnail_class: "project-thumb-fill-top project-thumb-fill-deep"
 
   - title: "Motion tracking action game"
     image: "/images/motion tracking action game.gif"
     url: "/pages/motion-tracking-action-game"
-    thumbnail_class: "project-thumb-fill-top"
+    thumbnail_class: "project-thumb-fill-top project-thumb-fill-deep"
 
   - title: "Reinforcement learning based redirected walking"
     image: "/images/6 gain.gif"
@@ -32,7 +32,7 @@ projects:
   - title: "Air Click"
     image: "/images/Air Click.gif"
     url: "/pages/air-click"
-    thumbnail_class: "project-thumb-fill-top"
+    thumbnail_class: "project-thumb-fill-top project-thumb-fill-extra"
 
   - title: "Food delivery turtlebot"
     image: "/images/automatic food delivery robot.gif"

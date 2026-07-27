@@ -413,6 +413,16 @@ footer {
   transform-origin: center top;
 }
 
+.project-card img.project-thumb-fill-deep {
+  --project-thumb-scale: 1.52;
+  --project-thumb-y: -30%;
+}
+
+.project-card img.project-thumb-fill-extra {
+  --project-thumb-scale: 1.62;
+  --project-thumb-y: -38%;
+}
+
 .project-card a:hover img,
 .project-card a:focus img {
   filter: brightness(0.78) saturate(1.05);

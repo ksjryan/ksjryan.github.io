@@ -38,6 +38,7 @@ The homepage itself is intentionally small:
 - `_includes/home-projects.html`: project grid template
 - `_layouts/publication.html`: publication summary/video page layout
 - `pages/publications/`: one lightweight page file per publication detail page
+- `smooth-scroll.js`: smooth same-page section navigation
 
 ## Publishing
 
