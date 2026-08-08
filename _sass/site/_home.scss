@@ -547,6 +547,22 @@ footer {
   }
 }
 
+@media (min-width: $large-breakpoint) and (max-width: 92rem) {
+  .container {
+    padding-left: clamp(1.75rem, 3vw, 3rem);
+    padding-right: clamp(1.75rem, 3vw, 3rem);
+  }
+
+  .container > .home-content {
+    max-width: 64rem;
+  }
+
+  .project-grid {
+    gap: 1.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+}
+
 @media (max-width: 72rem) {
   .publication-card--standard {
     grid-template-columns: 1fr;
