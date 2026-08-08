@@ -548,30 +548,6 @@ footer {
 }
 
 @media (min-width: $large-breakpoint) and (max-width: 110rem) {
-  .home #sidebar {
-    padding: 1.5rem;
-    width: 15.25rem;
-  }
-
-  .home #sidebar .site-title {
-    font-size: 2.75rem;
-    line-height: 1.12;
-  }
-
-  .home #sidebar .lead {
-    font-size: 0.9rem;
-  }
-
-  .home .container {
-    margin-left: 15.25rem;
-    padding-left: clamp(1.35rem, 2.4vw, 2.5rem);
-    padding-right: clamp(1.35rem, 2.4vw, 2.5rem);
-  }
-
-  .container > .home-content {
-    max-width: 58rem;
-  }
-
   .home-section {
     padding: 1.25rem 0;
   }
@@ -581,14 +557,61 @@ footer {
     margin-bottom: 1rem;
   }
 
+  .about-grid {
+    gap: 1rem;
+    grid-template-columns: minmax(8rem, 11.5rem) minmax(0, 1fr);
+  }
+
+  .profile-name {
+    font-size: 2.05rem;
+  }
+
+  .profile-intro,
+  .profile-bio {
+    font-size: 0.94rem;
+  }
+
+  .profile-vision {
+    font-size: 0.95rem;
+  }
+
+  .publication-card {
+    gap: 0.85rem;
+    padding: 0.85rem;
+  }
+
+  .publication-card--standard {
+    grid-template-columns: minmax(11rem, 17rem) minmax(0, 1fr);
+  }
+
+  .publication-title {
+    font-size: 1rem;
+  }
+
+  .publication-card--featured .publication-title {
+    font-size: 1.22rem;
+  }
+
+  .publication-authors,
+  .publication-venue,
+  .publication-note {
+    font-size: 0.9rem;
+  }
+
   .project-grid {
-    gap: 0.9rem;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(10.75rem, 1fr));
   }
 
   .project-card-title {
-    font-size: 0.9rem;
-    padding: 2.15rem 0.75rem 0.75rem;
+    font-size: 0.82rem;
+    padding: 1.95rem 0.7rem 0.7rem;
+  }
+}
+
+@media (min-width: 88rem) and (max-width: 110rem) {
+  .project-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
