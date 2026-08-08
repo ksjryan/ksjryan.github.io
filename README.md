@@ -1,4 +1,4 @@
-# Seongjun (Ryan) Kang Website
+# Seongjun Kang Website
 
 This is the source for the GitHub Pages site at <https://ksjryan.github.io>.
 
