@@ -549,7 +549,7 @@ footer {
 
 @media (min-width: $large-breakpoint) and (max-width: 110rem) {
   .home .container {
-    padding-right: clamp(2.75rem, 5vw, 5rem);
+    padding-right: clamp(5rem, 9vw, 9rem);
   }
 
   .home-section {
