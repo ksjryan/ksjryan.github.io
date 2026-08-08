@@ -548,8 +548,32 @@ footer {
 }
 
 @media (min-width: $large-breakpoint) and (max-width: 110rem) {
+  .home {
+    --home-right-pad: clamp(7rem, 14vw, 14rem);
+    --home-sidebar-lead-size: 0.9rem;
+    --home-sidebar-padding: 1.65rem;
+    --home-sidebar-title-size: 2.95rem;
+    --home-sidebar-width: 16.75rem;
+  }
+
+  .home #sidebar {
+    padding: var(--home-sidebar-padding);
+    width: var(--home-sidebar-width);
+  }
+
+  .home #sidebar .site-title {
+    font-size: var(--home-sidebar-title-size);
+    line-height: 1.12;
+  }
+
+  .home #sidebar .lead {
+    font-size: var(--home-sidebar-lead-size);
+  }
+
   .home .container {
-    padding-right: clamp(7rem, 14vw, 14rem);
+    margin-left: var(--home-sidebar-width);
+    padding-left: clamp(1.5rem, 3vw, 3.25rem);
+    padding-right: var(--home-right-pad);
   }
 
   .home-section {
@@ -613,6 +637,49 @@ footer {
   }
 }
 
+@media (min-width: $large-breakpoint) and (max-width: 88rem) {
+  .home {
+    --home-sidebar-lead-size: 0.84rem;
+    --home-sidebar-padding: 1.35rem;
+    --home-sidebar-title-size: 2.65rem;
+    --home-sidebar-width: 15.5rem;
+  }
+
+  .home .container {
+    padding-left: clamp(1.2rem, 2.6vw, 2.5rem);
+  }
+
+  .profile-name {
+    font-size: 1.92rem;
+  }
+
+  .profile-intro,
+  .profile-bio {
+    font-size: 0.9rem;
+  }
+
+  .profile-vision {
+    font-size: 0.91rem;
+  }
+
+  .publication-title {
+    font-size: 0.95rem;
+  }
+
+  .publication-card--featured .publication-title {
+    font-size: 1.12rem;
+  }
+}
+
+@media (min-width: 88rem) and (max-width: 100rem) {
+  .home {
+    --home-sidebar-lead-size: 0.87rem;
+    --home-sidebar-padding: 1.5rem;
+    --home-sidebar-title-size: 2.82rem;
+    --home-sidebar-width: 16.25rem;
+  }
+}
+
 @media (min-width: 88rem) and (max-width: 110rem) {
   .project-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -620,8 +687,12 @@ footer {
 }
 
 @media (min-width: 100rem) and (max-width: 110rem) {
-  .home .container {
-    padding-right: clamp(6.5rem, 10vw, 12rem);
+  .home {
+    --home-right-pad: clamp(5.25rem, 7.5vw, 9.5rem);
+    --home-sidebar-lead-size: 0.92rem;
+    --home-sidebar-padding: 1.8rem;
+    --home-sidebar-title-size: 3.05rem;
+    --home-sidebar-width: 17.25rem;
   }
 }
 
