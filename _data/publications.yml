@@ -6,6 +6,25 @@ sections:
       - title: "Full Papers &mdash; First Author"
         layout: "featured"
         items:
+          - title: "Inertia in Your Hand: Rendering Virtual Tool Dynamics via In-Hand Cutaneous Deformation"
+            slug: "inertia-in-your-hand"
+            detail_url: "/pages/publications/inertia-in-your-hand/"
+            image: "/images/InertiaInYourHand_UIST2026.jpg"
+            summary: >-
+              This paper presents the Inertia Handle, a handheld haptic device
+              that renders virtual tool dynamics through in-hand cutaneous
+              deformation. By modeling hand-tool coupling and adapting feedback
+              from grip force, the paper shows how compact in-hand motion can
+              communicate virtual tool direction, length, and tool-matched
+              dynamics in VR.
+            video_note: "A video link will be added here when available."
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Kim, G., Shin,
+              S., Park, J., Um, J., Rus, D., Kim, S.
+            venue: "UIST 2026"
+            venue_detail: "The ACM Symposium on User Interface Software and Technology"
+            highlight_venue: true
+
           - title: "When Fingers Become Tools: Rendering Virtual Tool Inertia with a Finger-Mounted Extending Rod"
             slug: "when-fingers-become-tools"
             detail_url: "/pages/publications/when-fingers-become-tools/"
