@@ -44,12 +44,15 @@ img {
 
 .home #sidebar #sidebar-icon-links {
   --sidebar-icon-size: clamp(2.375rem, 2.8vw, 2.5rem);
-  column-gap: clamp(0.4rem, calc(var(--home-sidebar-width, 16rem) / 28), 1.25rem);
+  column-gap: calc(min(
+    clamp(0.4rem, calc(var(--home-sidebar-width, 16rem) / 28), 1.25rem) + 2px,
+    (100% - 4 * var(--sidebar-icon-size)) / 3
+  ));
   display: grid;
   grid-template-columns: repeat(4, var(--sidebar-icon-size));
   justify-content: center;
   margin-left: 0;
-  row-gap: 0.65rem;
+  row-gap: calc(0.65rem + 2px);
 }
 
 .home #sidebar #sidebar-icon-links .icon {
@@ -810,7 +813,7 @@ footer {
 
 @media (min-width: $large-breakpoint) and (max-width: 79.99rem) {
   .home #sidebar #sidebar-icon-links {
-    column-gap: clamp(0.6rem, calc(var(--home-sidebar-width) / 12), 1.25rem);
+    column-gap: calc(clamp(0.6rem, calc(var(--home-sidebar-width) / 12), 1.25rem) + 2px);
     grid-template-columns: repeat(2, var(--sidebar-icon-size));
   }
 }
