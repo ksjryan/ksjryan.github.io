@@ -188,6 +188,67 @@ footer {
   transform: translateY(-50%) scale(1.04);
 }
 
+.profile-carousel-thumbnails {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, minmax(0, 3rem));
+  justify-content: center;
+  margin-top: 0.65rem;
+}
+
+.profile-carousel-thumbnail {
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  box-shadow: none;
+  line-height: 0;
+  min-width: 0;
+  padding: 2px;
+  transition: border-color 0.15s ease;
+  width: 100%;
+}
+
+.profile-carousel-thumbnail img {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  display: block;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.65;
+  width: 100%;
+}
+
+.profile-carousel-thumbnail:hover {
+  background: transparent;
+  border-color: $border-color;
+  box-shadow: none;
+}
+
+.profile-carousel-thumbnail[aria-pressed="true"] {
+  border-color: $link-color;
+}
+
+.profile-carousel-thumbnail:hover img,
+.profile-carousel-thumbnail[aria-pressed="true"] img {
+  opacity: 1;
+}
+
+.profile-carousel-thumbnail:focus-visible {
+  outline: 2px solid $heading-color;
+  outline-offset: 3px;
+}
+
+.profile-carousel-status {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .about-copy {
   min-width: 0;
 }
