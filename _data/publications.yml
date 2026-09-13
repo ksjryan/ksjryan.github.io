@@ -8,8 +8,12 @@ sections:
         items:
           - title: "Inertia in Your Hand: Rendering Virtual Tool Dynamics via In-Hand Cutaneous Deformation"
             slug: "inertia-in-your-hand"
-            detail_url: "/pages/publications/inertia-in-your-hand/"
-            image: "/images/InertiaInYourHand_UIST2026.jpg"
+            image: "/images/InertiaInYourHand_UIST2026.gif"
+            image_width: 455
+            image_height: 255
+            teaser_image: "/images/InertiaInYourHand_UIST2026.jpg"
+            teaser_image_width: 1800
+            teaser_image_height: 554
             summary: >-
               This paper presents the Inertia Handle, a handheld haptic device
               that renders virtual tool dynamics through in-hand cutaneous
@@ -27,8 +31,12 @@ sections:
 
           - title: "When Fingers Become Tools: Rendering Virtual Tool Inertia with a Finger-Mounted Extending Rod"
             slug: "when-fingers-become-tools"
-            detail_url: "/pages/publications/when-fingers-become-tools/"
-            image: "/images/WhenFingersBecomeTools_CHI.png"
+            image: "/images/WhenFingersBecomeTools_CHI.gif"
+            image_width: 800
+            image_height: 450
+            teaser_image: "/images/WhenFingersBecomeTools_CHI.png"
+            teaser_image_width: 2546
+            teaser_image_height: 790
             summary: >-
               This paper explores how a finger-mounted extending rod can render
               the inertia of virtual tools. By changing the apparent physical
@@ -49,8 +57,12 @@ sections:
 
           - title: "EarPressure VR: Ear Canal Pressure Feedback for Enhancing Environmental Presence in Virtual Reality"
             slug: "earpressure-vr"
-            detail_url: "/pages/publications/earpressure-vr/"
-            image: "/images/EarPressureVR_UIST.png"
+            image: "/images/EarPressureVR_UIST.gif"
+            image_width: 800
+            image_height: 450
+            teaser_image: "/images/EarPressureVR_UIST.png"
+            teaser_image_width: 2856
+            teaser_image_height: 820
             summary: >-
               This paper introduces EarPressure VR, an ear-canal pressure
               feedback approach for strengthening environmental presence in
@@ -72,8 +84,12 @@ sections:
 
           - title: "TelePulse: Enhancing the Teleoperation Experience through Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality"
             slug: "telepulse"
-            detail_url: "/pages/publications/telepulse/"
-            image: "/images/TelePulse_CHI.png"
+            image: "/images/TelePulse_CHI.gif"
+            image_width: 800
+            image_height: 450
+            teaser_image: "/images/TelePulse_CHI.png"
+            teaser_image_width: 2908
+            teaser_image_height: 994
             summary: >-
               This paper presents TelePulse, which combines biomechanical
               simulation and electrical muscle stimulation to provide
@@ -96,8 +112,12 @@ sections:
 
           - title: "Flip-Pelt: Motor-Driven Peltier Elements for Rapid Thermal Stimulation and Congruent Pressure Feedback in Virtual Reality"
             slug: "flip-pelt"
-            detail_url: "/pages/publications/flip-pelt/"
-            image: "/images/FlipPelt_UIST.png"
+            image: "/images/FlipPelt_UIST.gif"
+            image_width: 515
+            image_height: 290
+            teaser_image: "/images/FlipPelt_UIST.png"
+            teaser_image_width: 2834
+            teaser_image_height: 756
             summary: >-
               This paper presents Flip-Pelt, a motor-driven thermal interface
               that flips Peltier elements to deliver rapid warm and cool
@@ -119,8 +139,12 @@ sections:
 
           - title: "Giant Finger: A Novel Visuo-Somatosensory Approach to Simulating Lower Body Movements in Virtual Reality"
             slug: "giant-finger"
-            detail_url: "/pages/publications/giant-finger/"
-            image: "/images/GiantFinger_ISMAR.png"
+            image: "/images/GiantFinger_ISMAR.gif"
+            image_width: 600
+            image_height: 338
+            teaser_image: "/images/GiantFinger_ISMAR.png"
+            teaser_image_width: 2820
+            teaser_image_height: 996
             summary: >-
               This paper presents Giant Finger, a visuo-somatosensory approach
               to simulating lower-body movement in virtual reality by mapping

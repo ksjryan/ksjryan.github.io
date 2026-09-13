@@ -1,30 +1,34 @@
 {% assign publication = include.publication %}
 {% assign card_layout = include.card_layout | default: "standard" %}
 
-<article class="publication-card publication-card--{{ card_layout }}">
+<article class="publication-card publication-card--{{ card_layout }}"{% if card_layout == "featured" %} data-publication-details data-publication-title="{{ publication.title | escape }}"{% endif %}>
+  <div class="publication-summary">
   {% unless card_layout == "compact" %}
   <div class="publication-media">
-    {% if card_layout == "featured" and publication.detail_url %}
-      <a
-        href="{{ publication.detail_url | relative_url }}"
-        class="publication-media-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open summary and video for {{ publication.title }}"
+    {% if card_layout == "featured" %}
+      <button
+        type="button"
+        class="publication-media-toggle"
+        data-publication-toggle
+        aria-expanded="false"
+        aria-controls="details-{{ publication.slug }}"
+        aria-label="More details for {{ publication.title | escape }}"
       >
         <img
           src="{{ publication.image | relative_url }}"
-          alt="{{ publication.title }}"
+          alt="{{ publication.title | escape }}"
+          width="{{ publication.image_width }}"
+          height="{{ publication.image_height }}"
           loading="lazy"
         >
         <span class="publication-media-overlay" aria-hidden="true">
-          <span class="publication-media-mark">Paper details</span>
+          <span class="publication-media-mark" data-publication-toggle-label>More Details</span>
         </span>
-      </a>
+      </button>
     {% else %}
       <img
         src="{{ publication.image | relative_url }}"
-        alt="{{ publication.title }}"
+        alt="{{ publication.title | escape }}"
         loading="lazy"
       >
     {% endif %}
@@ -62,4 +66,44 @@
       </nav>
     {% endif %}
   </div>
+  </div>
+
+  {% if card_layout == "featured" %}
+    <div
+      class="publication-details-panel"
+      id="details-{{ publication.slug }}"
+      data-publication-panel
+      role="region"
+      aria-label="Details for {{ publication.title | escape }}"
+      aria-hidden="true"
+      inert
+      hidden
+    >
+      <div class="publication-details-inner">
+        <div class="publication-details-grid">
+          <figure class="publication-teaser">
+            <img src="{{ publication.teaser_image | relative_url }}" alt="{{ publication.title | escape }} — overview teaser" width="{{ publication.teaser_image_width }}" height="{{ publication.teaser_image_height }}" loading="lazy">
+          </figure>
+          {% if publication.video_id %}
+            <div class="publication-video">
+              <iframe
+                data-src="https://www.youtube-nocookie.com/embed/{{ publication.video_id }}?rel=0"
+                title="{{ publication.title | escape }} — video"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          {% else %}
+            <div class="publication-video publication-video--unavailable">
+              <p>{{ publication.video_note | default: "Video coming soon." }}</p>
+            </div>
+          {% endif %}
+        </div>
+        <div class="publication-details-footer">
+          <button type="button" class="publication-details-close" data-publication-close>Close details <span aria-hidden="true">↑</span></button>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 </article>
