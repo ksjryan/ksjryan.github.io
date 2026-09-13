@@ -650,11 +650,12 @@ footer {
 }
 
 .publication-details-grid {
-  align-items: center;
+  align-items: start;
   border-top: 1px solid rgba(0, 0, 0, 0.09);
   display: grid;
   gap: 1rem;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  // Give both media the same height using their original aspect ratios.
+  grid-template-columns: minmax(0, var(--publication-teaser-column, 3fr)) minmax(0, 1.777777778fr);
   padding-top: 1rem;
 }
 
