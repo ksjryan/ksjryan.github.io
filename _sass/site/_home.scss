@@ -413,11 +413,6 @@ footer {
 .publication-card--featured .publication-title {
   font-size: 1.35rem;
   line-height: 1.22;
-  margin-bottom: 0;
-}
-
-.publication-card--featured .publication-body > :first-child {
-  margin-top: 0;
 }
 
 .publication-authors,
@@ -846,11 +841,7 @@ footer {
 @media (min-width: 80rem) {
   .home .publication-card--featured {
     align-items: start;
-    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
-  }
-
-  .home .publication-card--featured > .publication-title {
-    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.4fr);
   }
 
   .home #sidebar #sidebar-icon-links {
