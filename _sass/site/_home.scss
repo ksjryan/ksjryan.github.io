@@ -43,28 +43,30 @@ img {
 }
 
 .home #sidebar #sidebar-icon-links {
-  --sidebar-icon-size: clamp(2.375rem, 2.8vw, 2.5rem);
-  column-gap: calc(min(
-    clamp(0.4rem, calc(var(--home-sidebar-width, 16rem) / 28), 1.25rem) + 8px,
-    (100% - 4 * var(--sidebar-icon-size)) / 3
-  ));
+  --sidebar-icon-size: 2.5rem;
+  --sidebar-icon-gap: clamp(0.25rem, calc(var(--home-sidebar-width, 16rem) / 24), 1.1rem);
+  column-gap: var(--sidebar-icon-gap);
   display: grid;
-  grid-template-columns: repeat(4, var(--sidebar-icon-size));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   justify-content: center;
-  margin-left: 0;
-  row-gap: calc(0.65rem + 8px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(4 * var(--sidebar-icon-size) + 3 * var(--sidebar-icon-gap));
+  width: 100%;
 }
 
 .home #sidebar #sidebar-icon-links .icon {
   align-items: center;
+  aspect-ratio: 1;
   border-radius: 0.4rem;
   display: flex;
-  height: var(--sidebar-icon-size);
+  height: auto;
   justify-content: center;
   line-height: 1;
   margin: 0;
+  max-width: var(--sidebar-icon-size);
   transition: transform 0.18s ease;
-  width: var(--sidebar-icon-size);
+  width: 100%;
 }
 
 .home #sidebar #sidebar-icon-links svg {
@@ -760,6 +762,8 @@ footer {
   .home .about-grid {
     gap: 1rem;
     grid-template-columns: minmax(8rem, 10.5rem) minmax(0, 1fr);
+    max-width: 100%;
+    width: calc(70vw - var(--home-sidebar-width) - var(--home-content-gap));
   }
 
   .home .profile-name {
@@ -841,33 +845,12 @@ footer {
   .home #sidebar #sidebar-nav-links {
     font-size: 0.8rem;
   }
-
-  .home #sidebar #sidebar-icon-links {
-    column-gap: 0;
-    grid-template-columns: var(--sidebar-icon-size);
-  }
-}
-
-@media (min-width: 64rem) and (max-width: 127.99rem) {
-  .home #sidebar #sidebar-icon-links {
-    column-gap: calc(clamp(0.6rem, calc(var(--home-sidebar-width) / 12), 1.25rem) + 8px);
-    grid-template-columns: repeat(2, var(--sidebar-icon-size));
-  }
 }
 
 @media (min-width: 80rem) {
   .home .publication-card--featured {
     align-items: start;
     grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.4fr);
-  }
-}
-
-@media (min-width: 128rem) {
-  .home #sidebar #sidebar-icon-links {
-    margin-left: -8px;
-    margin-right: -8px;
-    max-width: none;
-    width: calc(100% + 16px);
   }
 }
 
