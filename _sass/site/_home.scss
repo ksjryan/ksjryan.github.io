@@ -201,12 +201,6 @@ footer {
 }
 
 .profile-intro,
-.profile-vision,
-.profile-bio {
-  max-width: 62rem;
-}
-
-.profile-intro,
 .profile-bio {
   font-size: 0.98rem;
   line-height: 1.6;
@@ -691,12 +685,10 @@ footer {
   .home .profile-intro,
   .home .profile-bio {
     font-size: 0.94rem;
-    max-width: 70ch;
   }
 
   .home .profile-vision {
     font-size: 0.95rem;
-    max-width: 70ch;
   }
 
   .home .publication-list {
