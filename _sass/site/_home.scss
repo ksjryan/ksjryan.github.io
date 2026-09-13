@@ -45,14 +45,14 @@ img {
 .home #sidebar #sidebar-icon-links {
   --sidebar-icon-size: clamp(2.375rem, 2.8vw, 2.5rem);
   column-gap: calc(min(
-    clamp(0.4rem, calc(var(--home-sidebar-width, 16rem) / 28), 1.25rem) + 2px,
+    clamp(0.4rem, calc(var(--home-sidebar-width, 16rem) / 28), 1.25rem) + 8px,
     (100% - 4 * var(--sidebar-icon-size)) / 3
   ));
   display: grid;
   grid-template-columns: repeat(4, var(--sidebar-icon-size));
   justify-content: center;
   margin-left: 0;
-  row-gap: calc(0.65rem + 2px);
+  row-gap: calc(0.65rem + 8px);
 }
 
 .home #sidebar #sidebar-icon-links .icon {
@@ -256,36 +256,13 @@ footer {
   min-width: 0;
 }
 
-.profile-icon-links {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(0.75rem, 1vw, 1rem);
-  margin-top: 1rem;
+.profile-resource-links a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  white-space: nowrap;
 }
 
-.profile-icon-links .icon {
-  border-radius: 0.4rem;
-  display: inline-flex;
-  flex: 0 0 auto;
-  height: 2.5rem;
-  line-height: 1;
-  margin: 0;
-  transition: transform 0.18s ease;
-  width: 2.5rem;
-}
-
-.profile-icon-links svg {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.profile-icon-links .icon:hover {
-  transform: translateY(-2px);
-}
-
-.profile-icon-links .icon:focus-visible {
+.profile-resource-links a:focus-visible {
   outline: 2px solid $heading-color;
   outline-offset: 4px;
 }
@@ -299,10 +276,15 @@ footer {
 }
 
 .profile-intro,
-.profile-bio {
+.profile-bio,
+.profile-resource-links {
   font-size: 0.98rem;
   line-height: 1.6;
   margin: 0 0 0.75rem;
+}
+
+.profile-resource-links {
+  margin: 1rem 0 0;
 }
 
 .profile-vision {
@@ -781,7 +763,8 @@ footer {
   }
 
   .home .profile-intro,
-  .home .profile-bio {
+  .home .profile-bio,
+  .home .profile-resource-links {
     font-size: 0.94rem;
   }
 
@@ -847,8 +830,17 @@ footer {
 
 @media (min-width: $large-breakpoint) and (max-width: 79.99rem) {
   .home #sidebar #sidebar-icon-links {
-    column-gap: calc(clamp(0.6rem, calc(var(--home-sidebar-width) / 12), 1.25rem) + 2px);
+    column-gap: calc(clamp(0.6rem, calc(var(--home-sidebar-width) / 12), 1.25rem) + 8px);
     grid-template-columns: repeat(2, var(--sidebar-icon-size));
+  }
+}
+
+@media (min-width: 80rem) {
+  .home #sidebar #sidebar-icon-links {
+    margin-left: -8px;
+    margin-right: -8px;
+    max-width: none;
+    width: calc(100% + 16px);
   }
 }
 
