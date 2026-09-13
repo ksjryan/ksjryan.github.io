@@ -591,152 +591,139 @@ footer {
   }
 }
 
-@media (min-width: $large-breakpoint) and (max-width: 110rem) {
+@media (min-width: $large-breakpoint) {
   .home {
-    --home-right-pad: clamp(7rem, 14vw, 14rem);
-    --home-sidebar-lead-size: 0.9rem;
-    --home-sidebar-padding: 1.65rem;
-    --home-sidebar-title-size: 2.95rem;
-    --home-sidebar-width: 16.75rem;
+    --home-content-gap: clamp(1.2rem, 2.5vw, 3rem);
+    --home-sidebar-width: clamp(14rem, 19vw, 15.5rem);
   }
 
   .home #sidebar {
-    padding: var(--home-sidebar-padding);
+    left: 0;
+    padding: clamp(1.2rem, 1.8vw, 1.4rem);
     width: var(--home-sidebar-width);
   }
 
   .home #sidebar .site-title {
-    font-size: var(--home-sidebar-title-size);
+    font-size: clamp(2.35rem, 3vw, 2.65rem);
     line-height: 1.12;
   }
 
   .home #sidebar .lead {
-    font-size: var(--home-sidebar-lead-size);
+    font-size: 0.85rem;
   }
 
   .home .container {
     margin-left: var(--home-sidebar-width);
-    padding-left: clamp(1.5rem, 3vw, 3.25rem);
-    padding-right: var(--home-right-pad);
+    padding-left: var(--home-content-gap);
+    padding-right: 0;
   }
 
-  .home-section {
+  .home .container > .home-content {
+    // Keep the content's right edge at 80vw, with the sidebar flush left.
+    max-width: none;
+    width: calc(80vw - var(--home-sidebar-width) - var(--home-content-gap));
+  }
+
+  .home .home-section {
     padding: 1.25rem 0;
   }
 
-  .section-title {
+  .home .home-section:first-child {
+    padding-top: 0;
+  }
+
+  .home .home-section:last-child {
+    padding-bottom: 0;
+  }
+
+  .home .section-title {
     font-size: 1.42rem;
     margin-bottom: 1rem;
   }
 
-  .about-grid {
+  .home .about-grid {
     gap: 1rem;
-    grid-template-columns: minmax(8rem, 11.5rem) minmax(0, 1fr);
+    grid-template-columns: minmax(8rem, 10.5rem) minmax(0, 1fr);
   }
 
-  .profile-name {
-    font-size: 2.05rem;
+  .home .profile-name {
+    font-size: 1.95rem;
   }
 
-  .profile-intro,
-  .profile-bio {
+  .home .profile-intro,
+  .home .profile-bio {
     font-size: 0.94rem;
+    max-width: 70ch;
   }
 
-  .profile-vision {
+  .home .profile-vision {
     font-size: 0.95rem;
+    max-width: 70ch;
   }
 
-  .publication-card {
+  .home .publication-list {
     gap: 0.85rem;
+  }
+
+  .home .publication-card {
+    gap: 0.85rem;
+    margin: 0;
     padding: 0.85rem;
   }
 
-  .publication-card--standard {
-    grid-template-columns: minmax(11rem, 17rem) minmax(0, 1fr);
+  .home .publication-card--standard {
+    grid-template-columns: minmax(9rem, 15rem) minmax(0, 1fr);
   }
 
-  .publication-title {
-    font-size: 1rem;
+  .home .publication-card--standard .publication-media img {
+    max-height: 13rem;
   }
 
-  .publication-card--featured .publication-title {
-    font-size: 1.22rem;
+  .home .publication-card--featured .publication-media img {
+    max-height: 20.5rem;
   }
 
-  .publication-authors,
-  .publication-venue,
-  .publication-note {
-    font-size: 0.9rem;
+  .home .publication-card--standard .publication-title {
+    font-size: 0.95rem;
   }
 
-  .project-grid {
+  .home .publication-card--featured .publication-title {
+    font-size: 1.12rem;
+  }
+
+  .home .publication-card:not(.publication-card--compact) {
+    .publication-authors,
+    .publication-venue,
+    .publication-note,
+    .publication-links a {
+      font-size: 0.9rem;
+    }
+  }
+
+  .home .project-grid {
     gap: 0.75rem;
     grid-template-columns: repeat(auto-fit, minmax(10.75rem, 1fr));
   }
 
-  .project-card-title {
+  .home .project-card-title {
     font-size: 0.82rem;
     padding: 1.95rem 0.7rem 0.7rem;
   }
 }
 
-@media (min-width: $large-breakpoint) and (max-width: 88rem) {
-  .home {
-    --home-sidebar-lead-size: 0.84rem;
-    --home-sidebar-padding: 1.35rem;
-    --home-sidebar-title-size: 2.65rem;
-    --home-sidebar-width: 15.5rem;
-  }
-
-  .home .container {
-    padding-left: clamp(1.2rem, 2.6vw, 2.5rem);
-  }
-
-  .profile-name {
-    font-size: 1.92rem;
-  }
-
-  .profile-intro,
-  .profile-bio {
-    font-size: 0.9rem;
-  }
-
-  .profile-vision {
-    font-size: 0.91rem;
-  }
-
-  .publication-title {
-    font-size: 0.95rem;
-  }
-
-  .publication-card--featured .publication-title {
-    font-size: 1.12rem;
+@media (min-width: $large-breakpoint) and (max-width: 72rem) {
+  .home .publication-card--standard {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (min-width: 88rem) and (max-width: 100rem) {
-  .home {
-    --home-sidebar-lead-size: 0.87rem;
-    --home-sidebar-padding: 1.5rem;
-    --home-sidebar-title-size: 2.82rem;
-    --home-sidebar-width: 16.25rem;
+@media (min-width: $large-breakpoint) and (max-width: 64rem) {
+  .home .about-grid {
+    grid-template-columns: 1fr;
   }
-}
 
-@media (min-width: 88rem) and (max-width: 110rem) {
-  .project-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 100rem) and (max-width: 110rem) {
-  .home {
-    --home-right-pad: clamp(5.25rem, 7.5vw, 9.5rem);
-    --home-sidebar-lead-size: 0.92rem;
-    --home-sidebar-padding: 1.8rem;
-    --home-sidebar-title-size: 3.05rem;
-    --home-sidebar-width: 17.25rem;
+  .home .profile-carousel {
+    max-width: 10.5rem;
   }
 }
 
