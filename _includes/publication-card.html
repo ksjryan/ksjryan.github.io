@@ -2,6 +2,7 @@
 {% assign card_layout = include.card_layout | default: "standard" %}
 
 <article class="publication-card publication-card--{{ card_layout }}">
+  {% unless card_layout == "compact" %}
   <div class="publication-media">
     {% if card_layout == "featured" and publication.detail_url %}
       <a
@@ -28,6 +29,7 @@
       >
     {% endif %}
   </div>
+  {% endunless %}
 
   <div class="publication-body">
     <h4 class="publication-title">{{ publication.title }}</h4>
