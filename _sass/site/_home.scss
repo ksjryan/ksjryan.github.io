@@ -594,22 +594,32 @@ footer {
 @media (min-width: $large-breakpoint) {
   .home {
     --home-content-gap: clamp(1.2rem, 2.5vw, 3rem);
-    --home-sidebar-width: clamp(14rem, 19vw, 15.5rem);
+    --home-sidebar-width: calc(20vw - var(--home-content-gap));
   }
 
   .home #sidebar {
     left: 0;
-    padding: clamp(1.2rem, 1.8vw, 1.4rem);
+    max-height: 100vh;
+    padding: clamp(0.5rem, 1.25vw, 1.4rem);
     width: var(--home-sidebar-width);
   }
 
   .home #sidebar .site-title {
-    font-size: clamp(2.35rem, 3vw, 2.65rem);
+    font-size: clamp(1.25rem, 2.8vw, 2.65rem);
     line-height: 1.12;
   }
 
   .home #sidebar .lead {
     font-size: 0.85rem;
+  }
+
+  .home #sidebar #sidebar-icon-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 50px));
+  }
+
+  .home #sidebar #sidebar-icon-links svg {
+    max-width: 100%;
   }
 
   .home .container {
@@ -619,7 +629,7 @@ footer {
   }
 
   .home .container > .home-content {
-    // Keep the content's right edge at 80vw, with the sidebar flush left.
+    // The sidebar and gap use 20vw; the remaining 60vw centers the content.
     max-width: none;
     width: calc(80vw - var(--home-sidebar-width) - var(--home-content-gap));
   }
@@ -718,6 +728,11 @@ footer {
 }
 
 @media (min-width: $large-breakpoint) and (max-width: 64rem) {
+  .home #sidebar #sidebar-icon-links {
+    column-gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 50px));
+  }
+
   .home .about-grid {
     grid-template-columns: 1fr;
   }
