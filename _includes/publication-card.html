@@ -80,7 +80,8 @@
       hidden
     >
       <div class="publication-details-inner">
-        <div class="publication-details-grid">
+        {% assign teaser_ratio = publication.teaser_image_width | times: 1.0 | divided_by: publication.teaser_image_height %}
+        <div class="publication-details-grid" style="--publication-teaser-column: {{ teaser_ratio }}fr;">
           <figure class="publication-teaser">
             <img src="{{ publication.teaser_image | relative_url }}" alt="{{ publication.title | escape }} — overview teaser" width="{{ publication.teaser_image_width }}" height="{{ publication.teaser_image_height }}" loading="lazy">
           </figure>
