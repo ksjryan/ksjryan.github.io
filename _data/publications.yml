@@ -351,7 +351,7 @@ sections:
   - id: "research3"
     title: "More Publications"
     groups:
-      - layout: "standard"
+      - layout: "compact"
         items:
           - title: "TS2Vec-based Time-Series Representation Learning for Badminton Swing Skill Level Assessment"
             image: "/images/TS2VecBadminton_HCIKorea2026.png"
