@@ -124,10 +124,13 @@ footer {
 }
 
 .profile-photo {
+  aspect-ratio: 3 / 4;
   border-radius: 8px;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
   height: auto;
   margin: 0;
+  object-fit: cover;
+  object-position: center top;
   width: 100%;
 }
 
