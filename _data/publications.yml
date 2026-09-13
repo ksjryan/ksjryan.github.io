@@ -143,6 +143,33 @@ sections:
       - title: "Full Papers &mdash; Co-author"
         layout: "standard"
         items:
+          - title: "MagToTheFuture: Transforming Passive Objects into Circuit-Free Haptic Devices via Magnetic Fields"
+            image: "/images/MagToTheFuture_UIST2026.webp"
+            authors_html: >-
+              Park, J., <strong class="author-name">Kang, S.</strong>, Ko, K.,
+              Kim, G., Shin, S., Kang, Y., Matusik, W., Rus, D., Kim, S.
+            venue: "UIST 2026"
+            venue_detail: "The ACM Symposium on User Interface Software and Technology"
+            highlight_venue: true
+
+          - title: "Contextual Blocking Entities: Transformation of Guardian Boundaries in Virtual Reality"
+            image: "/images/ContextualBlockingEntities_TVCG2026.webp"
+            authors_html: >-
+              Jang, S., <strong class="author-name">Kang, S.</strong>, Um, J.,
+              Park, J., Kim, S.
+            venue: "IEEE TVCG 2026"
+            venue_detail: "IEEE Transactions on Visualization and Computer Graphics"
+            highlight_venue: true
+
+          - title: "EMSWalker: Integrating Gait-Synchronized Electrical Muscle Stimulation for Seated Walking-in-Place in Virtual Reality"
+            image: "/images/EMSWalker_ISMAR2026.webp"
+            authors_html: >-
+              Um, J., <strong class="author-name">Kang, S.</strong>, Gim, B.,
+              Kang, Y., Kim, G., Shin, S., DelPreto, J., Rus, D., Kim, S.
+            venue: "ISMAR 2026"
+            venue_detail: "IEEE International Symposium on Mixed and Augmented Reality"
+            highlight_venue: true
+
           - title: "From Disruption to Immersion: Reimagining Vehicle Motion as Environmental Feedback through Force Mappings in In-Car VR"
             image: "/images/From Disruption to Immersion.jpg"
             authors_html: >-
@@ -215,6 +242,24 @@ sections:
       - title: "Posters, Demos, and Workshop Papers"
         layout: "standard"
         items:
+          - title: "Surf-Roll: Modulating Perceived Slipperiness and Stickiness through Finger–Surface Relative Motion"
+            image: "/images/SurfRoll_UISTAdjunct2026.png"
+            authors_html: >-
+              Kim, E., Shin, S., <strong class="author-name">Kang, S.</strong>,
+              Jang, S., Park, J., Um, J., Kim, S.
+            venue: "UIST-Adjunct 2026"
+            venue_detail: "The ACM Symposium on User Interface Software and Technology Adjunct"
+            highlight_venue: true
+
+          - title: "Six Gains RDW: Reinforcement Learning Based Redirected Walking Using Translation, Rotation, Curvature, Strafing, Saccadic, and Eye Blink Gains"
+            image: "/images/SixGainsRDW_ISMARAdjunct2026.png"
+            authors_html: >-
+              Oh, J.*, <strong class="author-name">Kang, S.*</strong>, Um, J.*,
+              Kim, S. (* equal contribution)
+            venue: "ISMAR-Adjunct 2026"
+            venue_detail: "IEEE International Symposium on Mixed and Augmented Reality Adjunct"
+            highlight_venue: true
+
           - title: "Magneto: Enabling Multimodal Haptic Feedback on Paper through Magnetic Fields"
             image: "/images/Magneto_CHILBW.gif"
             authors_html: >-
@@ -308,6 +353,39 @@ sections:
     groups:
       - layout: "standard"
         items:
+          - title: "TS2Vec-based Time-Series Representation Learning for Badminton Swing Skill Level Assessment"
+            image: "/images/TS2VecBadminton_HCIKorea2026.png"
+            authors_html: >-
+              Park, C., Seong, M., Um, J.,
+              <strong class="author-name">Kang, S.</strong>, Park, J., Kim, S.
+            venue: "HCI Korea 2026"
+            links:
+              - label: "Paper"
+                url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12745810"
+
+          - title: "TherMusic: A Valence-Arousal-Based Music Emotion Classifier and Thermal Feedback Headset System"
+            image: "/images/TherMusic_KCC2025.png"
+            authors_html: >-
+              <strong class="author-name">Kang, S.</strong>, Gim, B., Um, J.,
+              Kim, S.
+            venue: "KIISE Korea Computer Congress 2025"
+            venue_detail: "Proceedings of the Korean Information Science Society Conference"
+            note: "Best Paper Award"
+            links:
+              - label: "Paper"
+                url: "https://drive.google.com/file/d/1zzFlPxAglVimVZo42ODQrhVgkwaR3MN-/view?usp=sharing"
+
+          - title: "Utilizing Real-Time Video Matting to create a Scalable System for Real Hand Visualization and Interaction within Augmented Virtuality"
+            image: "/images/RealTimeVideoMatting_KCC2025.webp"
+            authors_html: >-
+              Gim, B., <strong class="author-name">Kang, S.</strong>, Um, J.,
+              Kim, S.
+            venue: "KIISE Korea Computer Congress 2025"
+            venue_detail: "Proceedings of the Korean Information Science Society Conference"
+            links:
+              - label: "Paper"
+                url: "https://drive.google.com/file/d/19iPgUeTzQq5FggVdwBp31KxVJdeQvIlV/view?usp=sharing"
+
           - title: "How Do Background and Remote User Representations Affect Social Telepresence in Remote Collaboration?: A Study with Portal Display, a Head Pose-Responsive Video Teleconferencing System"
             image: "/images/PortalDisplay_Electronics.gif"
             authors_html: >-
