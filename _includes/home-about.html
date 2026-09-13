@@ -63,6 +63,9 @@
       <p class="profile-intro">{{ include.profile.intro }}</p>
       <p class="profile-vision">My Vision: {{ include.profile.vision }}</p>
       <p class="profile-bio">{{ include.profile.bio }}</p>
+      <nav class="profile-icon-links" aria-label="Profile links">
+        {% include social-icon-links.html id_prefix="profile-" %}
+      </nav>
     </div>
   </div>
 </section>

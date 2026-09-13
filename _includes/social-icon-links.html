@@ -1,0 +1,23 @@
+{% capture social_icon_links %}
+  <a id="{{ include.id_prefix }}scholar-link"
+     class="icon" title="Google Scholar" aria-label="Google Scholar"
+     href="https://scholar.google.com/citations?user=GflY-_gAAAAJ&hl=ko" target="_blank" rel="noopener noreferrer">
+    {% include svg/Google-Scholar.svg %}
+  </a>
+  <a id="{{ include.id_prefix }}cv-link"
+     class="icon" title="CV" aria-label="CV"
+     href="{{ '/assets/pdf/Seongjun_Kang_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+    {% include svg/CV_2.svg %}
+  </a>
+  <a id="{{ include.id_prefix }}linkedin-link"
+     class="icon" title="LinkedIn" aria-label="LinkedIn"
+     href="https://www.linkedin.com/in/seongjun-kang-309647262/" target="_blank" rel="noopener noreferrer">
+    {% include svg/LinkedIn.svg %}
+  </a>
+  <a id="{{ include.id_prefix }}youtube-link"
+     class="icon" title="Youtube" aria-label="Youtube"
+     href="https://www.youtube.com/channel/UCmVL3NEjQe9m6zM13Z6EauQ" target="_blank" rel="noopener noreferrer">
+    {% include svg/Youtube.svg %}
+  </a>
+{% endcapture %}
+{{ social_icon_links | remove: ' id="surface1"' }}
