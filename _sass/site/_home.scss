@@ -822,7 +822,7 @@ footer {
     gap: 1rem;
     grid-template-columns: minmax(8rem, 10.5rem) minmax(0, 1fr);
     max-width: 100%;
-    width: calc(70vw - var(--home-sidebar-width) - var(--home-content-gap));
+    width: 100%;
   }
 
   .home .profile-name {
