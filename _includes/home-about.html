@@ -33,6 +33,22 @@
             >&rsaquo;</button>
           {% endif %}
         </div>
+        {% if include.profile.images.size > 1 %}
+          <div class="profile-carousel-thumbnails" role="group" aria-label="Choose a profile photo">
+            {% for image in include.profile.images %}
+              <button
+                type="button"
+                class="profile-carousel-thumbnail"
+                data-profile-thumbnail
+                aria-label="Show profile photo {{ forloop.index }} of {{ include.profile.images.size }}"
+                aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
+              >
+                <img src="{{ image.src | relative_url }}" alt="" decoding="async">
+              </button>
+            {% endfor %}
+          </div>
+          <span class="profile-carousel-status" data-profile-status aria-live="polite" aria-atomic="true">Photo 1 of {{ include.profile.images.size }}</span>
+        {% endif %}
       </div>
     {% else %}
       <img
