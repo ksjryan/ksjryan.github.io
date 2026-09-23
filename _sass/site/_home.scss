@@ -305,6 +305,108 @@ footer {
   gap: 1rem;
 }
 
+.background-section {
+  scroll-margin-top: 1.5rem;
+}
+
+.background-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.background-column {
+  min-width: 0;
+}
+
+.background-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.background-list {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.background-entry + .background-entry {
+  border-top: 1px solid rgba(0, 0, 0, 0.065);
+  padding-top: 1.05rem;
+}
+
+.background-period {
+  color: #6b6b6b;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.025em;
+  line-height: 1.4;
+  margin: 0 0 0.3rem;
+}
+
+.background-entry-title {
+  color: $heading-color;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+  margin: 0 0 0.3rem;
+}
+
+.background-entry-title a,
+.background-institution a {
+  color: inherit;
+}
+
+.background-entry a:focus-visible {
+  outline: 2px solid $link-color;
+  outline-offset: 3px;
+}
+
+.background-role {
+  color: $gray-5;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-left: 0.65rem;
+}
+
+.background-institution,
+.background-detail,
+.background-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0.2rem 0 0;
+  overflow-wrap: break-word;
+}
+
+.background-institution a {
+  font-weight: 600;
+}
+
+.background-institution span {
+  display: block;
+}
+
+.background-detail {
+  color: #686868;
+}
+
+.background-description {
+  margin-top: 0.4rem;
+}
+
+@media (min-width: 66rem) {
+  .background-grid {
+    column-gap: clamp(1.5rem, 3vw, 3rem);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  .background-column + .background-column {
+    border-left: 1px solid $border-color;
+    padding-left: clamp(1.5rem, 3vw, 3rem);
+  }
+}
+
 .publication-card {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.09);
