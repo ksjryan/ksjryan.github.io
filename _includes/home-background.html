@@ -2,6 +2,7 @@
   <div class="background-grid">
     <section class="background-column" aria-labelledby="education-title">
       <h2 id="education-title" class="section-title">Education</h2>
+      {% assign education_advisors = include.background.education | map: "advisor" | uniq %}
       <ol class="background-list">
         {% for item in include.background.education %}
           <li class="background-entry">
@@ -9,13 +10,15 @@
             <h3 class="background-entry-title">{{ item.degree }}</h3>
             <p class="background-institution">
               <a href="{{ item.institution_url }}" title="{{ item.institution_name }}">{{ item.institution }}</a>
-              {% if forloop.first %}<span>{{ item.institution_name }}</span>{% endif %}
             </p>
             {% if item.status %}<p class="background-detail">{{ item.status }}</p>{% endif %}
-            <p class="background-detail">Advisor: {{ item.advisor }}</p>
+            {% if education_advisors.size > 1 and item.advisor %}<p class="background-detail">Advisor: {{ item.advisor }}</p>{% endif %}
           </li>
         {% endfor %}
       </ol>
+      {% if education_advisors.size == 1 and education_advisors.first %}
+        <p class="background-shared-detail">Advisor: {{ education_advisors.first }}</p>
+      {% endif %}
     </section>
 
     <section class="background-column" aria-labelledby="experience-title">
@@ -24,8 +27,8 @@
         {% for item in include.background.experience %}
           <li class="background-entry">
             <p class="background-period">{{ item.period }}</p>
-            <h3 class="background-entry-title"><a href="{{ item.url }}">{{ item.title }}</a><span class="background-role">{{ item.role }}</span></h3>
-            {% if item.organization %}<p class="background-detail">{{ item.organization }}</p>{% endif %}
+            <h3 class="background-entry-title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+            <p class="background-role">{{ item.role }}{% if item.organization %} · {{ item.organization }}{% endif %}</p>
             {% if item.person %}
               <p class="background-detail">{{ item.person_label }}: {% if item.person_url %}<a href="{{ item.person_url }}">{{ item.person }}</a>{% else %}{{ item.person }}{% endif %}</p>
             {% endif %}
