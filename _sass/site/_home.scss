@@ -320,19 +320,28 @@ footer {
 }
 
 .background-list {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  display: grid;
+  gap: 1.4rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1.15rem;
 }
 
-.background-list {
-  display: grid;
-  gap: 1.15rem;
+.background-entry {
+  min-width: 0;
+  position: relative;
 }
 
-.background-entry + .background-entry {
-  border-top: 1px solid rgba(0, 0, 0, 0.065);
-  padding-top: 1.05rem;
+.background-entry::before {
+  background: #777;
+  border-radius: 50%;
+  content: "";
+  height: 5px;
+  left: calc(-1.15rem - 3px);
+  position: absolute;
+  top: 0.4rem;
+  width: 5px;
 }
 
 .background-period {
@@ -364,15 +373,14 @@ footer {
 
 .background-role {
   color: $gray-5;
-  display: inline-block;
-  font-size: 0.85rem;
   font-weight: 400;
-  margin-left: 0.65rem;
 }
 
 .background-institution,
+.background-role,
 .background-detail,
-.background-description {
+.background-description,
+.background-shared-detail {
   font-size: 0.85rem;
   line-height: 1.5;
   margin: 0.2rem 0 0;
@@ -380,30 +388,28 @@ footer {
 }
 
 .background-institution a {
-  font-weight: 600;
+  font-weight: 400;
 }
 
-.background-institution span {
-  display: block;
-}
-
-.background-detail {
+.background-detail,
+.background-description,
+.background-shared-detail {
   color: #686868;
+  font-size: 0.8rem;
 }
 
 .background-description {
   margin-top: 0.4rem;
 }
 
+.background-shared-detail {
+  margin: 1.25rem 0 0 1.15rem;
+}
+
 @media (min-width: 66rem) {
   .background-grid {
-    column-gap: clamp(1.5rem, 3vw, 3rem);
-    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  }
-
-  .background-column + .background-column {
-    border-left: 1px solid $border-color;
-    padding-left: clamp(1.5rem, 3vw, 3rem);
+    column-gap: clamp(2rem, 4vw, 4rem);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
   }
 }
 
