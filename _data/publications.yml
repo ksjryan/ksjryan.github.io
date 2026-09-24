@@ -1,7 +1,7 @@
 # Edit this file to add, remove, or reorder homepage publications.
 sections:
   - id: "research"
-    title: "Publications from PhD research: rewiring & restoring sensory gaps"
+    title: "Publications"
     groups:
       - title: "Full Papers &mdash; First Author"
         layout: "featured"
