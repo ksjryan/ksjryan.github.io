@@ -1,0 +1,48 @@
+# Education: Seongjun Kang's September 2026 CV.
+# Current research: the homepage and the HCIS Lab people page.
+# MIT visit dates: supplied directly by Seongjun Kang on September 23, 2026.
+education:
+  - degree: Ph.D. in Artificial Intelligence
+    period: 2023–Present
+    institution: GIST
+    institution_name: Gwangju Institute of Science and Technology
+    institution_url: https://www.gist.ac.kr/en/
+    status: Ph.D. candidate
+    advisor: Prof. SeungJun Kim
+  - degree: M.S. in Robotics
+    period: 2022–2023
+    institution: GIST
+    institution_name: Gwangju Institute of Science and Technology
+    institution_url: https://www.gist.ac.kr/en/
+    advisor: Prof. SeungJun Kim
+  - degree: B.S. in Mechanical Engineering
+    period: 2018–2022
+    institution: GIST
+    institution_name: Gwangju Institute of Science and Technology
+    institution_url: https://www.gist.ac.kr/en/
+    advisor: Prof. SeungJun Kim
+
+experience:
+  - title: HCIS Lab · GIST
+    url: https://sites.google.com/view/gist-hcis-lab/home
+    role: Doctoral Research
+    period: Present
+    person_label: Advisor
+    person: Prof. SeungJun Kim
+    description: Haptic interfaces and multisensory interaction in virtual reality.
+  - title: MIT CSAIL
+    url: https://www.csail.mit.edu/research/distributed-robotics-laboratory
+    role: Research Visit
+    period: May 2 – June 2, 2026
+    organization: Distributed Robotics Laboratory
+    person_label: Host
+    person: Prof. Daniela Rus
+    person_url: https://www.csail.mit.edu/person/daniela-rus
+  - title: MIT CSAIL
+    url: https://www.csail.mit.edu/research/distributed-robotics-laboratory
+    role: Research Visit
+    period: May 6 – June 1, 2025
+    organization: Distributed Robotics Laboratory
+    person_label: Host
+    person: Prof. Daniela Rus
+    person_url: https://www.csail.mit.edu/person/daniela-rus

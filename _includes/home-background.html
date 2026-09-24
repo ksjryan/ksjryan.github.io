@@ -1,0 +1,38 @@
+<section id="background" class="home-section background-section" aria-label="Education and research experience">
+  <div class="background-grid">
+    <section class="background-column" aria-labelledby="education-title">
+      <h2 id="education-title" class="section-title">Education</h2>
+      <ol class="background-list">
+        {% for item in include.background.education %}
+          <li class="background-entry">
+            <p class="background-period">{{ item.period }}</p>
+            <h3 class="background-entry-title">{{ item.degree }}</h3>
+            <p class="background-institution">
+              <a href="{{ item.institution_url }}" title="{{ item.institution_name }}">{{ item.institution }}</a>
+              {% if forloop.first %}<span>{{ item.institution_name }}</span>{% endif %}
+            </p>
+            {% if item.status %}<p class="background-detail">{{ item.status }}</p>{% endif %}
+            <p class="background-detail">Advisor: {{ item.advisor }}</p>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="background-column" aria-labelledby="experience-title">
+      <h2 id="experience-title" class="section-title">Research Experience</h2>
+      <ol class="background-list">
+        {% for item in include.background.experience %}
+          <li class="background-entry">
+            <p class="background-period">{{ item.period }}</p>
+            <h3 class="background-entry-title"><a href="{{ item.url }}">{{ item.title }}</a><span class="background-role">{{ item.role }}</span></h3>
+            {% if item.organization %}<p class="background-detail">{{ item.organization }}</p>{% endif %}
+            {% if item.person %}
+              <p class="background-detail">{{ item.person_label }}: {% if item.person_url %}<a href="{{ item.person_url }}">{{ item.person }}</a>{% else %}{{ item.person }}{% endif %}</p>
+            {% endif %}
+            {% if item.description %}<p class="background-description">{{ item.description }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  </div>
+</section>

@@ -22,6 +22,7 @@ Most homepage content now lives in `_data`, so routine updates do not require
 copying large HTML blocks.
 
 - `_data/profile.yml`: name, profile image, intro, vision, and biography
+- `_data/background.yml`: education and research experience, including research visit dates
 - `_data/publications.yml`: publication sections, images, authors, venues, awards, and links
 - `_data/fun_projects.yml`: fun project cards and links
 - `_config.yml`: site title, sidebar description, and sidebar navigation
@@ -32,6 +33,7 @@ The homepage itself is intentionally small:
 
 - `index.html`: assembles the homepage sections
 - `_includes/home-about.html`: profile section template
+- `_includes/home-background.html`: responsive Education and Research Experience section
 - `profile-carousel.js`: profile photo previous/next interaction
 - `_includes/home-publications.html`: publication section template
 - `_includes/publication-card.html`: one publication card template
