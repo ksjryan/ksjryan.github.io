@@ -37,9 +37,7 @@
 
   <div class="publication-body">
     <h4 class="publication-title">{{ publication.title }}</h4>
-    {% unless card_layout == "featured" %}
-      <p class="publication-authors">{{ publication.authors_html }}</p>
-    {% endunless %}
+    <p class="publication-authors">{{ publication.authors_html }}</p>
 
     <p class="publication-venue">
       <span class="publication-venue-name{% if publication.highlight_venue %} publication-venue-name--highlight{% endif %}">
@@ -49,10 +47,6 @@
         <span class="publication-venue-detail">: {{ publication.venue_detail }}</span>
       {% endif %}
     </p>
-
-    {% if card_layout == "featured" %}
-      <p class="publication-authors">{{ publication.authors_html }}</p>
-    {% endif %}
 
     {% if publication.note %}
       <p class="publication-note">Award: {{ publication.note }}</p>
