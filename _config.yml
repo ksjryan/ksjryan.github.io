@@ -5,7 +5,6 @@ highlighter: rouge
 # Setup
 title: Seongjun Kang
 description: |
-  <span class="lead-line">Ph.D. candidate in human-computer interaction</span>
   <span class="lead-line"><a href="https://sites.google.com/view/gist-hcis-lab/home" target="_blank" rel="noopener noreferrer">HCIS Lab</a>, Gwangju Institute of Science and Technology (GIST)</span>
 url: https://ksjryan.github.io
 baseurl: ''
