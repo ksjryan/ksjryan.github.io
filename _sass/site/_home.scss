@@ -428,6 +428,28 @@ footer {
   margin: 1.25rem 0 0 1.15rem;
 }
 
+.background-column[aria-labelledby="experience-title"] {
+  .background-list {
+    gap: 1.2rem;
+  }
+
+  .background-period,
+  .background-entry-title {
+    margin-bottom: 0.25rem;
+  }
+
+  .background-role,
+  .background-detail,
+  .background-description {
+    line-height: 1.4;
+    margin-top: 0.15rem;
+  }
+
+  .background-description {
+    margin-top: 0.3rem;
+  }
+}
+
 @media (min-width: 66rem) {
   .background-grid {
     column-gap: clamp(2rem, 4vw, 4rem);
