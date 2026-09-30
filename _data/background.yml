@@ -33,17 +33,24 @@ experience:
     description: Haptic interfaces and multisensory interaction in virtual reality.
   - title: MIT CSAIL
     url: https://www.csail.mit.edu/research/distributed-robotics-laboratory
-    role: Research Visits
-    period: >-
-      May 2 – June 2, 2026<br>
-      May 6 – June 1, 2025
+    role: Research Visit
+    period: May 2 – June 2, 2026
     organization: Distributed Robotics Laboratory
     person_label: Host
     person: Prof. Daniela Rus
     person_url: https://www.csail.mit.edu/person/daniela-rus
     description: >-
-      Joint publications: <a href="#publication-telepulse">TelePulse (CHI ’25)</a> ·
-      <a href="#publication-inertia-in-your-hand">Inertia in Your Hand (UIST ’26)</a>.
+      Joint publication: <a href="#publication-inertia-in-your-hand">Inertia in Your Hand (UIST ’26)</a>.
+  - title: MIT CSAIL
+    url: https://www.csail.mit.edu/research/distributed-robotics-laboratory
+    role: Research Visit
+    period: May 6 – June 1, 2025
+    organization: Distributed Robotics Laboratory
+    person_label: Host
+    person: Prof. Daniela Rus
+    person_url: https://www.csail.mit.edu/person/daniela-rus
+    description: >-
+      Joint publication: <a href="#publication-telepulse">TelePulse (CHI ’25)</a>.
   - title: Carnegie Mellon University (CMU)
     url: https://www.cmu.edu/
     role: Academic Visit
