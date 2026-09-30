@@ -1,6 +1,7 @@
 # Education: Seongjun Kang's September 2026 CV.
 # Current research: the homepage and the HCIS Lab people page.
 # MIT visit dates: supplied directly by Seongjun Kang on September 23, 2026.
+# CMU visit dates and purpose: supplied directly by Seongjun Kang on September 30, 2026.
 education:
   - degree: Ph.D. in Artificial Intelligence
     period: 2023–Present
@@ -46,3 +47,9 @@ experience:
     person_label: Host
     person: Prof. Daniela Rus
     person_url: https://www.csail.mit.edu/person/daniela-rus
+  - title: Carnegie Mellon University (CMU)
+    url: https://www.cmu.edu/
+    role: Academic Visit
+    period: Sep 26 – Nov 1, 2023
+    description: >-
+      Research and project discussions with <a href="https://www.cs.cmu.edu/~jeanoh/">Prof. Jean Oh</a>.
