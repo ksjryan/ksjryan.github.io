@@ -1,7 +1,7 @@
 {% assign publication = include.publication %}
 {% assign card_layout = include.card_layout | default: "standard" %}
 
-<article class="publication-card publication-card--{{ card_layout }}"{% if card_layout == "featured" %} data-publication-details data-publication-title="{{ publication.title | escape }}"{% endif %}>
+<article class="publication-card publication-card--{{ card_layout }}"{% if publication.slug %} id="publication-{{ publication.slug }}"{% endif %}{% if card_layout == "featured" %} data-publication-details data-publication-title="{{ publication.title | escape }}"{% endif %}>
   <div class="publication-summary">
   {% unless card_layout == "compact" %}
   <div class="publication-media">
