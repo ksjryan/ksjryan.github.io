@@ -26,7 +26,7 @@
               <img class="activity-badge-image" src="{{ event.badge | relative_url }}" alt="{{ event.label | escape }} conference badge" width="{{ event.badge_width }}" height="{{ event.badge_height }}" loading="lazy" decoding="async">
             {% endif %}
           </div>
-          <div class="activity-gallery" data-activity-gallery>
+          <div class="activity-gallery" data-activity-gallery{% if event.photo_aspect_ratio %} style="--activity-photo-ratio: {{ event.photo_aspect_ratio | escape }};"{% endif %}>
             <div class="activity-viewport" data-activity-viewport>
               <div class="activity-track" data-activity-track>
                 {% for photo in event.photos %}
