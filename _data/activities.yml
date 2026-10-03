@@ -15,7 +15,16 @@ events:
       height: 1090
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "4 / 3"
+    photos:
+      - src: "/images/activities/chi-2026/photo-01.webp"
+        alt: "Group photo beside the CHI letters at CHI 2026."
+      - src: "/images/activities/chi-2026/photo-02.webp"
+        alt: "Presentation of When Fingers Become Tools at CHI 2026."
+      - src: "/images/activities/chi-2026/photo-03.webp"
+        alt: "Group photo at an interactive demonstration booth at CHI 2026."
+      - src: "/images/activities/chi-2026/photo-04.webp"
+        alt: "Evening group photo during the CHI 2026 conference trip."
   - id: "ismar-2025"
     label: "ISMAR ’25"
     year: 2025
