@@ -69,6 +69,11 @@ photos:
     caption: "Optional short caption"
 ```
 
+Set `photo_aspect_ratio` and, where needed, `photo_fit: "contain"` on an event to
+preserve group photos within the gallery. The `location` field appears beside the
+year. Photos are view-only; the arrows browse the album without opening an enlarged
+image. Events without a supplied badge leave that column empty.
+
 The badge viewports crop the displayed image without changing its printed text
 or ribbons. Coordinates use the upright source dimensions recorded in
 `badge_crop`; `badge_width` and `badge_height` describe the visible crop.

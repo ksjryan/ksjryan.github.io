@@ -46,11 +46,6 @@
             var isVisible = photoIndex >= index && photoIndex < last;
             photo.setAttribute("aria-hidden", isVisible ? "false" : "true");
             photo.toggleAttribute("inert", !isVisible);
-            // Also keep offscreen links out of the tab order in older browsers.
-            var link = photo.querySelector("a");
-            if (link) {
-              link.tabIndex = isVisible ? 0 : -1;
-            }
           });
         }
 
