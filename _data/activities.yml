@@ -5,6 +5,8 @@ events:
   - id: "chi-2026"
     label: "CHI ’26"
     year: 2026
+    location: "Barcelona, Spain"
+    venue_source: "https://chi2026.acm.org/attendees/local-info/"
     badge: "/images/activities/chi-2026-badge.jpg"
     badge_width: 595
     badge_height: 1090
@@ -28,6 +30,8 @@ events:
   - id: "ismar-2025"
     label: "ISMAR ’25"
     year: 2025
+    location: "Daejeon, South Korea"
+    venue_source: "https://www.ieeeismar.net/2025/"
     badge: "/images/activities/ismar-2025-badge.jpg"
     badge_width: 760
     badge_height: 990
@@ -38,10 +42,18 @@ events:
       height: 990
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "4 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/ismar-2025/photo-01.webp"
+        alt: "Group photo beside a vehicle demonstration at ISMAR 2025."
+      - src: "/images/activities/ismar-2025/photo-02.webp"
+        alt: "Group photo by the waterfront during the ISMAR 2025 conference trip."
   - id: "uist-2025"
     label: "UIST ’25"
     year: 2025
+    location: "Busan, South Korea"
+    venue_source: "https://uist.acm.org/2025/"
     badge: "/images/activities/uist-2025-badge.jpg"
     badge_width: 751
     badge_height: 835
@@ -52,10 +64,24 @@ events:
       height: 835
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "4 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/uist-2025/photo-01.webp"
+        alt: "Conference presentation about ear canal pressure at UIST 2025."
+      - src: "/images/activities/uist-2025/photo-02.webp"
+        alt: "Group photo at a demonstration booth at UIST 2025."
+      - src: "/images/activities/uist-2025/photo-03.webp"
+        alt: "Explaining the EarPressure VR demonstration during the UIST 2025 conference trip."
+      - src: "/images/activities/uist-2025/photo-04.webp"
+        alt: "Evening group photo beside a vehicle demonstration during the UIST 2025 conference trip."
+      - src: "/images/activities/uist-2025/photo-05.webp"
+        alt: "Participants viewing a vehicle demonstration during the UIST 2025 conference trip."
   - id: "icra-2025"
     label: "ICRA ’25"
     year: 2025
+    location: "Atlanta, USA"
+    venue_source: "https://2025.ieee-icra.org/announcements/industrys-premier-robotics-event-convenes-19-23-may-in-atlanta/"
     badge: "/images/activities/icra-2025-badge.jpg"
     badge_width: 664
     badge_height: 1034
@@ -66,10 +92,18 @@ events:
       height: 1034
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "4 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/icra-2025/photo-01.webp"
+        alt: "Group photo in front of the ICRA 2025 conference display."
+      - src: "/images/activities/icra-2025/photo-02.webp"
+        alt: "Group photo inside the ICRA 2025 conference venue."
   - id: "chi-2025"
     label: "CHI ’25"
     year: 2025
+    location: "Yokohama, Japan"
+    venue_source: "https://chi2025.acm.org/"
     badge: "/images/activities/chi-2025-badge.jpg"
     badge_width: 672
     badge_height: 1046
@@ -80,10 +114,36 @@ events:
       height: 1046
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "4 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/chi-2025/photo-01.webp"
+        alt: "Conference presentation at CHI 2025."
+      - src: "/images/activities/chi-2025/photo-02.webp"
+        alt: "Group photo in front of the CHI 2025 conference display."
+      - src: "/images/activities/chi-2025/photo-03.webp"
+        alt: "Group photo by the waterfront during the CHI 2025 conference trip."
+  - id: "uist-2024"
+    label: "UIST ’24"
+    year: 2024
+    location: "Pittsburgh, USA"
+    venue_source: "https://uist.acm.org/2024/"
+    photo_aspect_ratio: "4 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/uist-2024/photo-01.webp"
+        alt: "Conference presentation showing a sensory massage demonstration at UIST 2024."
+      - src: "/images/activities/uist-2024/photo-02.webp"
+        alt: "Group photo in front of the UIST 2024 conference display."
+      - src: "/images/activities/uist-2024/photo-03.webp"
+        alt: "Group photo beside the Flip-Pelt poster at UIST 2024."
+      - src: "/images/activities/uist-2024/photo-04.webp"
+        alt: "Outdoor group selfie with luggage during the UIST 2024 conference trip."
   - id: "chi-2024"
     label: "CHI ’24"
     year: 2024
+    location: "Honolulu, USA"
+    venue_source: "https://chi2024.acm.org/"
     badge: "/images/activities/chi-2024-badge.jpg"
     badge_width: 736
     badge_height: 879
@@ -94,10 +154,20 @@ events:
       height: 879
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "5 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/chi-2024/photo-01.webp"
+        alt: "Group photo holding a laptop and documents at CHI 2024."
+      - src: "/images/activities/chi-2024/photo-02.webp"
+        alt: "Group selfie on the beach during the CHI 2024 conference trip."
+      - src: "/images/activities/chi-2024/photo-03.webp"
+        alt: "Outdoor group selfie with a CHI 2024 student volunteer shirt."
   - id: "ubicomp-2023"
     label: "UbiComp ’23"
     year: 2023
+    location: "Cancún, Mexico"
+    venue_source: "https://ubicomp.org/ubicomp-iswc-2023/"
     badge: "/images/activities/ubicomp-2023-badge.jpg"
     badge_width: 573
     badge_height: 1057
@@ -108,10 +178,18 @@ events:
       height: 1057
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "3 / 2"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/ubicomp-2023/photo-01.webp"
+        alt: "Outdoor poster session at sunset at UbiComp 2023."
+      - src: "/images/activities/ubicomp-2023/photo-02.webp"
+        alt: "Evening group photo at UbiComp 2023."
   - id: "uist-2022"
     label: "UIST ’22"
     year: 2022
+    location: "Bend, USA"
+    venue_source: "https://uist.acm.org/uist2022/attending.html"
     badge: "/images/activities/uist-2022-badge.jpg"
     badge_width: 809
     badge_height: 554
@@ -122,10 +200,18 @@ events:
       height: 554
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "4 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/uist-2022/photo-01.webp"
+        alt: "Outdoor group photo during snowfall at UIST 2022."
+      - src: "/images/activities/uist-2022/photo-02.webp"
+        alt: "Indoor group photo at UIST 2022."
   - id: "ismar-2022"
     label: "ISMAR ’22"
     year: 2022
+    location: "Singapore"
+    venue_source: "https://ismar2022.org/main-news/"
     badge: "/images/activities/ismar-2022-badge.jpg"
     badge_width: 724
     badge_height: 1019
@@ -136,4 +222,10 @@ events:
       height: 1019
       source_width: 1368
       source_height: 1824
-    photos: []
+    photo_aspect_ratio: "4 / 3"
+    photo_fit: "contain"
+    photos:
+      - src: "/images/activities/ismar-2022/photo-01.webp"
+        alt: "Group photo in front of the ISMAR 2022 conference display."
+      - src: "/images/activities/ismar-2022/photo-02.webp"
+        alt: "Group selfie inside a meeting room at ISMAR 2022."
