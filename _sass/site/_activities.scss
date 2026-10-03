@@ -135,6 +135,10 @@
     overflow: hidden;
   }
 
+  .activity-photo-link {
+    aspect-ratio: var(--activity-photo-ratio, 3 / 2);
+  }
+
   .activity-photo-link img {
     border-radius: 0;
     display: block;
