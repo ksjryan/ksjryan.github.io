@@ -1,0 +1,130 @@
+# Conference attendance and badge photographs supplied by Seongjun Kang.
+# Badge crops are non-destructive viewports in an upright 1368 × 1824 coordinate space.
+# Add photo records {src, alt, caption (optional)} to each photos list when ready.
+events:
+  - id: "chi-2026"
+    label: "CHI ’26"
+    year: 2026
+    badge: "/images/activities/chi-2026-badge.jpg"
+    badge_width: 595
+    badge_height: 1090
+    badge_crop:
+      x: 370
+      y: 420
+      width: 595
+      height: 1090
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "ismar-2025"
+    label: "ISMAR ’25"
+    year: 2025
+    badge: "/images/activities/ismar-2025-badge.jpg"
+    badge_width: 760
+    badge_height: 990
+    badge_crop:
+      x: 305
+      y: 455
+      width: 760
+      height: 990
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "uist-2025"
+    label: "UIST ’25"
+    year: 2025
+    badge: "/images/activities/uist-2025-badge.jpg"
+    badge_width: 751
+    badge_height: 835
+    badge_crop:
+      x: 294
+      y: 507
+      width: 751
+      height: 835
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "icra-2025"
+    label: "ICRA ’25"
+    year: 2025
+    badge: "/images/activities/icra-2025-badge.jpg"
+    badge_width: 664
+    badge_height: 1034
+    badge_crop:
+      x: 322
+      y: 431
+      width: 664
+      height: 1034
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "chi-2025"
+    label: "CHI ’25"
+    year: 2025
+    badge: "/images/activities/chi-2025-badge.jpg"
+    badge_width: 672
+    badge_height: 1046
+    badge_crop:
+      x: 333
+      y: 446
+      width: 672
+      height: 1046
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "chi-2024"
+    label: "CHI ’24"
+    year: 2024
+    badge: "/images/activities/chi-2024-badge.jpg"
+    badge_width: 736
+    badge_height: 879
+    badge_crop:
+      x: 324
+      y: 531
+      width: 736
+      height: 879
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "ubicomp-2023"
+    label: "UbiComp ’23"
+    year: 2023
+    badge: "/images/activities/ubicomp-2023-badge.jpg"
+    badge_width: 573
+    badge_height: 1057
+    badge_crop:
+      x: 397
+      y: 450
+      width: 573
+      height: 1057
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "uist-2022"
+    label: "UIST ’22"
+    year: 2022
+    badge: "/images/activities/uist-2022-badge.jpg"
+    badge_width: 809
+    badge_height: 554
+    badge_crop:
+      x: 273
+      y: 678
+      width: 809
+      height: 554
+      source_width: 1368
+      source_height: 1824
+    photos: []
+  - id: "ismar-2022"
+    label: "ISMAR ’22"
+    year: 2022
+    badge: "/images/activities/ismar-2022-badge.jpg"
+    badge_width: 724
+    badge_height: 1019
+    badge_crop:
+      x: 322
+      y: 442
+      width: 724
+      height: 1019
+      source_width: 1368
+      source_height: 1824
+    photos: []
