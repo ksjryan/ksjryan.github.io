@@ -1,0 +1,65 @@
+{% assign activity_events = site.data.activities.events %}
+{% if activity_events.size > 0 %}
+<section id="activities" class="home-section activities-section" aria-labelledby="activities-title" data-activities>
+  <h2 id="activities-title" class="section-title">Conferences &amp; Activities</h2>
+
+  <div class="activity-selector" role="group" aria-label="Choose a conference">
+    {% for event in activity_events %}
+      <button type="button" class="activity-selector-button" data-activity-select="{{ event.id | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="activity-display">{{ event.label }}</button>
+    {% endfor %}
+  </div>
+
+  <div id="activity-display" class="activity-display" role="region" aria-label="Conference badge and photos">
+    {% for event in activity_events %}
+      <article class="activity-panel" data-activity-panel="{{ event.id | escape }}" data-activity-label="{{ event.label | escape }}" aria-labelledby="activity-title-{{ event.id | escape }}"{% unless forloop.first %} hidden{% endunless %}>
+        <div class="activity-heading">
+          <h3 id="activity-title-{{ event.id | escape }}">{{ event.label }}</h3>
+          <span class="activity-year">{{ event.year }}</span>
+        </div>
+        <div class="activity-row">
+          <div class="activity-badge">
+            {% if event.badge_crop %}
+              <svg class="activity-badge-image" viewBox="{{ event.badge_crop.x }} {{ event.badge_crop.y }} {{ event.badge_crop.width }} {{ event.badge_crop.height }}" width="{{ event.badge_crop.width }}" height="{{ event.badge_crop.height }}" role="img" aria-label="{{ event.label | escape }} conference badge">
+                <image {% if forloop.first %}href{% else %}data-badge-src{% endif %}="{{ event.badge | relative_url }}" x="0" y="0" width="{{ event.badge_crop.source_width }}" height="{{ event.badge_crop.source_height }}" />
+              </svg>
+            {% else %}
+              <img class="activity-badge-image" src="{{ event.badge | relative_url }}" alt="{{ event.label | escape }} conference badge" width="{{ event.badge_width }}" height="{{ event.badge_height }}" loading="lazy" decoding="async">
+            {% endif %}
+          </div>
+          <div class="activity-gallery" data-activity-gallery>
+            <div class="activity-viewport" data-activity-viewport>
+              <div class="activity-track" data-activity-track>
+                {% for photo in event.photos %}
+                  {% assign photo_source = photo.src | default: photo %}
+                  {% assign photo_full = photo.full | default: photo_source %}
+                  <figure class="activity-photo" data-activity-photo>
+                    <a class="activity-photo-link" href="{{ photo_full | relative_url }}" target="_blank" rel="noopener" aria-label="Open {{ event.label | escape }} photo {{ forloop.index }} at full size">
+                      <img src="{{ photo_source | relative_url }}" alt="{{ photo.alt | default: event.label | escape }}" loading="lazy" decoding="async">
+                    </a>
+                    {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+                  </figure>
+                {% else %}
+                  <div class="activity-photo activity-photo--empty" aria-hidden="true"></div>
+                  <div class="activity-photo activity-photo--empty" aria-hidden="true"></div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="activity-gallery-controls" data-activity-controls hidden>
+              <span class="activity-photo-count" data-activity-count aria-live="polite" aria-atomic="true"></span>
+              <button type="button" class="activity-arrow" data-activity-prev aria-label="Previous photo" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
+              </button>
+              <button type="button" class="activity-arrow" data-activity-next aria-label="Next photo" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  <p class="activity-sr-only" data-activity-status role="status" aria-live="polite" aria-atomic="true"></p>
+</section>
+
+<script src="{{ '/activity-gallery.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{% endif %}
