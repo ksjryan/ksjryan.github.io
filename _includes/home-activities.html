@@ -14,28 +14,29 @@
       <article class="activity-panel" data-activity-panel="{{ event.id | escape }}" data-activity-label="{{ event.label | escape }}" aria-labelledby="activity-title-{{ event.id | escape }}"{% unless forloop.first %} hidden{% endunless %}>
         <div class="activity-heading">
           <h3 id="activity-title-{{ event.id | escape }}">{{ event.label }}</h3>
-          <span class="activity-year">{{ event.year }}</span>
+          <span class="activity-year">{{ event.year }}{% if event.location %} · {{ event.location | escape }}{% endif %}</span>
         </div>
         <div class="activity-row">
           <div class="activity-badge">
-            {% if event.badge_crop %}
-              <svg class="activity-badge-image" viewBox="{{ event.badge_crop.x }} {{ event.badge_crop.y }} {{ event.badge_crop.width }} {{ event.badge_crop.height }}" width="{{ event.badge_crop.width }}" height="{{ event.badge_crop.height }}" role="img" aria-label="{{ event.label | escape }} conference badge">
-                <image {% if forloop.first %}href{% else %}data-badge-src{% endif %}="{{ event.badge | relative_url }}" x="0" y="0" width="{{ event.badge_crop.source_width }}" height="{{ event.badge_crop.source_height }}" />
-              </svg>
-            {% else %}
-              <img class="activity-badge-image" src="{{ event.badge | relative_url }}" alt="{{ event.label | escape }} conference badge" width="{{ event.badge_width }}" height="{{ event.badge_height }}" loading="lazy" decoding="async">
+            {% if event.badge and event.badge != empty %}
+              {% if event.badge_crop %}
+                <svg class="activity-badge-image" viewBox="{{ event.badge_crop.x }} {{ event.badge_crop.y }} {{ event.badge_crop.width }} {{ event.badge_crop.height }}" width="{{ event.badge_crop.width }}" height="{{ event.badge_crop.height }}" role="img" aria-label="{{ event.label | escape }} conference badge">
+                  <image {% if forloop.first %}href{% else %}data-badge-src{% endif %}="{{ event.badge | relative_url }}" x="0" y="0" width="{{ event.badge_crop.source_width }}" height="{{ event.badge_crop.source_height }}" />
+                </svg>
+              {% else %}
+                <img class="activity-badge-image" src="{{ event.badge | relative_url }}" alt="{{ event.label | escape }} conference badge" width="{{ event.badge_width }}" height="{{ event.badge_height }}" loading="lazy" decoding="async">
+              {% endif %}
             {% endif %}
           </div>
-          <div class="activity-gallery" data-activity-gallery{% if event.photo_aspect_ratio %} style="--activity-photo-ratio: {{ event.photo_aspect_ratio | escape }};"{% endif %}>
+          <div class="activity-gallery" data-activity-gallery{% if event.photo_aspect_ratio or event.photo_fit %} style="{% if event.photo_aspect_ratio %}--activity-photo-ratio: {{ event.photo_aspect_ratio | escape }};{% endif %}{% if event.photo_fit %} --activity-photo-fit: {{ event.photo_fit | escape }};{% endif %}"{% endif %}>
             <div class="activity-viewport" data-activity-viewport>
               <div class="activity-track" data-activity-track>
                 {% for photo in event.photos %}
                   {% assign photo_source = photo.src | default: photo %}
-                  {% assign photo_full = photo.full | default: photo_source %}
                   <figure class="activity-photo" data-activity-photo>
-                    <a class="activity-photo-link" href="{{ photo_full | relative_url }}" target="_blank" rel="noopener" aria-label="Open {{ event.label | escape }} photo {{ forloop.index }} at full size">
+                    <div class="activity-photo-frame">
                       <img src="{{ photo_source | relative_url }}" alt="{{ photo.alt | default: event.label | escape }}" loading="lazy" decoding="async">
-                    </a>
+                    </div>
                     {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
                   </figure>
                 {% else %}
